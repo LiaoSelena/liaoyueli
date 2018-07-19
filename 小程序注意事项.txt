@@ -1,0 +1,7 @@
+小程序要自己去开启下拉刷新的功能
+
+1. `"window": {`
+2. `    "enablePullDownRefresh":true  //开启下拉功能`
+3. `}`
+
+禁止滚动  catchtouchmove='true'
