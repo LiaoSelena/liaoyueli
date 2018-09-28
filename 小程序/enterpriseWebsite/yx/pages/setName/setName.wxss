@@ -1,0 +1,20 @@
+@import "../../utils/yx.wxss";
+
+.box{ background-color:#fff; margin-top:10rpx;}
+.list{ height:100rpx; margin:0 30rpx; border-bottom:2rpx solid #e6edf2; justify-content:flex-start;}
+.list:last-child{ border-bottom:0;}
+.list label{ font-size:32rpx; color:#666; width:180rpx;}
+.list_box{ font-size:32rpx; width:510rpx;}
+.list_box view{ font-size:32rpx; color:#5cb8f7;}
+.licence_box{ justify-content:space-between;}
+.licence{ width:78rpx; height:78rpx; border-radius:10rpx;}
+.icon{ width:11rpx; height:20rpx; margin:0 4rpx 0 20rpx;}
+.fail{ overflow:hidden; margin:0 30rpx;}
+.fail label{ font-size:32rpx; color:#666; width:180rpx; float:left; padding:35rpx 0;}
+.fail view{ font-size:32rpx; color:#ff0036; width:510rpx; float:left; line-height:1.4; padding:30rpx 0;}
+.btn{ font-size:34rpx; color:#fff; width:540rpx; height:88rpx; background:linear-gradient(#27a6fd,#5bb8f7); border-radius:50rpx; margin:60rpx auto 30rpx; box-shadow:0 5rpx 20rpx #5bb8f7;}
+.nothing{ width:100%; background-color:#fff; position:absolute; top:0; bottom:0;}
+.nothing image{ width:320rpx; height:180rpx; margin:120rpx auto 50rpx;}
+.nothing_text1{ font-size:26rpx; color:#5cb9f7; margin-bottom:14rpx; text-align:center;}
+.nothing_text2{ font-size:24rpx; color:#666; margin-bottom:16rpx; text-align:center;}
+.nothing .btn{ margin:194rpx auto 30rpx;}

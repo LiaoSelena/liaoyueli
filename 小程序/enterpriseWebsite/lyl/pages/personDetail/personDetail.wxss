@@ -1,0 +1,6 @@
+/* lyl/pages/personDetail/personDetail.wxss */
+@import "../../utils/lyl.wxss";
+.img_size{  height: 422rpx; }
+.line_height{ line-height: 160%;}
+ .h388{ height: 388rpx;}
+ .border_radius{ border-radius: 20rpx;}

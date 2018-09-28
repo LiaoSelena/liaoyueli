@@ -1,0 +1,30 @@
+<import src="../../../template/overTime/overTime1.wxml"></import>
+<import src="../../../template/overTime/overTime2.wxml"></import>
+<view wx:if="{{haveFlag==1}}">
+<view class="mt100">
+  <view class="topPlan">
+    <image src="{{list.moduleProduct.productImg}}" class="cover"></image>
+    <view class="name">{{list.moduleProduct.productName}}</view>
+    <view class="price"> 
+      <text class="Rmbi">￥</text>
+      <text wx:if="{{list.moduleProduct.amountMin==''}}">{{list.moduleProduct.amountMax}}</text>
+      <text wx:if="{{list.moduleProduct.amountMax==''}}">{{list.moduleProduct.amountMin}}</text>
+      <text wx:if="{{list.moduleProduct.amountMin!=''&&list.moduleProduct.amountMax!=''}}">{{list.moduleProduct.amountMin}}-{{list.moduleProduct.amountMax}}</text>
+    </view>
+  </view>
+  <view class="productImgbox">
+    <view class="tile">———  <text style="color:#666;">产品详情</text>  ———</view>
+      <view wx:for="{{list.moduleTextImg}}" wx:key="wanghai">
+        <view class="text" wx:if="{{item.contentType=='1'}}">{{item.content}}</view>
+        <image mode="widthFix" wx:for="{{item.imgContent}}" wx:for-item="imgs"wx:if="{{item.contentType=='2'}}" src="{{imgs}}" wx:key="wanghai"></image>
+      </view>
+  </view>
+</view>
+<view class="footbox">
+  <view class="service flex_centet" bindtap="goPhone"> <image class="serviceIcon" src="http://q.img.soukong.cn/website/wh/icon_service.png"></image> <text>咨询客服</text></view>
+  <button  open-type="share"class="share flex_centet"> <image class="shareIcon" src="http://q.img.soukong.cn/website/wh/icon_share.png"></image><text>分享</text></button>
+</view>
+</view>
+<view class="noNews" wx:if="{{haveFlag==2}}">该产品信息不存在</view>
+<template is="overTime1" data="{{flag:flags.overTime,mask:flags.mask}}" wx:if="{{flags.fromManage}}"></template>
+<template is="overTime2" data="{{flag:flags.overTime,mask:flags.mask}}" wx:if="{{flags.fromOther}}"></template>

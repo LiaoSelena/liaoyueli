@@ -1,0 +1,81 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/support/support"
+  ],
+  "subPackages": [
+    {
+      "root": "lyl",
+      "pages": [
+        "pages/test/test",
+        "pages/officialNetwork/officialNetwork",
+        "pages/productEdit/productEdit",
+        "pages/person/person",
+        "pages/personInfoEdit/personInfoEdit",
+        "pages/joinUs/joinUs",
+        "pages/addPost/addPost",
+        "pages/postDetailView/postDetailView",
+        "pages/HRinfoEdit/HRinfoEdit",
+        "pages/partnerEdit/partnerEdit",
+        "pages/officialNetworkSearch/officialNetworkSearch",
+        "pages/teamManagement/teamManagement",
+        "pages/teamManagementEdit/teamManagementEdit",
+        "pages/partner/partner",
+        "pages/contactUs/contactUs",
+        "pages/team/team",
+        "pages/contactUsDeail/contactUsDeail",
+        "pages/personDetail/personDetail"
+      ]
+    },
+    {
+      "root": "wh",
+      "pages": [
+        "pages/test/test",
+        "pages/Invitation/Invitation",
+        "pages/register/register",
+        "pages/registerSuccessful/registerSuccessful",
+        "pages/codeQr/codeQr",
+        "pages/share/share",
+        "pages/editEnterprise/editEnterprise",
+        "pages/informationList/informationList",
+        "pages/productList/productList",
+        "pages/productDetails/productDetails",
+        "pages/releaseInformation/releaseInformation",
+        "pages/informationPreview/informationPreview",
+        "pages/editInformation/editInformation",
+        "pages/previewHome/previewHome",
+        "pages/enterprise/enterprise",
+        "pages/attractInvestment/attractInvestment"
+      ]
+    },
+    {
+      "root": "yx",
+      "pages": [
+        "pages/test/test",
+        "pages/create/create",
+        "pages/law/law",
+        "pages/manage/manage",
+        "pages/coverImg/coverImg",
+        "pages/setMenu/setMenu",
+        "pages/set/set",
+        "pages/setCompany/setCompany",
+        "pages/setColumn/setColumn",
+        "pages/editColumn/editColumn",
+        "pages/listBind/listBind",
+        "pages/setWorker/setWorker",
+        "pages/listWorker/listWorker",
+        "pages/setName/setName",
+        "pages/editName/editName",
+        "pages/bindShop/bindShop",
+        "pages/playVideo/playVideo",
+        "pages/playMap/playMap"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#5cb8f7",
+    "navigationBarTitleText": "",
+    "navigationBarTextStyle": "#ffffff"
+  }
+}

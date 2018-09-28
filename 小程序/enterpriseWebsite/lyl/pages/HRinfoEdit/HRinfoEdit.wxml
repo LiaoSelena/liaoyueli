@@ -1,0 +1,35 @@
+<!--lyl/pages/HRinfoEdit/HRinfoEdit.wxml-->
+<view class='top-lr-scatter center-float-center pd30'>
+   <image class='avatar' mode='aspectFill' src='{{avatar}}'></image>
+   <view class='color-ba ft32' bindtap='changeAvatar'>更换头像<image class='icon_one ml10' src='http://q.img.soukong.cn/website/lyl/00_jt.png'></image></view>
+</view>
+<view class='center-float-left h100  ft32 border_b ml30 mr30'>
+    <view class='w200 color-666 '>姓<text class='pl60'>名</text><text class='color-red pl5'>*</text></view>
+    <view class='flex-1 ml20'><input class='w100' type='text' bindinput='HRNameGet' maxlength='8' placeholder='{{tipData.hrName}}' placeholder-class='color-ba' value='{{HRName}}'></input></view>
+</view>
+<view class='center-float-left h100  ft32 border_b ml30 mr30'>
+    <view class='w200 color-666 '>联系电话<text class='color-red pl5'>*</text></view>
+    <view class='flex-1 ml20'><input class='w100' type='number' bindinput='HRTelGet' maxlength='11' placeholder='{{tipData.phone}}' placeholder-class='color-ba' value='{{HRTel}}'></input></view>
+</view>
+<view class="center-float-left h100 ft32 border_b ml30 mr30">
+  <view class='w200 color-666 '>微信二维码</view>
+  <view class='flex-1 ml20 color-blue {{codeIs?"hide":""}}' bindtap='codeFun'>上传微信二维码</view>  
+  <view class='flex-1 ml30 {{codeIs?"":"hide"}}' bindtap='lookCode'><image class='icon_two' src='http://q.img.soukong.cn/website/lyl/122_ewm.png'></image></view> 
+  <view class='text-right center-float-right'>
+     <view class='pr20 color-ba {{codeIs?"":"hide"}}' bindtap='codeFun'>更换</view>
+     <image class='icon_one' src='http://q.img.soukong.cn/website/lyl/00_jt.png'></image>
+  </view>
+</view>
+<view class='pd30 pt80'>
+    <button class='btn ft32 {{finishIs?"btn_one":"bg-ddd"}}'  bindtap='sureFun'>确定</button>
+</view>
+<!--layer-->
+<view class='{{layerIs?"":"hide"}}'>
+    <view class='back_bg'></view>
+    <view class='fixedcenter w600 bg-fff border_radius_b'>
+         <view class='bg-blue h110 color-fff text-center ft38 border_radius_t'>微信二维码</view>
+         <view class='center-float-center pt100 pb100'><image class='icon_three' src='{{codeImg}}'></image></view>
+         <view class='center-float-center pb40' bindtap='colseLayer'><image class='icon_four' mode='aspectFill' src='http://q.img.soukong.cn/website/lyl/123_guanbi.png'></image></view>
+    </view>
+</view>
+<!--/layer-->

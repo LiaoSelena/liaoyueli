@@ -1,0 +1,143 @@
+<!-- 有名片ID流程 -->
+<form bindsubmit="submit" wx:if="{{flags.inShow}}">
+  <view class="box">
+    <view class="input_box">
+      <label class="flex_center label"><view>公司简称</view><text class="must">*</text></label>
+      <input placeholder="支持6个汉字" placeholder-class="place_style" maxlength="6" name="name" value="{{name}}" bindblur="name"></input>
+    </view>
+    <view class="input_box" bindtap="logo">
+      <label class="flex_center label"><view>公司logo</view><text class="must">*</text></label>
+      <view class="input_logo">
+        <view class="flex_center place_style logo_text" wx:if="{{src==''}}">请上传公司logo</view>
+        <view class="flex_center logo_control">
+          <view class="flex_center" wx:if="{{src==''}}">LOGO</view>
+          <image mode="aspectFill" class="logo" src="{{src}}" wx:else></image>
+          <image class="arrow" src="http://q.img.soukong.cn/website/yx/arrow.png"></image>
+        </view>
+      </view>
+    </view>
+    <!-- <view class="company">
+      <label class="label">公司名称</label>
+      <view>{{company}}</view>
+    </view> -->
+
+    <view class="input_box">
+      <label class="flex_center label">公司名称</label>
+      <input style="width:500rpx;" placeholder="支持30个汉字" placeholder-class="place_style" maxlength="30" name="company" value="{{company}}" bindblur="company"></input>
+    </view>
+    
+  </view>
+  <view class="box">
+    <!-- <view class="input_box">
+      <label class="flex_center label">公司行业</label>
+      <view class="trade lh100">{{trade}}</view>
+    </view> -->
+
+    <view class="flex_center industry_box">
+      <label class="flex_center label">公司行业</label>
+      <picker class="industry {{trade=='请选择'?'place_style':''}}" range="{{industryList}}" range-key="industry" bindchange="industry">{{trade}}</picker>
+      <image class="arrow" src="http://q.img.soukong.cn/website/yx/arrow.png"></image>
+    </view>
+
+    <view class="input_box">
+      <label class="flex_center label"><view>联系电话</view><text class="must">*</text></label>
+      <!-- <input placeholder="填写联系电话" placeholder-class="place_style" type="number" value="{{phone}}" name="phone" bindblur="phone"></input> -->
+      
+      <input placeholder="填写联系电话" placeholder-class="place_style" type="number" value="{{phone}}" name="phone"  disabled="true"  maxlength='11' wx:if="{{isDisabled}}"></input>
+      <input placeholder="填写联系电话" placeholder-class="place_style" type="number" value="{{phone}}" name="phone" bindblur="phone"  maxlength='11' wx:else bindinput="checkPhone"></input>
+    </view>
+    <view class="address_box" bindtap="address">
+      <label class="flex_center label"><view>公司地址</view><text class="must">*</text></label>
+      <view class="address {{address=='公司导航地址'?'place_style':''}}">{{address}}</view>
+    </view>
+
+    <view class="input_box no_border">
+      <label class="flex_center label">门牌号码</label>
+      <input placeholder="选填门牌号码" placeholder-class="place_style" name="door" value="{{door}}" bindblur="door"></input>
+    </view>
+  </view>
+  <view class="agree">
+    <image src="{{flags.agree?'http://q.img.soukong.cn/website/yx/create_yes.png':'http://q.img.soukong.cn/website/yx/create_no.png'}}"></image>
+    <view class="agree_text">本人承诺所填写信息的真实性，理解并同意 <text bindtap="read1" data-flag="old">《平台服务协议》</text><text>《法律声明》</text>的全部内容</view>
+    <view class="agree_control" bindtap="agreeControl"></view>
+  </view>
+  <button class="flex_center submit {{flags.agree?'submit_on':''}}" form-type="submit">确定</button>
+</form>
+<!-- 全新创建流程 -->
+<form bindsubmit="submitNew" wx:if="{{flags.new}}">
+  <view class="box">
+    <view class="input_box">
+      <label class="flex_center label"><view>公司简称</view><text class="must">*</text></label>
+      <input placeholder="支持6个汉字" placeholder-class="place_style" maxlength="6" name="name" value="{{name}}" bindblur="name"></input>
+    </view>
+    <view class="input_box" bindtap="logo">
+      <label class="flex_center label"><view>公司logo</view><text class="must">*</text></label>
+      <view class="input_logo">
+        <view class="flex_center place_style logo_text" wx:if="{{src==''}}">请上传公司logo</view>
+        <view class="flex_center logo_control">
+          <view class="flex_center" wx:if="{{src==''}}">LOGO</view>
+          <image mode="aspectFill" class="logo" src="{{src}}" wx:else></image>
+          <image class="arrow" src="http://q.img.soukong.cn/website/yx/arrow.png"></image>
+        </view>
+      </view>
+    </view>
+    <view class="input_box">
+      <label class="flex_center label"><view>公司名称</view><text class="must">*</text></label>
+      <input style="width:500rpx;" placeholder="支持30个汉字" placeholder-class="place_style" maxlength="30" name="company" value="{{company}}" bindblur="company"></input>
+    </view>
+  </view>
+  <view class="box">
+    <view class="input_box">
+      <label class="flex_center label"><view>您的姓名</view><text class="must">*</text></label>
+      <input placeholder="请输入姓名" placeholder-class="place_style" value="{{nickName}}" name="nickName" bindblur="nickName" maxlength="8"></input>
+    </view>
+    <view class="input_box">
+      <label class="flex_center label"><view>联系电话</view><text class="must">*</text></label>
+      <!-- <input placeholder="请输入手机号" placeholder-class="place_style" type="number" value="{{phone}}" name="phone" bindblur="phone" maxlength="11"></input> -->
+
+      <input placeholder="请输入手机号" placeholder-class="place_style" type="number" value="{{phone}}" name="phone"   disabled='true' maxlength="11" wx:if='{{isDisabled}}'></input>
+      <input placeholder="请输入手机号" placeholder-class="place_style" type="number" value="{{phone}}" name="phone" bindblur="phone" maxlength="11" wx:else bindinput="checkPhone"></input>
+      
+    </view>
+    <view class="flex_center input_box">
+      <label class="flex_center label"><view>验证码</view><text class="must">*</text></label>
+      <input placeholder="请输入验证码" placeholder-class="place_style" type="number" value="{{code}}" name="code" bindblur="code" maxlength="4"></input>
+      <view class="flex_center get_code {{flags.code?'':'get_code_bg'}}" bindtap="getCode">{{codeText}}</view>
+    </view>
+  </view>
+  <view class="box">
+    <view class="flex_center industry_box">
+      <label class="flex_center label"><view>公司行业</view><text class="must">*</text></label>
+      <picker class="industry {{trade=='请选择'?'place_style':''}}" range="{{industryList}}" range-key="industry" bindchange="industry">{{trade}}</picker>
+      <image class="arrow" src="http://q.img.soukong.cn/website/yx/arrow.png"></image>
+    </view>
+    <view class="address_box" bindtap="address">
+      <label class="flex_center label"><view>公司地址</view><text class="must">*</text></label>
+      <view class="address {{address=='公司导航地址'?'place_style':''}}">{{address}}</view>
+    </view>
+    <view class="input_box no_border">
+      <label class="flex_center label">门牌号码</label>
+      <input placeholder="选填门牌号码" placeholder-class="place_style" name="door" value="{{door}}" bindblur="door"></input>
+    </view>
+  </view>
+  <view class="agree">
+    <image src="{{flags.agree?'http://q.img.soukong.cn/website/yx/create_yes.png':'http://q.img.soukong.cn/website/yx/create_no.png'}}"></image>
+    <view class="agree_text">本人承诺所填写信息的真实性，理解并同意 <text bindtap="read1" data-flag="new">《平台服务协议》</text><text bindtap="read2" data-flag="new">《法律声明》</text>的全部内容</view>
+    <view class="agree_control" bindtap="agreeControl"></view>
+  </view>
+  <button class="flex_center submit {{flags.agree?'submit_on':''}}" form-type="submit">确定</button>
+</form>
+<!-- 法律声明 -->
+<view class="law_box" hidden="{{flags.law}}">
+  <view class="law">
+     <view class="law_hd">
+      <image src="http://q.img.soukong.cn/website/yx/law_pic.jpg"></image>
+      <text space="emsp">在使用官网小程序各项服务前，请您务必仔细阅读并理解本声明</text>
+    </view>
+    <view class="law_list" wx:for="{{lawList}}" wx:key="yangxi">
+      <view class="law_index">{{index+1}}</view>
+      <view class="law_text">{{item}}</view>
+    </view>
+  </view>
+  <view class="flex_center law_btn" bindtap="agree">我已阅读并同意</view>
+</view>

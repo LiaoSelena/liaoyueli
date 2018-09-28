@@ -1,0 +1,5 @@
+<view wx:for="{{list}}">
+  <view class="text" wx:if="{{item.contentType==1}}">{{item.content}}</view>
+  <image class="imgs" wx:if="{{item.contentType==2}}" wx:for="{{item.imgs}}" wx:for-item="imgs" src="{{imgs}}"></image>
+  <video class="videos"wx:if="{{item.contentType==3}}" src="{{item.content}}"></video>
+</view>

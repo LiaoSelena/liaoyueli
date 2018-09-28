@@ -1,0 +1,15 @@
+<import src="head.wxml"></import>
+<template name="2">
+  <view class="c_box">
+    <template is="head" data="{{from:from,index:index,data:data}}"></template>
+    <view>
+      <view class="n_list" wx:for="{{data.ModuleMediaList}}" wx:key="yangxi" bindtap="newsLink" wx:for-index="idx" data-id="{{data.ModuleMediaList[idx].mediaId}}" data-cid="{{data.ModuleMediaList[idx].columnId}}">
+        <image mode="aspectFill" src="{{item.img}}"></image>
+        <view class="flex_column_center n_list_right">
+          <view class="word_break ellipsis_two n_list_text">{{item.title}}</view>
+          <view class="n_list_time">{{item.createTime}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,12 @@
+<form bindsubmit="submit">
+  <label class="flex_center label"><text>*</text>联系人</label>
+  <input class="input" placeholder="请填写联系人姓名" placeholder-class="place_style" name="name"></input>
+  <label class="flex_center label"><text>*</text>联系电话</label>
+  <input class="input" placeholder="请输入有效的联系电话" placeholder-class="place_style" type="number" maxlength="11" name="phone"></input>
+  <label class="flex_center label"><text>*</text>营业执照</label>
+  <view class="add">
+    <image mode="aspectFill" src="{{licence}}" bindtap="choose"></image>
+    <view hidden="{{flags.choose}}" bindtap="cancel"></view>
+  </view>
+  <button class="flex_center btn" form-type="submit">完成</button>
+</form>

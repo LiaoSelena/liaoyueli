@@ -1,0 +1,39 @@
+<!--lyl/pages/person/person.wxml-->
+<!--photo-->
+<view class='img_size  center-float-center' wx:if='{{imgUrl==""}}'>
+    <view class='text-center' bindtap='changePhoto'>
+        <image class='icon_three' src='http://q.img.soukong.cn/website/lyl/icon_replace.png'></image>
+        <view class='color-666 pt10'>添加照片</view>
+    </view>
+</view>
+<view class='position-re bg-00' wx:else>
+    <view class='center-float-center'><image class='block w100' mode='widthFix' src='{{imgUrl}}'></image></view>
+    <image bindtap='changePhoto' class='icon_photo' src='http://q.img.soukong.cn/website/lyl/00_changepic1.png'></image>
+</view>
+<!--/photo-->
+<!--text-->
+<view class='pd30 bg-fff'>
+    <view class='color-666 line_height'>
+         <textarea class='w100 h348' maxlength='{{textTotal}}' value='{{text}}'  placeholder='{{tip}}' bindinput='getText' placeholder-class='color-ba'></textarea>
+         <view class='color-ba ft24 text-right'>{{textLength}}/500</view>
+    </view>
+</view>
+<!--/text-->
+<!--add video-->
+ <view class='' wx:if='{{videoSrc!=""}}'>
+   <video class='w100 h388 ' src='{{videoSrc}}'></video>
+   <!-- <view class='right-float-top'>
+       <image bindtap='addVideo' class="icon_video " src='http://q.img.soukong.cn/website/lyl/00_changevideo.png'></image>
+   </view> -->
+</view> 
+<view class='center-float-right pt20' wx:if='{{videoSrc!=""}}'>
+    <view class='center-float-right color-666 mr30 ft30' bindtap='addVideo'>
+        <image class='icon_four mr10' src='http://q.img.soukong.cn/website/lyl/37_changevideo.png'></image>更换视频
+    </view>
+    <view class='center-float-right color-666 mr30 ft30' bindtap='deleteVideo'>
+        <image class='icon_four mr10'  src='http://q.img.soukong.cn/website/lyl/37_delete.png'></image>删除视频
+    </view>
+</view>
+<view bindtap='addVideo' wx:if='{{videoSrc==""}}'><image class='icon_two' src='http://q.img.soukong.cn/website/lyl/73_addshiping.png'></image></view>
+<!--/add video-->
+<view class='bg-blue save_btn color-fff text-center ft38' bindtap='saveFun'>保存</view>

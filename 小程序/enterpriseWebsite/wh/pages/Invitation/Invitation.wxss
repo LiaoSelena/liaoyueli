@@ -1,0 +1,13 @@
+page{background:linear-gradient(#5CB8F7,#047DDB)}
+view{overflow: auto}
+.topLine{height: 32rpx;width: 652rpx;margin-top: 80rpx;border-radius: 16rpx;background: #1E6FDE;margin-left: 56rpx;}
+.colorPlan{height: 54rpx;width: 624rpx;background: linear-gradient(#2D81DF,#FFFEFE);float: left;margin-left: 72rpx;margin-top:-25rpx;border-radius: 20rpx 20rpx 0 0;}
+.main{width: 624rpx;height: 874rpx;background: #fff;margin-left: 72rpx;border-radius: 0 0 20rpx 20rpx;}
+.textcont{margin-top: 42rpx;}
+.name{text-align: center;color: #333;font-family: PingFang SC;font-size: 36rpx;font-weight: 600}
+.code{margin-left: 105rpx;width: 414rpx;height: 414rpx;margin-top: 50rpx;}
+.linebox{height: 35rpx;width: 100%;margin-top: 60rpx;}
+.leftro{float: left;height: 35rpx;width: 35rpx;border-radius:50%;background: #2f9ae9;margin-left: -17rpx;}
+.line{height: 1rpx;width: 560rpx;margin-left: 15rpx;display: inline-block;margin-bottom: 14rpx;border-bottom: 2px dotted #ccc}
+.rightro{float: right;height: 35rpx;width: 35rpx;border-radius:50%;background: #2f9ae9;margin-right: -17rpx;}
+.footText{text-align: center;margin-top: 60rpx;color: #666;font-size: 30rpx;}

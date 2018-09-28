@@ -1,0 +1,2 @@
+page{background:linear-gradient(#5CB8F7,#047DDB)}
+.bg{background: #fff;width: 600rpx;height: 600rpx;margin-left: 75rpx;margin-top: 100rpx;border-radius: 10rpx;}

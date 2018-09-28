@@ -1,0 +1,8 @@
+/* lyl/pages/teamManagementEdit/teamManagementEdit.wxss */
+@import "../../utils/lyl.wxss";
+.bg-000{ background: #000;}
+.img_size{ width: 344rpx; height: 382rpx; display: block; }
+.icon_photo{ width: 191rpx; height: 67rpx; position: absolute; right:30rpx; bottom: 30rpx;}
+.border_b{ border-bottom:#BAC8D2 1px solid;}
+.btn{ height: 88rpx; line-height: 88rpx; border-radius: 44rpx;}
+.h422{ height: 422rpx;}

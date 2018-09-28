@@ -1,0 +1,53 @@
+<import src="../../../template/column/introduction.wxml"></import>
+<import src="../../../template/column/news.wxml"></import>
+<import src="../../../template/column/product.wxml"></import>
+<import src="../../../template/column/hero.wxml"></import>
+<import src="../../../template/column/team.wxml"></import>
+<import src="../../../template/column/partner.wxml"></import>
+<import src="../../../template/column/join.wxml"></import>
+<import src="../../../template/column/us.wxml"></import>
+<import src="../../../template/menu/menu.wxml"></import>
+<import src="../../../template/overTime/overTime1.wxml"></import>
+<import src="../../template/logo.wxml"></import>
+<view wx:if="{{flags.inShow}}">
+  <view class="hd">
+    <view class="hd_overview">
+      <view class="hd_logo_box">
+        <view class="flex_center hd_logo"><image mode="aspectFill" src="{{company.logoUrl}}"></image></view>
+        <view class="flex_column_center hd_name">
+          <view class="hd_company">{{company.simpCmpyName}}</view>
+          <view class="hd_trade">{{company.industry}}</view>
+        </view>
+      </view>
+      <view class="hd_forward">
+        <view class="hd_number">{{total.forward}}</view>
+        <view class="hd_text">转发量</view>
+      </view>
+      <view class="hd_see">
+        <view class="hd_number">{{total.read}}</view>
+        <view class="hd_text">访问量</view>
+      </view>
+    </view>
+    <view class="flex_center hd_control">
+      <view class="flex_center" bindtap="set"><image class="hd_set" src="http://q.img.soukong.cn/website/yx/mag_set.png"></image>设置</view>
+      <button class="flex_center" open-type="share"><image class="hd_share" src="http://q.img.soukong.cn/website/yx/mag_share.png"></image>分享</button>
+      <view class="flex_center" bindtap="preWeb"><image class="hd_pre" src="http://q.img.soukong.cn/website/yx/mag_pre.png"></image>预览</view>
+    </view>
+  </view>
+  <view class="pass" wx:if="{{flags.authStatus}}" bindtap="toAuthStatus"><image src="http://q.img.soukong.cn/website/yx/mag_pass.png"></image></view>  
+  <view class="cover">
+    <view class="cover_hd">
+      <view class="cover_text">官网封面图(限9张)</view>
+      <view class="flex_center cover_edit" bindtap="coverLoc"><image src="http://q.img.soukong.cn/website/yx/mag_edit.png"></image>编辑</view>
+    </view>
+    <scroll-view class="cover_scroll" scroll-x="true">
+      <view class="flex_center">默认</view>
+      <image mode="aspectFill" src="{{item}}" wx:for="{{coverImg}}" wx:key="yangxi" bindtap="coverPre" data-src="{{item}}"></image>
+    </scroll-view>
+  </view>
+  <view class="template_load" hidden="{{flags.loading}}">加载中...</view> 
+  <template is="{{item.moduleType}}" data="{{from:'manage',index:index,data:item,QRCode:QRCode,mapUrl:mapUrl}}" wx:for="{{template}}" wx:key="yangxi"></template>
+  <template is="logo"></template>
+  <template is="menu" data="{{from:'manage',menu:menu}}"></template>
+  <template is="overTime1" data="{{flag:flags.overTime,mask:flags.mask}}"></template>
+</view>

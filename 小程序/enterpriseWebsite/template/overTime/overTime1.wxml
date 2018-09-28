@@ -1,0 +1,11 @@
+<!-- 查看自己企业过期 -->
+<template name="overTime1">
+  <view class="tep_overTime1" wx:if="{{flag}}">
+    <image src="http://q.img.soukong.cn/website/yx/c_overTime1.jpg"></image>
+    <view class="tep_overTime1_text1">企业官网版本已到期</view>
+    <view class="tep_overTime1_text2">请联系客服 进行续费~</view>
+    <view class="flex_center tep_overTime1_btn1" bindtap="overTime1" data-flag="call">拨打客服热线</view>
+    <view class="flex_center tep_overTime1_btn2" bindtap="overTime1" data-flag="close">关闭</view>
+  </view>
+  <view class="mask" wx:if="{{mask}}"></view>
+</template>

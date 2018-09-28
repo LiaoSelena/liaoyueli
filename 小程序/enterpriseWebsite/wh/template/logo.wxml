@@ -1,0 +1,5 @@
+<template name="logo">
+  <view class="g_logo" bindtap="logoClick">
+    <image src="http://q.img.soukong.cn/website/yx/logo.png" style="{{logo}}"></image>
+  </view>
+</template>

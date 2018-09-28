@@ -1,0 +1,71 @@
+<view class="textconts"> 
+    <view class="upcovre" bindtap="setCover" wx:if="{{cover.flag==''}}">
+       <image class="picIcon" src="http://q.img.soukong.cn/website/wh/icon_replace.png"></image>
+        <view class="pcitext" >添加封面</view>
+    </view> 
+    <image class="covre" src="{{cover.src}}" mode="aspectFill" style="display:{{Release.covreStyle}}"></image>
+    <image class="changepic"  bindtap="setCover" wx:if="{{cover.flag!=''}}" src="http://q.img.soukong.cn/website/wh/00_changepic.png"></image>
+</view>
+<view class="inputBox">
+  <input class="nameInputs" maxlength='30'  placeholder-class="inputStyle" placeholder='请输入资讯标题(限30字)' bindinput="getTitle"></input>
+</view>
+<view class="template" wx:for="{{template}}">
+    <view class="textBox" wx:if="{{item.ifTemplate=='1'}}">
+      <view class="Bar">
+        文字
+       <view class="flex_centet rigIcon">
+          <view data-indexa="{{index}}" wx:if="{{index!=0}}" bindtap="movetop"><image src="http://q.img.soukong.cn/website/wh/84_shangyi.png" class="topIcon"></image></view>
+          <view data-indexa="{{index}}" wx:if="{{index!=length-1}}" data-ss="{{length-1}}" bindtap="movedown"><image src="http://q.img.soukong.cn/website/wh/84_xiayi.png" class="btoIcon"></image></view>
+          <view data-indexa="{{index}}" bindtap="deletePlan"><image src="http://q.img.soukong.cn/website/wh/84_guanbi.png" class="deletIcon"></image></view>   
+        </view>
+      </view> 
+      <textarea placeholder="请输入文字内容" class="Inputcont" maxlength="500" data-i="{{index}}" bindinput="getcont" value="{{item.data}}"></textarea>
+    </view>
+    <view class="ImgBox" wx:if="{{item.ifTemplate=='2'}}">
+      <view class="Bar">
+        图片
+        <view class="flex_centet rigIcon">
+          <view data-indexa="{{index}}" wx:if="{{index!=0}}" bindtap="movetop"><image src="http://q.img.soukong.cn/website/wh/84_shangyi.png" class="topIcon"></image></view>
+          <view data-indexa="{{index}}" wx:if="{{index!=length-1}}" bindtap="movedown"><image src="http://q.img.soukong.cn/website/wh/84_xiayi.png" class="btoIcon"></image></view>
+          <view data-indexa="{{index}}" bindtap="deletePlan"><image src="http://q.img.soukong.cn/website/wh/84_guanbi.png" class="deletIcon"></image></view>   
+        </view>
+      </view>
+      <view class="Imgscont" >
+          <image class="Imgs" wx:for="{{item.data}}" src="{{item}}" mode="aspectFill"></image>    
+          <image class="ImgsControl" bindtap="uploadPhoto" data-i="{{index}}" style="display:{{ImgsControl}}" src="http://q.img.soukong.cn/website/wh/84_add.png"></image>
+      </view>
+    </view>
+    <view class="vidoeBox" wx:if="{{item.ifTemplate=='3'}}">
+      <view class="Bar">
+        视频
+        <view class="flex_centet rigIcon">
+          <view data-indexa="{{index}}" wx:if="{{index!=0}}" bindtap="movetop"><image src="http://q.img.soukong.cn/website/wh/84_shangyi.png" class="topIcon"></image></view>
+          <view data-indexa="{{index}}" wx:if="{{index!=length-1}}" bindtap="movedown"><image src="http://q.img.soukong.cn/website/wh/84_xiayi.png" class="btoIcon"></image></view>
+          <view data-indexa="{{index}}" bindtap="deletePlan"><image src="http://q.img.soukong.cn/website/wh/84_guanbi.png" class="deletIcon"></image></view>  
+        </view>
+      </view>
+      <video class="vidoes" src="{{item.data}}"></video>
+    </view>
+</view>
+<view wx:if="{{template.length==0}}">
+  <image src="http://q.img.soukong.cn/website/wh/fx_bland.png" class="promptImg"></image>
+  <view class="prompt">点击下面按钮开始编辑内容</view>
+</view>
+<view class="flex_centet mt66">
+<view class="flex_column_center iconBox" bindtap="addText">
+    <image src="http://q.img.soukong.cn/website/wh/icon_text.png" class="icons"></image>
+    <text class="texts">添加文字</text>
+  </view>
+  <view class="flex_column_center iconBox" bindtap="addImg">
+    <image src="http://q.img.soukong.cn/website/wh/icon_productdetails.png" class="icons"></image>
+    <text class="texts">添加图片</text>
+  </view>
+  <view class="flex_column_center" bindtap="addVideo">
+    <image src="http://q.img.soukong.cn/website/wh/00_shiping.png" class="icons"></image>
+    <text class="texts">添加视频</text>
+  </view>
+</view>
+<view class="flex_centet mt65 mb70">
+  <view class="btnOne"  bindtap="Release">发布</view>
+  <view class="btnTow" bindtap="Preview">预览</view>
+</view>

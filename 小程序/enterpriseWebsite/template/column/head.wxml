@@ -1,0 +1,11 @@
+<template name="head">
+  <view class="c_hd">
+    <view class="c_hd_text">{{data.columnName}}</view>
+    <view class="c_hd_control" wx:if="{{from=='manage'}}">
+      <view class="flex_center c_hd_control_left" data-show="{{data.moduleType}}" data-id="{{data.columnId}}" data-index="{{index}}" bindtap="Tshow"><image src="http://q.img.soukong.cn/website/yx/mag_{{data.isHide==0?'show':'hide'}}.png"></image>{{data.isHide==0?'显示':'隐藏'}}</view>
+      <view class="flex_center c_hd_control_right" data-show="{{data.moduleType}}" data-id="{{data.columnId}}" data-map="{{data.moduleMapList[0].mapId}}" bindtap="Tedit"><image src="http://q.img.soukong.cn/website/yx/mag_edit.png"></image>编辑</view>
+    </view>
+    <view wx:if="{{from=='pre'&&data.moduleType!=1&&data.moduleType!=7&&data.moduleType!=8}}" data-id="{{data.columnId}}" data-type="{{data.moduleType}}" class="flex_center c_hd_control_right c_more " bindtap='More'>查看更多<image class="c_moreIcon" src="http://q.img.soukong.cn/website/wh/00_jt.png"></image></view>
+    <view class="c_line"></view>
+  </view>
+</template>

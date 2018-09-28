@@ -1,0 +1,23 @@
+/* lyl/pages/teamManagement/teamManagement.wxss */
+@import "../../utils/lyl.wxss";
+.search_main{ position: fixed; z-index: 2;top:0;}
+.w110{  width: 100rpx;}
+.search_size{ width: 30rpx; height: 30rpx;}
+.search_box{ height: 82rpx; border-radius: 50rpx;}
+.search_close_size{ width: 28rpx; height: 28rpx;}
+.no_content_img{width:114rpx;height:156rpx; }
+.bg-9f{background: #9FB6C6}
+.pt175{ padding-top: 175rpx;}
+.avatar_size{ width: 214rpx; height: 242rpx; overflow: hidden;}
+.edit_size{ width:31rpx; height: 31rpx;}
+.icon_size{ width:24rpx; height: 24rpx;}
+.box{ position:relative; overflow:scroll; }
+.tip{ font-size:24rpx; color:#bac8d2; height:62rpx; justify-content:flex-end; margin-right:20rpx;}
+.list{ height:304rpx; width: 90%; margin-left: 5%; background-color:#fff; border-radius:10rpx; position:absolute; left:0rpx;justify-content:space-between;}
+.add{ font-size:34rpx; color:#fff; width:106rpx; height:106rpx;position:fixed; bottom:150rpx; right: 30rpx;}
+.add_size{width:106rpx; height:106rpx;}
+.transition{ transition:0.6s;}
+.no_size{width:217rpx; height: 143rpx;}
+.btn_list{ border-radius: 50rpx; height: 88rpx; line-height: 80rpx;}
+.btn_two{background:-webkit-gradient(linear, 0 0, 0 bottom, from(#579FF8), to(#57B6F8));}
+.w260{ width: 260rpx;}

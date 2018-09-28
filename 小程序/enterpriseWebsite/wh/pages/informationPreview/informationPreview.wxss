@@ -1,0 +1,11 @@
+.mask{ position:fixed; z-index:2; top:0; left:0; right:0; bottom:0; background-color:rgba(0,0,0,0.5);}
+.flex_center{ display:flex; justify-content:center; align-items:center;}
+@import "../../../template/overTime/overTime.wxss";
+.tilet{padding: 61rpx 42rpx 20rpx 36rpx;color: #333;font-size: 48rpx;}
+.name{font-size: 26rpx;color: #5CB8F7;margin-right: 32rpx;margin-left: 36rpx;}
+.time{color: #999;font-size: 26rpx;}
+.nameCont{margin-bottom: 60rpx;}
+.img{width: 690rpx;height: 388rpx;margin: 0rpx 30rpx 60rpx 30rpx;}
+.text{margin: 0rpx 42rpx 60rpx 42rpx;font-size: 32rpx;color: #333;line-height: 1.8; }
+.video{width: 690rpx;height: 388rpx;margin: 0rpx 30rpx 60rpx 30rpx;}
+.noNews{text-align: center;font-size: 32rpx;font-weight: 600;margin-top: 550rpx;}

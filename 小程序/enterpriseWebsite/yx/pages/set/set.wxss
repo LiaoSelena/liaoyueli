@@ -1,0 +1,14 @@
+@import "../../utils/yx.wxss";
+
+page{ background-color:#fff;}
+.hd{ height:198rpx; background-image:url(http://q.img.soukong.cn/website/yx/set_bg.jpg?0); background-size:750rpx 198rpx; background-repeat:no-repeat; justify-content:flex-start;}
+.logo{ width:130rpx; height:130rpx; border-radius:130rpx; border:2rpx solid #fff; margin:0 30rpx;}
+.logo view{ width:118rpx; height:118rpx; border-radius:118rpx; background-color:#fff;}
+.logo view image{ width:110rpx; height:110rpx; border-radius:110rpx;}
+.hd_text1{ font-size:32rpx; font-weight:bold; color:#fff; margin-bottom:10rpx;}
+.hd_text2{ font-size:24rpx; color:#fff;}
+.ct{ overflow:hidden;}
+.ct view{ font-size:30rpx; width:250rpx; height:210rpx; float:left; align-items:center;}
+.ct view image{ width:98rpx; height:98rpx; border-radius:50%; margin-bottom:16rpx;}
+.dot{ position:relative;}
+.dot text{ font-size:24rpx; color:#fff; padding:4rpx 6rpx; background-color:#ff0000; border:2rpx solid #fff; border-radius:10rpx 10rpx 0 10rpx; position:absolute; left:68rpx; top:30rpx;}

@@ -1,0 +1,12 @@
+<import src="head.wxml"></import>
+<template name="8">
+  <view class="c_box">
+    <template is="head" data="{{from:from,index:index,data:data}}"></template>
+    <image class="h_img" mode="widthFix" src="{{data.moduleMedia.img}}"></image>
+    <view class="h_text">{{data.moduleMedia.ModuleTextImgList[0].content}}</view>
+    <view class="h_cover" bindtap="playVideo" data-src="{{data.moduleMedia.ModuleTextImgList[1].content}}" wx:if="{{data.moduleMedia.ModuleTextImgList[1].content}}">
+      <image class="h_cover_video" mode="aspectFill" src="{{data.moduleMedia.ModuleTextImgList[1].videoUrl}}"></image>
+      <image class="h_cover_play" src="http://q.img.soukong.cn/website/yx/playVideo_play.png"></image>
+    </view>
+  </view>
+</template>

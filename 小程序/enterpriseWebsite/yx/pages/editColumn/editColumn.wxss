@@ -1,0 +1,23 @@
+@import "../../utils/yx.wxss";
+
+.label{ height:68rpx; justify-content:flex-start;}
+.label view{ font-size:32rpx; color:#ff0000; width:74rpx; height:68rpx; margin-top:10rpx; text-indent:20rpx;}
+.label text{ font-size:32rpx; color:#666; height:68rpx;}
+.input_box{ height:100rpx; background-color:#fff; justify-content:space-between;}
+.input_box input{ font-size:32rpx; height:100rpx; margin-left:74rpx;}
+.input_box view{ width:560rpx; margin-left:74rpx;}
+.input_box image{ width:42rpx; height:42rpx; margin-right:30rpx; transition:0.6s;}
+.submit{ font-size:34rpx; font-weight:bold; color:#fff; width:400rpx; height:88rpx; background:linear-gradient(#5cb8f7,#5cd4f7); border-radius:60rpx; margin:0 auto 30rpx; box-shadow:0 10rpx 30rpx rgba(92,185,247,0.5);margin-top: 80rpx;}
+.control{ min-height:394rpx; margin:20rpx;}
+.list_box{ height:528rpx; overflow:scroll; }
+.list{ width:350rpx; height:400rpx; float:left; margin-bottom:20rpx; position:relative;}
+.list:nth-of-type(odd){ margin-right:10rpx;}
+.list image{ width:338rpx; height:400rpx; border-radius:20rpx; box-shadow:0 0 10rpx rgba(221,221,221,0.5)}
+.list_btn{ font-size:30rpx; color:#999; width:240rpx; height:72rpx; border:2rpx solid #ddd; position:absolute; right:0; bottom:30rpx; border-radius:40rpx 0 0 40rpx; background-color:#fff; padding-left:20rpx;}
+.list_btn view{ width:30rpx; height:30rpx; border:2rpx solid #ddd; border-radius:50%; position:absolute; left:20rpx; top:20rpx;}
+.choose{ color:#fff; border:2rpx solid transparent; background:linear-gradient(#5cb8f7,#5cd4f7);}
+.choose view{ background-color:#5cb8f7; border:8rpx solid #fff;}
+
+.place_style{ font-size:32rpx; color:#bac6d2;}
+.on4{ color:#333;}
+.rotate{ transform:rotate(180deg);}

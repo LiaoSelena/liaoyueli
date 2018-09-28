@@ -1,0 +1,48 @@
+@import "../../utils/yx.wxss";
+
+.hd{ height:120rpx; background-color:#5cb8f7; justify-content:flex-start;}
+.hd_input{ width:600rpx; height:82rpx; background-color:#fff; border-radius:50rpx; margin-left:30rpx; justify-content:flex-start;}
+.hd_input view{ width:70rpx; height:82rpx; background-repeat:no-repeat; background-position:center center;}
+.hd_search{ background-image:url(http://q.img.soukong.cn/website/yx/listWorker_search.png); background-size:30rpx 31rpx; margin-left:10rpx;}
+.hd_cancel{ background-image:url(http://q.img.soukong.cn/website/yx/close_gray1.png); background-size:28rpx 28rpx;}
+.hd_input input{ font-size:32rpx; width:440rpx; height:82rpx;}
+.hd_btn{ color:#fff; width:120rpx; height:82rpx;}
+.list{ width:690rpx; height:160rpx; border-radius:10rpx; background-color:#fff; margin:20rpx auto 0; box-shadow:0 0 20rpx rgba(222,222,222,0.3); justify-content:space-between;}
+.list:last-child{ margin:20rpx auto 20rpx;}
+.scroll{ overflow:hidden;}
+.list image{ width:110rpx; height:110rpx; border-radius:50%; margin-left:30rpx;}
+.list_text{ font-size:32rpx; font-weight:bold; width:360rpx;}
+.list_btn{ font-size:24rpx; width:116rpx; height:54rpx; border:2rpx solid #5cb8f7; border-radius:10rpx; margin-right:30rpx;}
+.list_bind{ color:#5cb8f7; background-color:#fff;}
+.list_cancel{ color:#fff; background-color:#5cb8f7;}
+.more{ color:#666; height:68rpx;}
+.nothing{ position:absolute; top:120rpx; bottom:0; left:0; right:0; background-color:#f5f5f5; overflow:hidden;}
+.nothing image{ width:114rpx; height:156rpx; margin:100rpx auto 40rpx;}
+.nothing_text{ color:#999; text-align:center; margin-bottom:10rpx;}
+.nothing_btn{ font-size:34rpx; color:#fff; width:540rpx; height:88rpx; border-radius:50rpx; background:linear-gradient(#27a6fd,#5bb8f7); box-shadow:0 10rpx 20rpx rgba(91,184,247,0.5); margin:40rpx auto 0;}
+.aside{ width:624rpx; position:fixed; z-index:3; left:50%; margin-left:-312rpx; top:50%;}
+.aside_close{ width:58rpx; height:58rpx; position:absolute; right:25rpx; top:0;}
+.aside_line{ width:2rpx; height:52rpx; background-color:#fff; position:absolute; right:53rpx; top:58rpx;}
+.aside_form{ width:624rpx; background-color:#fff; border-radius:10rpx; position:absolute; left:0; bottom:0;}
+.aside_input{ width:542rpx; height:80rpx; border-radius:10rpx; border:2rpx solid #5cb8f7;}
+.aside_btn{ font-size:34rpx; color:#fff; width:542rpx; height:90rpx; border-radius:50rpx; background-color:#5cb8f7; margin:60rpx auto 0;}
+.apply{ height:760rpx; margin-top:-380rpx;}
+.apply_form{ height:650rpx;}
+.apply_text1{ font-size:32rpx; font-weight:bold; text-align:center; margin:80rpx 0 20rpx;}
+.apply_text2{ font-size:24rpx; color:#999; text-align:center; margin-bottom:6rpx;}
+.apply_text3{ margin-bottom:56rpx;}
+.apply_input{ margin:0 auto 30rpx; padding-left:30rpx;}
+.bind{ height:680rpx; margin-top:-340rpx;}
+.bind_form{ height:570rpx;}
+.bind_text1{ font-size:32rpx; font-weight:bold; text-align:center; margin:70rpx 0 56rpx;}
+.bind_input{ margin:0 auto; justify-content:flex-start;}
+.bind_phone{ width:22rpx; height:34rpx; margin:0 20rpx;}
+.bind_code_box{ width:542rpx; height:80rpx; justify-content:space-between; margin:30rpx auto 0;}
+.bind_code_input{ width:312rpx; justify-content:flex-start;}
+.bind_code_input input{ width:200rpx;}
+.bind_code{ width:26rpx; height:30rpx; margin:0 18rpx;}
+.bind_code_btn{ color:#fff; width:212rpx; height:80rpx; border-radius:10rpx; background-color:#5cb8f7;}
+.bind_code_btn_on{ color:#fff; width:212rpx; height:80rpx; border-radius:10rpx; background-color:#bac8d2;}
+
+.place_style{ font-size:28rpx; color:#c0d8e8;}
+.place_style2{ font-size:28rpx; color:#bac8d2;}

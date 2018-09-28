@@ -1,0 +1,25 @@
+<view wx:if="{{inShow=='2'}}">
+<import src="../../template/logo.wxml"></import>
+<scroll-view lower-threshold="50" bindscrolltolower="lower" scroll-y="true" style="height:{{lower.height}}px;">
+  <view class="list" style="min-height:{{lower.height-70}}px;">
+    <view class="lists flex_centet" wx:for="{{list}}" bindtap="browse" data-pid="{{item.productId}}">
+      <image class="imgs" src="{{item.productImg}}" mode="aspectFill"></image>
+      <view class="textconts flex_column_center">
+        <view class="tilet ellipsis_two">{{item.productName}}</view>
+        <text class="time" wx:if="{{item.amountMin==''}}">¥{{item.amountMax}}</text>
+        <text class="time" wx:if="{{item.amountMax==''}}">¥{{item.amountMin}}</text>
+        <text class="time" wx:if="{{item.amountMax!=''&&item.amountMin!=''}}">¥{{item.amountMin}}-{{item.amountMax}}</text>
+      </view>
+      <view class="dleBtn"  data-id="{{item.productId}}" catchtap="goDelete" wx:if="{{from!='pre'}}">
+          <image class="icos" src="http://q.img.soukong.cn/website/wh/list_delete.png"></image>
+      </view> 
+    </view>
+  </view>
+  <view class="pull_tip" wx:if="{{pullTipStys!=1}}">{{lower.pullTip}}</view>
+  <template is="logo"></template>
+</scroll-view>
+<view class="aadBtn" bindtap="goEstablish" wx:if="{{from!='pre'}}">
+    <image src="http://q.img.soukong.cn/website/wh/icon_added.png" class="addIcon"></image>
+ </view>
+
+ </view>

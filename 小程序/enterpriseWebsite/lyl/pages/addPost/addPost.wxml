@@ -1,0 +1,70 @@
+<!--lyl/pages/addPost/addPost.wxml-->
+<view class='bg-fff pl30 pr30'>
+   <view class='center-float-left h100  ft32 border_b'>
+        <view class='w200 color-666 '>职<text class='pl60'>务</text><text class='color-red pl5'>*</text></view>
+        <view class='flex-1 '><input class='w100' type='text' bindinput='postNameGet' maxlength='8' placeholder='请输入职务名称(限八字)' placeholder-class='color-ba' value='{{postName}}'></input></view>
+   </view>
+   <view class='center-float-left h100 ft32 border_b'>
+        <view class='w200 color-666 '>工作年限<text class='color-red pl5'>*</text></view>
+         <view class='flex-1 '><input class='w100' type='text' bindinput='postExperienceGet' value='{{postExperience}}' maxlength='20' placeholder='工作年限' placeholder-class='color-ba' ></input></view>
+   </view>  
+  <picker bindchange="educationPick" value="{{educationIndex}}" range="{{educationArray}}">
+      <view class="picker center-float-left h100 ft32">
+        <view class='w200 color-666 '>学<text class='pl60'>历</text><text class='color-red pl5'>*</text></view>
+        <view class='flex-1 ml20 {{educationIs?"color-666":"color-ba"}}'>{{educationArray[educationIndex]}}</view>
+        <view class='text-right'><image class='icon_two' src='http://q.img.soukong.cn/website/lyl/00_jt.png'></image></view>
+      </view>
+  </picker>
+  <picker bindchange="moenyPick" value="{{MoneyIndex}}" range="{{MoneyArray}}">
+      <view class="picker center-float-left h100 ft32">
+        <view class='w200 color-666 '>薪<text class='pl60'>资</text><text class='color-red pl5'>*</text></view>
+        <view class='flex-1 ml20 {{MoneyIs?"color-666":"color-ba"}}'>{{MoneyArray[moneyIndex]}}</view>
+        <view class='text-right'><image class='icon_two' src='http://q.img.soukong.cn/website/lyl/00_jt.png'></image></view>
+      </view>
+  </picker>
+</view>
+<view class='bg-fff pl30 pr30 mt30'>
+   <view class='center-float-left ft32 border_b'>
+        <view class='w200 color-666 '>岗位职责<text class='color-red pl5'>*</text></view>
+        <view class='flex-1 ml20 pt20'>
+               <textarea class='textarea_class' bindinput='postDutyGet' value='{{postDuty}}' placeholder='请输入岗位职责' placeholder-class='color-ba' maxlength='-1'></textarea>
+        </view>
+   </view>
+   <view class='center-float-left ft32 border_b'>
+        <view class='w200 color-666 '>任职要求<text class='color-red pl5'>*</text></view>
+        <view class='flex-1 ml20 pt20'>
+               <textarea class='textarea_class' bindinput='postAskGet' value='{{postAsk}}' placeholder='请输入任职要求' placeholder-class='color-ba' maxlength='-1'></textarea>
+        </view>
+   </view>    
+   <view class='center-float-left ft32 border_b'>
+        <view class='w200 color-666 '>公司福利</view>
+        <view class='flex-1 ml20 pt20'>
+               <textarea class='textarea_class' bindinput='cmpyWelfare' value='{{cmpyWelfare}}' placeholder='请输入公司福利' placeholder-class='color-ba' maxlength='-1'></textarea>
+        </view>
+   </view> 
+</view>
+<view class='bg-fff pl30 pr30 mt30 mb30'>
+   <picker mode="multiSelector" bindchange="bindMultiPickerChange" bindcolumnchange="bindMultiPickerColumnChange" value="{{timeIndex}}" range="{{timeArray}}">
+      <view class="picker center-float-left h100 ft32">
+        <view class='w200 color-666 '>工作时间</view>
+        <view class='flex-1 ml20 color-666 '>
+            <view class='{{timeIs?"":"hide"}}'>{{timeArray[0][timeIndex[0]]}} - {{timeArray[1][timeIndex[1]]}}</view>
+            <view class='color-ba {{timeIs?"hide":""}}'>请选择工作时间</view>
+        </view>
+        <view class='text-right'><image class='icon_two' src='http://q.img.soukong.cn/website/lyl/00_jt.png'></image></view>
+      </view>
+  </picker>
+  <view>
+      <view class="center-float-left h100 ft32" bindtap='chooseAddressOne'>
+        <view class='w200 color-666 '>工作地点</view>
+        <view class='flex-1 ml20 {{addrssIs?"color-666":"color-ba"}}'>{{address}}</view>
+        <view class='text-right ml20'><image class='icon_three' src='http://q.img.soukong.cn/website/lyl/31_dh.png'></image></view>
+      </view>
+  </view>
+</view>
+<view class='hide' bindtap='postDetailView'>
+    <image class='eye_img' src='http://q.img.soukong.cn/website/lyl/114_yl.png'></image>
+</view>
+<view class='pd30'>
+   <view class='btn w100 color-fff text-center ft34  {{finishIs?"btn_color":"bg-ccc"}}' bindtap='saveFun'>完成</view>
+</view>

@@ -1,0 +1,15 @@
+<import src="head.wxml"></import>
+<template name="6">
+  <view class="c_box">
+    <template is="head" data="{{from:from,index:index,data:data}}"></template>
+    <scroll-view class="t_scroll" scroll-x="true">
+      <view class="t_list" wx:for="{{data.moduleTeamList}}" wx:key="yangxi">
+        <image mode="aspectFill" src="{{item.img}}"></image>      
+        <view class="flex_column_center t_mask">
+          <view class="ellipsis_one t_name">{{item.userName}}</view>
+          <view class="ellipsis_two t_job t_cz">{{item.userJob}}</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</template>

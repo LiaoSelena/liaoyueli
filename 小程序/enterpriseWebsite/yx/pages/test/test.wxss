@@ -1,0 +1,3 @@
+.box{ height:3000rpx;}
+.bottom{ width:100%; height:98rpx; position:fixed; left:0; bottom:0; background-color:red;}
+.video{ margin-top:2000rpx;}

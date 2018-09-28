@@ -1,0 +1,55 @@
+<view wx:if="{{flags.inShow}}">
+  <view class="hd">
+    <view class="flex_center hd_search">
+      <image class="hd_search_icon" src="http://q.img.soukong.cn/website/yx/listWorker_search.png"></image>
+      <input placeholder="输入员工姓名" placeholder-class="place_style" confirm-type="search" bindconfirm="search" bindinput="input" value="{{keyWord}}" focus="{{flags.focus}}"></input>
+      <view class="hd_search_close" bindtap="clearSearch" hidden="{{flags.close}}"></view>
+    </view>
+    <view class="flex_center hd_search_btn" bindtap="search2">搜索</view>
+    <view class="hd_bg"></view>
+  </view>
+  <scroll-view style="height:{{height}}px;overflow:hidden;" scroll-y bindscrolltolower="low" lower-threshold="10" scroll-top="{{top}}" wx:if="{{!flags.nothing}}">
+    <view class="flex_center tip">{{total}}</view>
+    <view class="flex_center list" wx:for="{{list}}" wx:key="yangxi">
+      <view class="flex_center">
+        <view class="list_img_box" bindtap="see" data-use="{{item.userId}}" data-img="{{item.headImg}}" data-name="{{item.nickName}}" data-phone="{{item.phone}}" data-count="{{item.loginNumber}}" data-time="{{item.lastLoginTime}}" data-creater="{{item.isCreator}}">
+          <image class="list_img" mode="aspectFill" src="{{item.headImg}}"></image>
+          <image class="list_icon" src="http://q.img.soukong.cn/website/yx/listWorker_see.png"></image>
+        </view>
+        <view>
+          <view class="ellipsis_one list_name">{{item.nickName}}</view>
+          <view class="list_phone">{{item.phone}}</view>
+        </view>
+      </view>
+      <view class="flex_center list_right">
+        <view class="flex_center {{item.adminLevel==1?'list_cancel':'list_set'}}" wx:if="{{((item.adminLevel==1 && item.isCreator!=1)||(item.adminLevel ==0 && item.isSetAdmin==1))}}" bindtap="setManager" data-flag="{{item.adminLevel==1?'cancel':'set'}}" data-use="{{item.userId}}">{{item.adminLevel==1?'取消管理员':'设为管理员'}}</view>
+        <!-- <navigator class="flex_center list_card" wx:if="{{item.mp==1}}" target="miniProgram" app-id="{{item.appId}}" version="{{version}}" path="pages/shareIndex/shareIndex?appId={{item.appId}}&appKey={{item.appKey}}&mainUserId={{item.mainUserId}}&mp={{item.mp}}&shareIndex=1&fUserId=-1&fCardId=-1">查看名片</navigator> -->
+        <view class="flex_center list_card" bindtap="checkCard" wx:if="{{item.mp==1}}" data-app="{{item.appId}}" data-key="{{item.appKey}}" data-mp="{{item.mp}}" data-id="{{item.mainUserId}}">查看名片</view>
+      </view>
+    </view>
+    <view class="flex_center more" hidden="{{flags.more}}">{{more}}</view>
+  </scroll-view>
+  <view class="nothing" wx:else>
+    <image src="http://q.img.soukong.cn/website/yx/listWorker_nothing.jpg"></image>
+    <view>暂无数据</view>
+  </view>
+  <view class="flex_center add" bindtap="add"><image src="http://q.img.soukong.cn/website/yx/listWorker_add.png"></image></view>
+  <image class="add_tip" src="http://q.img.soukong.cn/website/yx/listWorker_tip.png" bindtap="gifClick" hidden="{{flags.gif}}"></image>
+  <view class="see_box" hidden="{{flags.see}}">
+    <image class="see_close" src="http://q.img.soukong.cn/website/yx/close_white.png" bindtap="closeSee"></image>
+    <view class="see_line"></view>
+    <view class="see">
+      <view class="see_hd"></view>
+      <image mode="aspectFill" class="see_img" src="{{dataSee.img}}"></image>
+      <view class="see_text_box">
+        <view class="ellipsis_one see_name">{{dataSee.name}}</view>
+        <view class="see_phone">{{dataSee.phone}}</view>
+        <view class="see_dashed"></view>
+        <view class="see_count">访问微官网次数：<text>{{dataSee.count}}次</text></view>
+        <view class="see_count">最后登录时间：<text>{{dataSee.time}}</text></view>
+      </view>
+      <view class="flex_center see_btn" bindtap="delete" data-use="{{dataSee.userId}}" hidden="{{dataSee.creater==1}}">删除该员工</view>
+    </view>
+  </view>
+  <view class="mask" hidden="{{flags.see}}" bindtap="closeSee"></view>
+</view>

@@ -1,0 +1,15 @@
+<view wx:if="{{flags.inShow}}">
+  <view class="flex_center tip">按上下箭头可以改变顺序哦~</view>
+  <view class="box" style="height:{{height}}px;">
+    <view class="flex_center list {{transition}}" style="top:{{item.top}}rpx;" wx:for="{{list}}" wx:key="yangxi">
+      <view class="flex_center list_left" bindtap="edit" data-id="{{item.id}}">
+        <view>{{item.name}}</view><text class="flex_center {{item.hide?'hide':'show'}}">{{item.hide?'已隐藏':'展示中'}}</text>
+      </view>
+      <view class="flex_center list_right">
+        <view class="up" hidden="{{item.index==0}}" data-i="{{item.index}}" bindtap="up"></view>
+        <view class="down" hidden="{{item.index==list.length-1}}" data-i="{{item.index}}" bindtap="down"></view>
+      </view>
+    </view>
+  </view>
+  <view class="flex_center add" bindtap="add">添加栏目</view>
+</view>

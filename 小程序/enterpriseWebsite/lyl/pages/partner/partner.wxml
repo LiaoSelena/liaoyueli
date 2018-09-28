@@ -1,0 +1,16 @@
+<import src="../../../template/overTime/overTime1.wxml"></import>
+<import src="../../../template/overTime/overTime2.wxml"></import>
+<view class='left-float-top left-float-topbr pr30 pb30' >
+     <view class='w33 box-sizing pl30 pt50 position-re text-center' wx:if='{{mainData!=""}}' wx:for='{{mainData}}'>
+          <image class='img_size' mode='aspectFill' src='{{item.partnerLogo}}'></image>
+           <image class='close_size' wx:if="{{style=='edit'}}" bindtap='deleteFun' data-partnerid='{{item.partnerId}}' data-index='{{index}}' src='http://q.img.soukong.cn/website/lyl/00_qingchu.png'></image> 
+          <image class='icon_size' wx:if="{{style=='edit'}}" bindtap='edit' data-style='edit' data-partnerid='{{item.partnerId}}'src='http://q.img.soukong.cn/website/lyl/000_icon_qianbi.png'></image>
+          <view class='color-666 ft24 text-center pt10 apostrophe-one'>{{item.partnerName}}</view>
+     </view>
+    <view class='w33 box-sizing pl30 pt50 position-re text-center'wx:if="{{style=='edit'}}" bindtap='edit' data-style='add' >
+          <image class='img_size' src='http://q.img.soukong.cn/website/lyl/000icon_tianjia.png'></image>
+          <view class='color-666 ft24 text-center pt10 apostrophe-one'>添加</view>
+     </view>
+</view>
+<template is="overTime1" data="{{flag:flags.overTime,mask:flags.mask}}" wx:if="{{flags.fromManage}}"></template>
+<template is="overTime2" data="{{flag:flags.overTime,mask:flags.mask}}" wx:if="{{flags.fromOther}}"></template>

@@ -1,0 +1,8 @@
+<!--lyl/pages/contactUs/contactUs.wxml-->
+<view class='pd30'>
+  <textarea class='h400 color-666' placeholder='请输入联系信息（限100字）' maxlength='100' value='{{content}}' bindinput='getText' placeholder-class='color-ba'></textarea>
+  <view class='pb30 color-666' wx:if='{{address!=""}}'>地址 : {{address}}</view>
+  <view class='dh_box center-float-center color-blue' bindtap='chooseAddress'><image class='icon_one mr5' src='http://q.img.soukong.cn/website/lyl/31_dh.png'></image>导航</view>
+  <view class='btn text-center ft34 mt50  {{content=="" || address==""?"bg-66":"btn_bg"}}' bindtap='save'>保存</view>
+</view>
+

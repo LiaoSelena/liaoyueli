@@ -1,0 +1,6 @@
+<!--lyl/pages/personInfoEdit/personInfoEdit.wxml-->
+<view class='bg-fff pd30 position-re'>
+   <textarea class='w100' maxlength='50' value='{{text}}'  placeholder='{{tip}}' bindinput='getText'></textarea>
+   <view class='color-ba ft24 text-right'>{{textLength}}/50</view>
+</view>
+<view class='btn_one color-fff text-center ft36 mr30 ml30 mt50' bindtap='saveFun'>确定</view>

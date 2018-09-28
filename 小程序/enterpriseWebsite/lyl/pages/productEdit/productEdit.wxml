@@ -1,0 +1,57 @@
+<!--lyl/pages/productEdit/productEdit.wxml-->
+<view>
+    <!--banner-->
+    <view class=' center-float-center banner_size bg-666' wx:if='{{bannerUrl==""}}'>
+        <view class='text-center' bindtap='bannerUp'>
+            <image class='icon_three' src='http://q.img.soukong.cn/website/lyl/icon_replace.png'></image>
+            <view class='color-666 pt10'>添加照片</view>
+        </view>
+    </view>
+    <view class='position-re bg-666 banner_size ' wx:else>
+       <view class='center-float-center'><image mode='aspectFill' class='w100 banner_size' src='{{bannerUrl}}'></image></view>
+       <image class='icon_photo' bindtap='bannerUp' src='http://q.img.soukong.cn/website/lyl/00_changepic1.png'></image>
+    </view>
+    <!--/banner-->
+    <!--info-->
+    <view class='ft32'>
+       <view class='color-666 h100 pl30'>产品名称</view>
+       <view class='center-float-left bg-666 h100 pl10'><input class='w100' type='text' maxlength='32' placeholder='产品名称' placeholder-class='color-ba' value='{{productName}}' bindinput='productNameGet'></input></view>
+       <!--产品价格-->
+        <view class='color-666 h100 pl30'>产品价格</view>
+       <view class='center-float-left'>
+         <view class='center-float-left flex-1 bg-666 h100 pl10 pr30'>
+              <input class='w100' type='digit' maxlength='10' value='{{productPriceMin}}' bindinput='productPriceMinGet' placeholder='请填写价格' placeholder-class='color-ba'></input>元
+         </view>
+         <view class='color-ba pl30 pr30'>至</view>
+         <view class='center-float-left flex-1 bg-666 h100 pl10 pr30'>
+              <input class='w100' type='digit' maxlength='10' bindinput='productPriceMaxGet' value='{{productPriceMax}}' placeholder='请填写价格'  placeholder-class='color-ba'></input>元
+          </view>
+       </view>
+       <!--/产品价格-->
+       <!--产品详情-->
+       <view class='color-666 h100 pl30'>产品详情</view>
+       <view class='pb100'>
+            <textarea class='bg-666 w100 box-sizing pd30' placeholder='请输入产品描述' placeholder-class='color-ba' value='{{productContent}}' bindinput='productContent'></textarea>
+            <view class='position-re bg-666' wx:if='{{productImg!=""}}' wx:for='{{productImg}}'>
+              <image class='w100 block ' mode='widthFix'  src='{{item}}'></image>
+              <view class='icon_photo_box' bindtap='changeImg' data-index='{{index}}'>
+                 <image class='icon_photo_one'  src='http://q.img.soukong.cn/website/lyl/icon_replace.png'></image>
+                 <view class='color-blue ft24'>更换图片</view>
+              </view>
+            </view>
+            <view class='center-float-center bg-fff mb60 pb50 pt100'>
+                <!-- <view class='pr100'>
+                  <image class='icon_one' src='http://q.img.soukong.cn/website/lyl/icon_text.png'></image>
+                  <view class='color-999 ft24 text-center'>添加文字</view>
+                </view> -->
+                <view class='' bindtap='imgUp'>
+                  <image class='icon_one' src='http://q.img.soukong.cn/website/lyl/icon_productdetails.png'></image>
+                  <view class='color-999 ft24 text-center'>添加图片</view>
+                </view>
+            </view>
+       </view>
+       <!--产品详情-->
+    </view>
+    <!--info-->
+    <view class='bg-blue save_btn w100 color-fff text-center ft38' bindtap='save'>保存</view>
+</view>

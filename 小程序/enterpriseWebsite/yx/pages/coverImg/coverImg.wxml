@@ -1,0 +1,23 @@
+<view class="list_box" style="height:{{height}}px" hidden="{{!flags.no}}">
+  <view class="list {{transition}}" wx:for="{{list}}" wx:key="yangxi" style="top:{{item.top}}rpx;">
+    <image mode="aspectFill" src="{{item.img}}" bindtap="control" data-i="{{item.index}}"></image>
+    <view class="flex_center default" wx:if="{{item.default}}">默认</view>
+    <view class="flex_center control" hidden="{{item.control}}">
+      <view class="flex_column_center" data-i="{{item.index}}" bindtap="change"><image src="http://q.img.soukong.cn/website/yx/coverImg_img.png"></image>更换</view>
+      <view class="flex_column_center" hidden="{{flags.up}}" data-i="{{item.index}}" bindtap="up"><image src="http://q.img.soukong.cn/website/yx/coverImg_up.png"></image>上移</view>
+      <view class="flex_column_center" hidden="{{flags.down}}" data-i="{{item.index}}" bindtap="down"><image src="http://q.img.soukong.cn/website/yx/coverImg_down.png"></image>下移</view>
+      <view class="flex_column_center" hidden="{{flags.delete}}" data-i="{{item.index}}" bindtap="delete"><image src="http://q.img.soukong.cn/website/yx/coverImg_delete.png"></image>删除</view>
+    </view>
+  </view>
+</view>
+<view class="btn" hidden="{{!flags.no}}">
+  <view class="flex_center" bindtap="save"><image src="http://q.img.soukong.cn/website/yx/coverImg_save.png"></image>保存修改</view>
+  <view class="flex_center" style="background-color:#{{flags.add?'':'ddd'}};" bindtap="add"><image src="http://q.img.soukong.cn/website/yx/coverImg_add.png"></image>添加图片</view>
+  <text></text>
+</view>
+<view class="nothing" hidden="{{flags.no}}">
+  <image src="http://q.img.soukong.cn/website/yx/coverImg_no.jpg"></image>
+  <view class="no_text1">官网封面图被清空啦~</view>
+  <view class="no_text2">添加官网封面图，让您的企业更优雅</view>
+  <view class="flex_center no_add" bindtap="add">添加</view>
+</view>

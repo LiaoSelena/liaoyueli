@@ -1,0 +1,86 @@
+<!--pages/officialNetworkSearch/officialNetworkSearch.wxml-->
+<!--search-->
+<view class='bg-blue pt30 pb30 center-float-left search_main w100'>
+   <view class='bg-fff flex-1 center-float-left search_box pl30 pr30 ml30 mr30'>
+      <image class='search_size' src='http://q.img.soukong.cn/website/lyl/00_search.png'></image>
+      <input class='flex-1 ml20' type='text' confirm-type='search' value='{{searchVal}}' placeholder='|  请输入要绑定的企业名称' placeholder-class='color-ba' bindinput='searchValFun' bindconfirm='searchFun'></input>
+      <view class='{{serchCloaseIs?"":"hide"}}' bindtap='searchColseFun'><image class='search_close_size' src='http://q.img.soukong.cn/website/lyl/00_qingchu.png'></image></view>
+   </view>
+   <view wx:if='{{searchVal!=""}}' class='mr20'>
+    <view class='w110  ft30 color-fff {{serchCloaseIs?"":"hide"}}' bindtap='searchFun'>搜索</view>
+    <view class='w110  ft30  color-fff {{serchCloaseIs?"hide":""}}' bindtap='searchColseFun'>取消</view>
+   </view>
+</view>
+ <view class='pt155 pb20 pl30 ft26 search_main' wx:if="{{cmpyData!=''}}">未认证的企业无法进行绑定</view> 
+<!--/search-->
+<view class='text-center pt205' wx:if='{{!emptyIs && cmpyData==""}}'>请输入你要绑定的官网名称搜索，搜索后进行绑定~~</view>
+<scroll-view class='pt205'  wx:if="{{cmpyData!=''}}" scroll-y style="height: {{height}}px;"  bindscrolltolower="lower" bindscroll="scroll" >
+  <!--list-->
+  <view class='center-float-left bg-fff ml30 mr30 border-r pd30 mb30'  wx:for='{{cmpyData}}'>
+      <view class='position-re'>
+          <image class='img_size' src='{{item.logo}}'></image>
+          <view class=' color-fff text-center position-ab-b {{item.authStatus=="0"?"bg-9f":"bg-red"}}'>
+             <text wx:if='{{item.authStatus=="0"}}'>未认证</text>
+             <text wx:if='{{item.authStatus=="1"}}'>已认证</text>
+          </view>
+      </view>
+      <view class='flex-1 ml30 mr30'>
+          <view class='ft30 apostrophe-two'>{{item.simpCmpyName}}</view>
+          <view class='color-666 ft24 pt10'>{{item.industry}}</view>
+      </view>
+      <view class='center-float-right ft24' wx:if='{{item.authStatus=="1"}}'>
+          <view class='btn_box text-center color-fff bg-red' bindtap='untie' data-cmpyid="{{item.cmpyId}}" wx:if='{{item.bindStatus=="1"}}' data-index='{{index}}'>解绑</view>
+          <view class='btn_box text-center color-fff bg-fff color-red' bindtap='binding' data-cmpyid="{{item.cmpyId}}"  wx:if='{{item.bindStatus=="0"}}'  data-index='{{index}}'>绑定</view>
+      </view>
+  </view>
+  <!--/list-->
+</scroll-view>
+<!--绑定layer-->
+<view class='black_bg w100 {{bindingLayer?"":"hide"}}'></view>
+<view class='fixedcenter layer {{bindingLayer?"":"hide"}}'>
+    <view class='center-float-right'><image bindtap='bindingLayerCloseFun' class='colse_size' src='http://q.img.soukong.cn/website/lyl/icon_deleteimg.png'></image></view>
+    <view class='center-float-right'><view class='line bg-fff'></view></view>
+    <view class='bg-fff pl40 pr40 pt70 pb70'>
+        <view class='text-center ft32 pb60'>绑定企业微官网</view>
+        <form bindsubmit='regietrtSubmit'>
+            <view class='center-float-left  input_box {{loginData.telBg?"border_blue":"border_ba"}}'>
+                <image class='img_size_one ml30' wx:if='{{!loginData.telBg}}' src='http://q.img.soukong.cn/website/lyl/00_wgw_phonegray.png'></image>
+                <image class='img_size_one ml30' wx:else src='http://q.img.soukong.cn/website/lyl/00_wgw_phonelan.png'></image>
+                <input class='flex-1' type='number' value='{{tel}}' bindinput='telFun' maxlength='11' name='tel' placeholder='请输入手机号码' placeholder-class='color-ba'></input>
+            </view>
+            <view class='center-float-left pt30 pb60'>
+              <view class='flex-1 center-float-left input_box {{loginData.codeInputBg?"border_blue":"border_ba"}}'>
+                    <image class='img_size_one ml30 ' wx:if='{{!loginData.codeInputBg}}' src='http://q.img.soukong.cn/website/lyl/00_wgw_yzmgray.png'></image>
+                    <image class='img_size_one ml30 ' wx:if='{{loginData.codeInputBg}}' src='http://q.img.soukong.cn/website/lyl/00_wgw_yzmlan.png'></image>
+                    <input class='flex-1' type='number' name='code' bindinput='codeFun' placeholder='验证码' placeholder-class='color-ba'></input>
+              </view>
+              <view class='ml30'>
+                  <button class='color-fff button_class {{loginData.codeBg?"bg-blue":"bg-ba"}}' bindtap='getCodeFun' disabled="{{loginData.codeDis}}" >
+                    {{loginData.codeText}}
+                    <text hidden="{{loginData.codeText == '获取验证码' || loginData.codeText == '重新获取'}}">S</text>
+                  </button>
+              </view>
+            </view>
+            <button class='w100  btn_sure text-center color-fff {{loginData.sureBg?"bg-blue":"bg-ba"}}' formType="submit">确定</button>
+        </form>
+    </view>
+</view>
+<!--/绑定layer-->
+<!--no_content-->
+<view class='pd100 pt275' wx:if="{{cmpyData=='' && emptyIs==true}}" >
+   <!-- <view class='center-float-center'><image class='no_content_img' src='http://q.img.soukong.cn/website/lyl/no_blank.png'></image></view>
+   <view class='text-center color-999 pt60 pb60'>抱歉，没有找到相关企业官网</view>
+   <view class='center-float-center'>
+      <view class='bg-blue color-fff btn_sure w100 text-center' bindtap='creatNetwork'>+ 快速创建微官网</view>
+   </view> -->
+   <view class='ft32 font-w pb50'>暂未搜索到相关官网</view>
+   <view class='pb30'>未搜索到的原因：</view>
+   <view class='pb10'>1. 暂未匹配到您所搜索的官网，换个搜索词试试</view>
+   <view>2. 你搜索的官网不存在，请先去创建官网，再进
+ 行绑定</view>
+  <view class='center-float-center pt100'>
+      <view class='color-blue border_blue btn_no center-float-center ft32' bindtap='searchColseFun'>重新搜索</view>
+      <!-- <view class='color-blue border_blue btn_no center-float-center ft32 ml50' bindtap='creatNetwork'>创建官网</view> -->
+  </view>
+</view>
+<!--/no_content-->

@@ -1,0 +1,4 @@
+<view bindtap='screenshot' style="display:{{onshowflag}}">
+<canvas class="bg" canvas-id="QRcode" >
+</canvas>
+</view>

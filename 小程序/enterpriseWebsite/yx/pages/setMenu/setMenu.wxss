@@ -1,0 +1,23 @@
+@import "../../utils/yx.wxss";
+
+.label{ height:68rpx; justify-content:flex-start;}
+.label view{ font-size:32rpx; color:#ff0000; width:74rpx; height:68rpx; margin-top:10rpx; text-indent:20rpx;}
+.label text{ font-size:32rpx; color:#666; height:68rpx;}
+.input_box{ height:100rpx; background-color:#fff; justify-content:space-between;}
+.input_box input{ font-size:32rpx; height:100rpx; margin-left:74rpx;}
+.input_box view{ width:560rpx; margin-left:74rpx;}
+.input_box image{ width:42rpx; height:42rpx; margin-right:30rpx; transition:0.6s;}
+.submit{ font-size:34rpx; font-weight:bold; color:#fff; width:400rpx; height:88rpx; background:linear-gradient(#5cb8f7,#5cd4f7); border-radius:60rpx; margin:0 auto 30rpx; box-shadow:0 10rpx 30rpx rgba(92,185,247,0.5);}
+.control{ min-height:394rpx; overflow:hidden;}
+.control_btn_box{ margin:30rpx 30rpx 20rpx; justify-content:space-between;}
+.control_btn{ font-size:30rpx; color:#999; width:288rpx; height:80rpx; padding-left:20rpx; border:2rpx solid #ddd; border-radius:40rpx; background-color:#fff; position:relative;}
+.on{ color:#5cb8f7; border:2rpx solid #5cb8f7;}
+.control_btn view{ width:30rpx; height:30rpx; border:2rpx solid #ddd; border-radius:50%; position:absolute; left:20rpx; top:24rpx;}
+.control_btn .on2{ border:8rpx solid #5cb8f7;}
+.choose{ width:720rpx; height:528rpx; background-color:#eaeaea; margin:0 auto 36rpx; overflow:scroll; padding-bottom:20rpx;}
+.choose view{ font-size:30rpx; width:288rpx; height:80rpx; border-radius:40rpx; background-color:#fff; margin-left:15rpx; margin-top:20rpx;}
+.choose .on3{ color:#fff; background-color:#5cb8f7;}
+
+.place_style{ font-size:32rpx; color:#bac6d2;}
+.on4{ color:#333;}
+.rotate{ transform:rotate(180deg);}

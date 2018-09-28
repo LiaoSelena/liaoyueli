@@ -1,0 +1,9 @@
+<!-- 查看他人企业过期 -->
+<template name="overTime2">
+  <view class="tep_overTime2" wx:if="{{flag}}">
+    <image src='http://q.img.soukong.cn/website/yx/c_overTime2.jpg'></image>
+    <view class='tep_overTime2_text'>您访问的企业官网服务已关闭</view>
+    <view class="flex_center tep_overTime2_btn" bindtap='tep_overTime2'>我知道了</view>
+  </view>
+  <view class="mask" wx:if="{{mask}}"></view>
+</template>

@@ -1,0 +1,31 @@
+page{ background-color:#f5f5f5;}
+view,text,label,input,textarea,button{ font-family:'Microsoft YaHei'; font-size:28rpx; color:#333; box-sizing:border-box; line-height:1;}
+input{ height:auto; min-height:auto;}
+button{ padding:0; border-radius:0; background-color:transparent;}
+button::after{ border:0;}
+image{ display:block;}
+.ellipsis_one{ text-overflow:ellipsis; white-space:nowrap; overflow:hidden; line-height:1.3;}
+.ellipsis_two{ overflow:hidden; text-overflow:ellipsis; display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:2; line-height:1.3;}
+.flex_center{ display:flex; justify-content:center; align-items:center;}
+.flex_column_center{ display:flex; flex-direction:column; justify-content:center;}
+.word_break{ word-break:break-all;}
+.arial{ font-family:'arial';}
+@import "../../../template/column/public.wxss";
+@import "../../../template/menu/menu.wxss";
+/* 底部LOGO */
+.g_logo{ overflow:hidden; background-color:#fff;}
+.g_logo image{ width:169rpx; height:64rpx; margin:28rpx auto 126rpx;}
+
+/* 透明蒙板 */
+.mask{ position:fixed; z-index:2; top:0; left:0; right:0; bottom:0; background-color:rgba(0,0,0,0.5);}
+@import "../../../template/overTime/overTime.wxss";
+.banner{position: relative}
+.slide-image{width: 750rpx;height: 1108rpx;}
+.editIcon,.shareIcon{width: 80rpx;height: 80rpx;position: fixed;right: 50rpx;z-index: 999}
+.shareBtn{width: 80rpx;height: 80rpx;position: fixed;right: 50rpx;z-index: 1000;bottom:145rpx;opacity: 0}
+.editIcon{bottom: 241rpx;}
+.shareIcon{bottom: 145rpx;}
+.returnIcon{width: 130rpx;height: 130rpx;position: fixed;right: 30rpx;top: 820rpx;}
+.c_box:first-child{margin-top: 0;}
+.JtIcon{width: 58rpx;height: 58rpx;position: absolute;bottom: 70rpx;left: 50%;margin-left: -29rpx;}
+

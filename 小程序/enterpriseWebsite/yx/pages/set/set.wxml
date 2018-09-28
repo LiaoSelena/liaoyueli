@@ -1,0 +1,17 @@
+<view class="flex_center hd">
+  <view class="flex_center logo"><view class="flex_center"><image mode="aspectFill" src="{{img}}"></image></view></view>
+  <view>
+    <view class="hd_text1">{{name}}</view>
+    <view class="hd_text2">{{time}} 到期</view>
+  </view>
+</view>
+<view class="ct">
+  <view class="flex_column_center" bindtap="setCompany"><image mode="aspectFill" src="http://q.img.soukong.cn/website/yx/set_icon1.png"></image>信息设置</view>
+  <view class="flex_column_center" bindtap="setColumn"><image mode="aspectFill" src="http://q.img.soukong.cn/website/yx/set_icon2.png"></image>栏目设置</view>
+  <view class="flex_column_center dot" bindtap="setBind"><image mode="aspectFill" src="http://q.img.soukong.cn/website/yx/set_icon3.png"></image>查看绑定<text class="flex_center" wx:if="{{num!=0}}">{{num}}</text></view>
+  <view class="flex_column_center" bindtap="setWorker"><image mode="aspectFill" src="http://q.img.soukong.cn/website/yx/set_icon4.png"></image>员工管理</view>
+  <view class="flex_column_center" bindtap="setCode"><image mode="aspectFill" src="http://q.img.soukong.cn/website/yx/set_icon5.png"></image>官网小程序码设置</view>
+  <view class="flex_column_center" bindtap="setName"><image mode="aspectFill" src="http://q.img.soukong.cn/website/yx/set_icon6.png"></image>实名认证</view>
+  <view class="flex_column_center" bindtap="mineWeb"><image mode="aspectFill" src="http://q.img.soukong.cn/website/yx/set_icon7.png"></image>我的官网</view>
+  <view class="flex_column_center" bindtap="bindShop"><image mode="aspectFill" src="http://q.img.soukong.cn/website/yx/set_icon8.png"></image>关联店铺</view>
+</view>

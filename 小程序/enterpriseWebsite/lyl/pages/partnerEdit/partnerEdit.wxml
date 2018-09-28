@@ -1,0 +1,23 @@
+<!--lyl/pages/partnerEdit/partnerEdit.wxml-->
+<view class='ml30 mr30 mb30 mt30 pb30 bg-fff border_radius pl30' wx:for="{{logoArr}}" wx:if='{{box}}'>
+   <view class='top-lr-scatter  pt30 pb30'>
+       <view class='color-666 ft32'><text class='color-red mr5'>*</text>合作企业名称</view>
+       <view class='bg-blue color-fff icon_bg text-center'>{{index+1}}</view>
+   </view>
+   <view class='input_bg mr30 mb30 center-float-left pl20 pr20'><input class='w100' placeholder='| 请输入合作企业名称' value='{{item.name}}' placeholder-class='color-ba'  bindinput='partnerName' data-index='{{index}}' maxlength='8'></input></view>
+   <view class='top-lr-scatter  pt30 pb30'>
+       <view class='color-666 ft32'><text class='color-red mr5'>*</text>合作企业LOGO</view>
+   </view>
+   <view class=' mr30 mb30 pl20 pr20 position-re'>
+       <view class='position-re icon_one'>
+          <image class='icon_one' bindtap='logoUp' mode='aspectFill' src='{{item.logoUrl}}' data-index='{{index}}'></image>
+          <image class='icon_colse {{item.logoDelete?"":"hide"}}' bindtap='logoDelete' data-index='{{index}}' src='http://q.img.soukong.cn/website/lyl/icon_deleteimg.png'></image>
+       </view>
+       <view class='delete_box {{item.itemsDelete?"":"hide"}}' data-index='{{index}}' bindtap='deleteItems' >
+        <image class='icon_delete' src='http://q.img.soukong.cn/website/lyl/icon_delete.png'></image>
+        <view class='color-ba ft24 text-center'>删除</view>
+       </view>
+   </view>
+</view>
+<view class='center-float-right pt50 pr30 pb150' wx:if='{{style=="add"}}'><image bindtap='addItems' class='icon_add' src='http://q.img.soukong.cn/website/lyl/icon_added.png'></image></view>
+<view class='color-fff save w100 text-center ft34' bindtap='saveFun'>保存</view>

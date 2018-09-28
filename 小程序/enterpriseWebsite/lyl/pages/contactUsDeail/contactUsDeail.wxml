@@ -1,0 +1,14 @@
+<!--lyl/pages/contactUsDeail/contactUsDeail.wxml-->
+<view wx:if='{{detailData!=""}}'>
+  <map id='myMap' class='w100 h422' bindtap='navigation'></map>
+  <view class='top-lr-scatter pd30 center-float-center'>
+    <view class='flex-1 pr50'>
+      <text class='color-666 line_heigt'>{{detailData.content}}</text>
+      <view class='color-666 line_heigt'>地址 : {{detailData.address}}</view>
+     </view>
+    <view class='w184 text-center'>
+        <image class='img_size' src='{{detailData.appQrCodeUrl}}'></image>
+        <view class='color-666 ft24'>识别二维码实时关注{{cpyName}}</view>
+    </view>
+  </view>
+</view>

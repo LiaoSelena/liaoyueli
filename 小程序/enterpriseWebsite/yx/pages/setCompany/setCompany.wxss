@@ -1,0 +1,29 @@
+@import "../../utils/yx.wxss";
+
+page{ background:#fff;}
+.hd{ height:250rpx; position:relative;}
+.hd_bg{ width:750rpx; height:144rpx; position:absolute; left:0; top:0;}
+.hd_white{ width:750rpx; height:136rpx; background-color:#fff; border-radius:30rpx 30rpx 0 0; position:absolute; left:0; bottom:0;}
+.hd_logo{ width:168rpx; height:168rpx; border:6rpx solid #fff; border-radius:20rpx; position:absolute; left:38rpx; top:24rpx; box-sizing:border-box;}
+.hd_edit{ width:64rpx; height:64rpx; border-radius:50%; position:absolute; left:170rpx; top:146rpx; box-sizing:border-box;}
+.input_box{ height:100rpx; margin:0 30rpx; border-bottom:2rpx solid #e6edf2;}
+.label{ width:180rpx; font-size:32rpx; color:#666; height:100rpx; float:left; justify-content:flex-start;}
+.label view{ font-size:32rpx; color:#666;}
+.must{ font-size:32rpx; color:#ff0000; margin-top:10rpx; margin-left:4rpx;}
+.input_box input{ width:350rpx; font-size:32rpx; height:100rpx; float:left;}
+.company{ min-height:100rpx; margin:0 30rpx; overflow:hidden;}
+.company .label{ height:auto; margin-top:36rpx; line-height:1.3;}
+.company view{ font-size:32rpx; width:480rpx; float:left; padding:36rpx 0; line-height:1.3;}
+.trade{ font-size:32rpx; height:100rpx; float:left;}
+.address_box{ min-height:100rpx; margin:0 38rpx 0 30rpx; overflow:hidden; background-image:url(http://q.img.soukong.cn/website/yx/create_address.png); background-repeat:no-repeat; background-size:27rpx 31rpx; background-position:right center; border-bottom:2rpx solid #e6edf2;}
+.address_box .label{ height:40rpx; margin-top:36rpx; line-height:1.3; overflow:hidden;}
+.address{ font-size:32rpx; width:420rpx; float:left; padding:36rpx 0; line-height:1.3;}
+.submit{ font-size:34rpx; color:#fff; width:690rpx; height:88rpx; background:linear-gradient(#418fee,#41a8ee); border-radius:60rpx; margin:60rpx auto; box-shadow:10rpx -5rpx 20rpx rgba(65,168,238,0.3);}
+.industry_box{ height:100rpx; margin:0 30rpx; border-bottom:2rpx solid #e6edf2; justify-content:flex-start;}
+.industry{ width:490rpx;}
+picker{ font-size:32rpx; color:#333;}
+.arrow{ width:11rpx; height:20rpx;}
+
+.place_style{ font-size:32rpx; color:#bac8d2;}
+.no_border{ border-bottom:0;}
+.colorb3{ color:#b3b3b3;}

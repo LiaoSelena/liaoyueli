@@ -1,0 +1,6 @@
+/* lyl/pages/personInfoEdit/personInfoEdit.wxss */
+@import "../../utils/lyl.wxss";
+page{ background: #f5f5f5;}
+.number{ position: absolute; bottom: 30rpx; right: 30rpx;}
+.btn_one{ height:88rpx; line-height: 80rpx; border-radius: 100rpx;
+ background:-webkit-gradient(linear, 0 0, 0 bottom, from(#26A6FD), to(#5CB8F7));}

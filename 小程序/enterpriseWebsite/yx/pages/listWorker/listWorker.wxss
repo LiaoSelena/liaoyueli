@@ -1,0 +1,45 @@
+@import "../../utils/yx.wxss";
+
+.hd{ height:140rpx; background-color:#5cb8f7; position:relative; overflow:hidden;}
+.hd_search{ width:600rpx; height:82rpx; border-radius:50rpx; background-color:#fff; margin:22rpx 0 22rpx 30rpx; justify-content:flex-start;}
+.hd_search_icon{ width:30rpx; height:31rpx; margin:0 20rpx 0 40rpx;}
+.hd_search input{ width:440rpx; height:82rpx;}
+.hd_search_close{ width:60rpx; height:82rpx; background-image:url(http://q.img.soukong.cn/website/yx/close_gray1.png); background-repeat:no-repeat; background-size:28rpx 28rpx; background-position:center center;}
+.hd_search_btn{ font-size:32rpx; color:#fff; width:120rpx; height:82rpx; position:absolute; right:0; top:22rpx;}
+.hd_bg{ width:750rpx; height:14rpx; background-color:#fff; border-radius:10rpx 10rpx 0 0; position:absolute; left:0; bottom:0;}
+.tip{ color:#999; height:48rpx; letter-spacing:4rpx; background-color:#fff;}
+.list{ height:160rpx; justify-content:space-between; background-color:#fff;}
+.list_right{ margin-right:30rpx;}
+.list_img_box{ width:100rpx; height:110rpx; position:relative; margin:0 14rpx 0 30rpx;}
+.list_img{ width:100rpx; height:100rpx; border-radius:50%;}
+.list_icon{ width:32rpx; height:32rpx; position:absolute; right:10rpx; bottom:0;}
+.list_name{ font-size:32rpx; font-weight:bold; width:280rpx; margin-bottom:10rpx;}
+.list_phone{ font-size:32rpx; color:#999;}
+.list_set,.list_card,.list_cancel{ font-size:24rpx; height:54rpx; border:2rpx solid #5cb8f7; border-radius:10rpx;}
+.list_set{ color:#fff; width:146rpx; background-color:#5cb8f7;}
+.list_card{ color:#5cb8f7; width:116rpx; background-color:#fff; margin-left:14rpx;}
+.list_cancel{ color:#5cb8f7; width:146rpx; background-color:#fff;}
+.more{ color:#666; height:68rpx;}
+.add{ width:106rpx; height:106rpx; background-color:#5cb8f7; border-radius:50%; position:fixed; left:50%; margin-left:-53rpx; bottom:28rpx; box-shadow:0 0 30rpx #5cb8f7;}
+.add image{ width:50rpx; height:50rpx;}
+.add_tip{ width:334rpx; height:99rpx; position:fixed; left:50%; margin-left:-167rpx; animation:run 2s infinite ease-in-out;}
+@keyframes run{0%{bottom:144rpx;}50%{bottom:124rpx;}100%{bottom:144rpx;}}
+.see_box{ width:572rpx; height:790rpx; position:fixed; z-index:3; left:50%; margin-left:-286rpx; top:50%; margin-top:-395rpx;}
+.see_close{ width:58rpx; height:58rpx; position:absolute; top:0; right:0;}
+.see_line{ width:2rpx; height:52rpx; background-color:#fff; position:absolute; right:28rpx; top:58rpx;}
+.see{ width:572rpx; height:680rpx; border-radius:10rpx; background-color:#fff; position:absolute; left:0; bottom:0; overflow:hidden;}
+.see_hd{ height:190rpx; background-color:#5cb8f7;}
+.see_img{ width:168rpx; height:168rpx; border:6rpx solid #fff; box-sizing:border-box; border-radius:50%; position:absolute; left:50%; margin-left:-84rpx; top:88rpx;}
+.see_text_box{ width:446rpx; margin:84rpx auto 0; overflow:hidden;}
+.see_text_box view{ text-align:center;}
+.see_name{ font-size:32rpx; font-weight:bold; margin-bottom:10rpx;}
+.see_phone{ font-size:32rpx; color:#999;}
+.see_dashed{ border:2rpx dashed rgba(192,192,192,0.5); margin:40rpx 0 30rpx;}
+.see_count{ font-size:26rpx; color:#999; margin-bottom:20rpx;}
+.see_count text{ font-size:26rpx; color:#5cb8f7;}
+.see_btn{ font-size:34rpx; color:#fff; width:266rpx; height:90rpx; border-radius:50rpx; background-color:#5cb8f7; margin:20rpx auto 0;}
+.nothing{ position:absolute; top:140rpx; bottom:0; left:0; right:0; background-color:#fff; overflow:hidden;}
+.nothing image{ width:320rpx; height:180rpx; margin:140rpx auto 30rpx;}
+.nothing view{ font-size:32rpx; color:#999; text-align:center;}
+
+.place_style{ font-size:28rpx; color:#c0d8e8;}

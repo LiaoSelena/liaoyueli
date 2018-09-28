@@ -1,0 +1,17 @@
+page{background: linear-gradient(#5CB8F7,#047DDB);}
+view{overflow: auto}
+.flex_centet{ display:flex; justify-content:center; align-items:center;}
+.flex_column_center{ display:flex; flex-direction:column; justify-content:center;}
+.mask{width: 656rpx;height: 810rpx;background-color:rgba(255,255,255,0.5);border-radius: 35rpx;margin-left: 50rpx;margin-top: 100rpx}
+.main{width: 610rpx;height: 768rpx;margin: 20rpx;background: #fff;}
+.logo{height: 124rpx;width: 124rpx;left: 315rpx;position: absolute;top: 53rpx;z-index: 5;border:2px solid #fff;border-radius: 10rpx;}
+.name{text-align: center;color: #333333;font-size: 34rpx;font-weight: 600;}
+.plan{margin-top: 42rpx;}
+.icons{width: 28rpx;height: 38rpx;margin-bottom: 30rpx;margin-right: 25rpx;}
+.plan .codes{height: 32rpx}
+.line{ width:450rpx; height: 80rpx;border-bottom:2rpx solid #BAC8D2;position: relative;}
+.line input{ font-size:32rpx;}
+.fonts{font-size: 32rpx;color: #BAC8D2}
+.registerBtn{width: 478rpx;height: 88rpx;background-color: #5CB8F7;color: #fff;text-align: center;font-size: 34rpx;border-radius: 44rpx;line-height: 88rpx;margin-left: 66rpx;margin-top: 72rpx;}
+.codeInput{width: 150rpx;}
+.codeBtn{width: 155rpx;height: 55rpx;color: #5CB8F7;background: #fff;font-size: 24rpx;border-radius: 27rpx;line-height: 55rpx;text-align: center;border:1px solid #5CB8F7;position: absolute;right: 0;top: 0;z-index: 5}

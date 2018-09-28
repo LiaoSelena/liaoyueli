@@ -1,0 +1,7 @@
+<view class="img-v">
+ <view class="img" wx:for="{{imgs}}" wx:for-item="item" wx:key="*this">
+  <image src="{{item}}" data-index="{{index}}" mode="aspectFill" bindtap="previewImg"></image>
+  <view class="delete-btn" data-index="{{index}}" catchtap="deleteImg"></view>
+ </view>
+ <view class="upload-img-btn" bindtap="chooseImg"></view>
+</view>

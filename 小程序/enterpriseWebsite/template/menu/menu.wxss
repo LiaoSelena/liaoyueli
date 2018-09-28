@@ -1,0 +1,12 @@
+.menu_box{ position:fixed; z-index:3; left:0; bottom:-2rpx;}
+.menu_show{ font-size:34rpx; color:#fff; width:750rpx; height:98rpx; background-color:#5cb8f7;}
+.menu{ width:750rpx; height:98rpx; background-color:#fff; border-top:2rpx solid #ddd; display:flex;}
+.menu view{ height:98rpx; float:left; border-right:2rpx solid #ddd; flex:1;}
+.menu view:last-child{ border-right:0;}
+.menu_add{ font-size:60rpx; color:#5cb8f7; margin-top:-4rpx;}
+.menu_control{ width:750rpx; height:98rpx; position:fixed; z-index:3; left:750rpx; bottom:118rpx;}
+.menu_control view{ font-size:26rpx; color:#fff; width:98rpx; height:98rpx; border-radius:50%; background-color:rgba(0,0,0,0.8); margin-right:28rpx;}
+.menu_control view:last-child{ margin-right:0;}
+.run_rotate{ transform:rotate(-360deg); transition:1s cubic-bezier(0.22, 0.61, 0.36, 1);}
+.run_left{ left:0; transition:1s cubic-bezier(0.22, 0.61, 0.36, 1);}
+

@@ -1,0 +1,3 @@
+<!--pages/support/support.wxml-->
+<!-- <text>pages/support/support.wxml</text> -->
+<web-view src="https://weiwebsite.soukong.com/weiwebsite/support.html"></web-view>

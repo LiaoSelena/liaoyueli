@@ -1,0 +1,17 @@
+@import "../../utils/yx.wxss";
+
+.tip{ font-size:24rpx; color:#bac8d2; height:62rpx; justify-content:flex-end; margin-right:20rpx;}
+.box{ position:relative; overflow:scroll;}
+.list{ width:710rpx; height:120rpx; background-color:#fff; border-radius:10rpx; position:absolute; left:20rpx; justify-content:space-between;}
+.list_left{ width:500rpx; margin-left:20rpx; justify-content:flex-start;}
+.list_left view{ font-size:32rpx; width:280rpx;}
+.list_left text{ width:120rpx; height:46rpx; border-radius:30rpx;}
+.show{ color:#5cb8f7; border:2rpx solid #5cb8f7;}
+.hide{ color:#fff; border:2rpx solid #ddd; background-color:#ddd;}
+.list_right{ margin-right:10rpx;}
+.up,.down{ width:58rpx; height:120rpx; background-repeat:no-repeat; background-position:center center; background-size:24rpx 24rpx;}
+.up{ background-image:url(http://q.img.soukong.cn/website/yx/setColumn_up.png);}
+.down{ background-image:url(http://q.img.soukong.cn/website/yx/setColumn_down.png);}
+.add{ font-size:34rpx; color:#fff; width:750rpx; height:98rpx; background-color:#5cb8f7; position:fixed; left:0; bottom:0;}
+
+.transition{ transition:0.6s;}

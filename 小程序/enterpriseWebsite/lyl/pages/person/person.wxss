@@ -1,0 +1,19 @@
+/* lyl/pages/person/person.wxss */
+@import "../../utils/lyl.wxss";
+page{ background: #fff;}
+.img_size{  height: 422rpx; }
+.line_height{ line-height: 160%;}
+.icon_photo{ width: 191rpx; height: 67rpx; position: absolute; right:30rpx; bottom: 30rpx;}
+.icon_one{width: 31rpx; height: 31rpx;}
+.edit_box{ position: absolute;right: 30rpx; bottom: 30rpx; width: 100rpx;
+ background: linear-gradient(to right, rgba(245,245,245,0.8), rgba(245,245,245,1));}
+ .save_btn{ width: 600rpx; margin: 150rpx auto 50rpx auto; height: 88rpx; line-height: 88rpx;border-radius: 50rpx;}
+ .icon_two{ width: 114rpx; height: 131rpx; position: fixed; right: 0; bottom: 200rpx;}
+ .h388{ height: 388rpx;}
+ .h348{ height: 348rpx;}
+.h422{ height: 422rpx;}
+ .icon_three{  width: 84rpx; height: 84rpx;}
+ .block{display: block;}
+ .icon_video{ width: 191rpx; height: 67rpx; display: block}
+.icon_four{ width: 30rpx; height:30rpx;}
+.bg-000{ background: rgba(0, 0, 0, 0.5)}

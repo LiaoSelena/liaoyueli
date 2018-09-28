@@ -1,0 +1,17 @@
+<import src="head.wxml"></import>
+<template name="7">
+  <view class="c_box">
+    <template is="head" data="{{from:from,index:index,data:data}}"></template>
+    <image class="u_map" mode="aspectFill" src="{{mapUrl[index].moduleMapList[0].mapUrl}}" bindtap="playMap" data-longitude="{{data.moduleMapList[0].markers[0].longitude}}" data-latitude="{{data.moduleMapList[0].markers[0].latitude}}" data-markers="{{data.moduleMapList[0].markers}}" data-address="{{data.moduleMapList[0].markers[0].address}}"></image>
+    <view class="u_box">
+      <text class="flex_column_center u_left">{{data.moduleMapList[0].content}}</text>
+      <view class="flex_column_center u_right">
+        <image src="{{QRCode}}" bindtap="usPre" data-img="{{QRCode}}"></image>
+        <view>
+          <view>识别二维码实时</view>
+          <view>关注{{data.moduleMapList[0].markers[0].label.content}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

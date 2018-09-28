@@ -1,0 +1,14 @@
+<!--lyl/pages/teamManagementEdit/teamManagementEdit.wxml-->
+<view class='position-re w100 bg-000'>
+    <view class='center-float-center'><image mode='aspectFill' class='w100 h422' src='{{imgUrl}}'></image></view>
+    <image bindtap='changePhoto' class='icon_photo' src='http://q.img.soukong.cn/website/lyl/00_changepic.png'></image>
+</view>
+<view class='center-float-left bg-fff ft32 pd30 border_b'>
+   <view class='color-666 mr30'>姓名</view>
+   <input class='flex-1' placeholder='{{tipName}}' value='{{userName}}' maxlength='15' bindinput='getUserName'  placeholder-class='color-333'></input>
+</view>
+<view class='center-float-left bg-fff ft32 pd30'>
+   <view class='color-666 mr30'>职位</view>
+   <input class='flex-1' placeholder='{{tipJob}}' value='{{userJob}}' maxlength='30' bindinput='getUserJob' placeholder-class='color-333'></input>
+</view>
+<view class='bg-blue color-fff text-center btn ft34 ml80 mr80 mt80' bindtap='btnTeam'>保存</view>

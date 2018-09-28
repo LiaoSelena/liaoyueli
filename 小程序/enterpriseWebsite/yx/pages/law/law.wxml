@@ -1,0 +1,9 @@
+<view class="hd">
+  <image src="http://q.img.soukong.cn/website/yx/law_pic.jpg"></image>
+  <text space="emsp">在使用官网小程序各项服务前，请您务必仔细阅读并理解本声明</text>
+</view>
+<view class="list" wx:for="{{list}}">
+  <view class="index">{{index+1}}</view>
+  <view class="text">{{item}}</view>
+</view>
+<view class="flex_center btn">我已阅读并同意</view>

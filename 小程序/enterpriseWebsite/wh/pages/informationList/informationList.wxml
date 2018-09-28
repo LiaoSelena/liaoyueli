@@ -1,0 +1,19 @@
+<view wx:if="{{inShow=='2'}}">
+<import src="../../template/logo.wxml"></import>
+<scroll-view lower-threshold="10" bindscrolltolower="lower" scroll-y="true" style="height:{{lower.height}}px;">
+  <view class="list" style="min-height:{{lower.height-60}}px;">
+    <view class="lists flex_centet" wx:for="{{list}}" wx:key="wanghai" bindtap="goEdit" wx:for-index="index" data-index="{{index}}" data-i="{{item.mediaId}}" style="background-color:{{item.listStyle}}">
+      <image class="imgs" src="{{item.img}}"mode="aspectFill"></image>
+      <view class="textconts flex_column_center">
+        <view class="tilet ellipsis_two"style="color:{{item.tiletStyle}}">{{item.title}}</view>
+        <text class="time" style="color:{{item.timeStyle}}">{{item.createTime}}</text>
+      </view>
+    </view>
+  </view>
+  <view class="pull_tip" wx:if="{{pullTipStys!=1}}">{{lower.pullTip}}</view>
+  <template is="logo"></template>
+</scroll-view>
+<view class="releaseBtn" bindtap="goRelease" wx:if="{{from!='pre'}}">
+    <image src="http://q.img.soukong.cn/website/wh/icon_Release.png" class="releaseIcon"></image>
+</view>
+</view>

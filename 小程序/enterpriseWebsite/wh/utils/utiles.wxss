@@ -1,0 +1,2 @@
+.g_logo{ overflow:hidden; background-color:#fff;}
+.g_logo image{ width:169rpx; height:64rpx; margin:28rpx auto 126rpx;}

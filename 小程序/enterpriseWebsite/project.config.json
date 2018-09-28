@@ -1,0 +1,185 @@
+{
+	"description": "项目配置文件。",
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "1.9.94",
+	"appid": "wx725ccb3359ac796d",
+	"projectname": "enterpriseWebsite_test",
+	"svr": "",
+	"client": "",
+	"qcloudRoot": "",
+	"miniprogramRoot": "",
+	"pluginRoot": "",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 23,
+			"list": [
+				{
+					"id": 0,
+					"name": "我的官网",
+					"pathName": "lyl/pages/officialNetwork/officialNetwork",
+					"query": "mainUserId=2018021214101534810211"
+				},
+				{
+					"id": 1,
+					"name": "产品编辑",
+					"pathName": "lyl/pages/productEdit/productEdit",
+					"query": "productId=30&cmpyId=11&columnId=11&style=edit"
+				},
+				{
+					"id": 2,
+					"name": "领军人物",
+					"pathName": "lyl/pages/person/person",
+					"query": "columnId=11&cmpyId=1155"
+				},
+				{
+					"id": 3,
+					"name": "领军人物编辑",
+					"pathName": "lyl/pages/personInfoEdit/personInfoEdit",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "加入我们",
+					"pathName": "lyl/pages/joinUs/joinUs",
+					"query": "columnId=380&cmpyId=1207&style=edit"
+				},
+				{
+					"id": 5,
+					"name": "添加招聘岗位",
+					"pathName": "lyl/pages/addPost/addPost",
+					"query": "id=320&style=edit"
+				},
+				{
+					"id": 6,
+					"name": "预览招聘详情",
+					"pathName": "lyl/pages/postDetailView/postDetailView",
+					"query": "id=14&style=c"
+				},
+				{
+					"id": -1,
+					"name": "HR信息编辑",
+					"pathName": "lyl/pages/HRinfoEdit/HRinfoEdit",
+					"query": ""
+				},
+				{
+					"id": 8,
+					"name": "合作伙伴编辑",
+					"pathName": "lyl/pages/partnerEdit/partnerEdit",
+					"query": ""
+				},
+				{
+					"id": 9,
+					"name": "搜索官网(mainUserId)",
+					"pathName": "lyl/pages/officialNetworkSearch/officialNetworkSearch",
+					"query": "cmpyName=益阳xxxxx&id=1155&mainUserId=2018020614590624910543"
+				},
+				{
+					"id": 10,
+					"name": "团队管理",
+					"pathName": "lyl/pages/teamManagement/teamManagement",
+					"query": "columnId=187&cmpyId=1189"
+				},
+				{
+					"id": -1,
+					"name": "123",
+					"pathName": "yx/pages/setColumn/setColumn",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "管理团队编辑",
+					"pathName": "lyl/pages/teamManagementEdit/teamManagementEdit",
+					"query": ""
+				},
+				{
+					"id": 13,
+					"name": "合作伙伴列表",
+					"pathName": "lyl/pages/partner/partner",
+					"query": "style=edit&columnId=5&cmpyId=1155"
+				},
+				{
+					"id": 14,
+					"name": "联系我们",
+					"pathName": "lyl/pages/contactUs/contactUs",
+					"query": "cmpyId=1155&columnId=11&mapId=2"
+				},
+				{
+					"id": -1,
+					"name": "产品列表",
+					"pathName": "wh/pages/productList/productList",
+					"query": ""
+				},
+				{
+					"id": 16,
+					"name": "团队详情",
+					"pathName": "lyl/pages/team/team",
+					"query": "columnId=25&cmpyId=1"
+				},
+				{
+					"id": 17,
+					"name": "联系我们详情",
+					"pathName": "lyl/pages/contactUsDeail/contactUsDeail",
+					"query": "mapId=2"
+				},
+				{
+					"id": 18,
+					"name": "领军人物详情",
+					"pathName": "lyl/pages/personDetail/personDetail",
+					"query": "columnId=33&cmpyId=1155"
+				},
+				{
+					"id": 19,
+					"name": "官网创建",
+					"pathName": "yx/pages/manage/manage",
+					"query": "from=card&cmpyId=1018051810142486"
+				},
+				{
+					"id": 20,
+					"name": "创建官网1549",
+					"pathName": "yx/pages/create/create",
+					"query": "mainUserId=2018070415133879610840&cardId=1549&from=DLS"
+				},
+				{
+					"id": 21,
+					"name": "搜索官网(电话号码查询)",
+					"pathName": "lyl/pages/officialNetworkSearch/officialNetworkSearch",
+					"query": "cmpyName=益阳xxxxx&id=1823&tel=13975146092"
+				},
+				{
+					"id": -1,
+					"name": "创建官网名片入口",
+					"pathName": "yx/pages/create/create",
+					"query": "id=4605&phone=18973845240"
+				},
+				{
+					"id": 23,
+					"name": "搜索官网(电话号码查询11)",
+					"pathName": "lyl/pages/officialNetworkSearch/officialNetworkSearch",
+					"query": "id=1665&tel=13975146092"
+				}
+			]
+		}
+	}
+}

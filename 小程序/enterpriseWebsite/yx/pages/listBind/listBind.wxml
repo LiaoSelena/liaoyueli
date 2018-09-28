@@ -1,0 +1,25 @@
+<view wx:if="{{flags.inShow}}">
+  <view class="flex_center total" wx:if="{{!flags.nothing}}"><text></text>共{{total}}人</view>
+  <scroll-view style="height:{{height}}px;" scroll-y bindscrolltolower="low" lower-threshold="10" scroll-top="{{top}}" wx:if="{{!flags.nothing}}">
+    <view class="list" wx:for="{{list}}" wx:key="yangxi">
+      <view class="flex_center list_left">
+        <image mode="aspectFill" src="{{item.headImg}}"></image>
+        <view class="flex_column_center list_left_box">
+          <view class="ellipsis_one list_text1">{{item.nickName}}</view>
+          <view class="list_text2">{{item.phone}}</view>
+          <view class="list_text3">{{item.createTime}}</view>
+        </view>
+      </view>
+      <view class="flex_center list_right">
+        <!-- <navigator class="flex_center list_card" target="miniProgram" app-id="{{item.appId}}" path="pages/shareIndex/shareIndex?appId={{item.appId}}&appKey={{item.appKey}}&mainUserId={{item.mainUserId}}&mp={{item.mp}}&shareIndex=1&fUserId=-1&fCardId=-1" version="{{version}}">查看名片</navigator> -->
+        <view class="flex_center list_card" bindtap="card" data-app="{{item.appId}}" data-key="{{item.appKey}}" data-mp="{{item.mp}}" data-id="{{item.mainUserId}}" wx:if="{{item.mp==1}}">查看名片</view>
+        <view class="flex_center list_remove" bindtap="remove" data-i="{{index}}" data-use="{{item.userId}}" wx:if="{{item.type!=2}}">解除绑定</view>
+      </view>
+    </view>
+    <view class="flex_center more" hidden="{{flags.more}}">{{more}}</view>
+  </scroll-view>
+  <view class="nothing" wx:if="{{flags.nothing}}">
+    <image src="http://q.img.soukong.cn/website/yx/listBind_nothing.jpg?0"></image>
+    <view>暂无数据</view>
+  </view>
+</view>

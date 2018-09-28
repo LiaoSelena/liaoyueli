@@ -1,0 +1,7 @@
+<image src="http://q.img.soukong.cn/website/wh/suecc.jpg" class="bigImg"></image>
+<view class="cont">恭喜您成为{{cmpyName}}的员工</view>
+<view class="codeBox flex_centet">
+  <image class="codeImg" src="http://q.img.soukong.cn/website/wh/taiyangma.png" bindtap="showCode"></image>
+  <text class="texts" space="ensp">请您识别左侧小程序码创建   个人名片信息，绑定企业官网!</text>
+</view>
+

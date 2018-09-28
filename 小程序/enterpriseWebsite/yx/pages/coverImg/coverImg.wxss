@@ -1,0 +1,20 @@
+@import "../../utils/yx.wxss";
+
+page{ background-color:#fff;}
+.list_box{ width:690rpx; position:absolute; z-index:1; left:30rpx; top:30rpx; overflow:scroll;} 
+.list{ width:690rpx; height:388rpx; position:absolute; left:0;}
+.list image{ width:690rpx; height:388rpx; border-radius:10rpx;}
+.default{ font-size:20rpx; color:#fff; width:60rpx; height:24rpx; background-color:#5cb8f7; border-radius:0 10rpx 10rpx 0; position:absolute; z-index:1; left:0; top:12rpx;}
+.btn{ width:100%; height:98rpx; position:fixed; z-index:2; left:0; bottom:0;}
+.btn view{ font-size:34rpx; color:#fff; width:50%; height:98rpx; float:left; background-color:#5cb8f7;}
+.btn text{ width:2rpx; height:70rpx; background-color:#ddd; position:absolute; left:377rpx; top:14rpx;}
+.btn view image{ width:36rpx; height:36rpx; margin-right:15rpx;}
+.control{ width:100%; height:100%; background-color:rgba(0,0,0,0.2); position:absolute; left:0; top:0;}
+.control view{ font-size:24rpx; color:#fff; width:120rpx; height:120rpx; background-color:#000; border-radius:50%; align-items:center; margin:0 14rpx;}
+.control view image{ width:34rpx; height:34rpx; margin-bottom:10rpx;}
+.nothing image{ width:328rpx; height:248rpx; margin:140rpx auto 50rpx;}
+.no_text1{ font-size:34rpx; font-weight:bold; text-align:center;}
+.no_text2{ font-size:26rpx; color:#999; text-align:center; margin:20rpx 0 110rpx;}
+.no_add{ font-size:34rpx; font-weight:bold; color:#fff; width:324rpx; height:98rpx; background:linear-gradient(#2ca2f9,#4fb4f8); border-radius:50rpx; margin:0 auto;}
+
+.transition{ transition:0.6s;}

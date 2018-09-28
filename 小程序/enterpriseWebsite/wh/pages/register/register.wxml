@@ -1,0 +1,30 @@
+<view class="mask">
+<form bindsubmit="submit">
+  <view class="main"> 
+    <image class="logo" src="{{logoUrl}}"></image>
+    <view class="name" style='margin-top: 90rpx;'>{{name}}搜空集团</view>
+    <view class="name">邀请您成为其员工</view>
+    <view class="flex_centet plan">
+      <image class="icons" src="http://q.img.soukong.cn/website/wh/nameIcon.png"></image>
+      <view class="line">
+        <input placeholder-class="fonts" placeholder="请输入您的姓名" name="name"></input>
+      </view>
+    </view>
+    <view class="flex_centet plan">
+      <image class="icons" src="http://q.img.soukong.cn/website/wh/whPhoneicon.png"></image>
+      <view class="line">
+        <input placeholder-class="fonts" placeholder="请输入您的电话" maxlength='11' name="phone" bindinput="getMobi" value="{{morenPhone}}" type="number"></input>
+        <view class="codeBtn" bindtap="getVcode" style="color:{{bindPhone.color}};border:{{bindPhone.border}}">{{bindPhone.verifyCodeTime}}</view>
+      </view>
+    </view>
+    <view class="flex_centet plan">
+      <image class="icons codes" src="http://q.img.soukong.cn/website/wh/whCodeicon.png"></image>
+      <view class="line">
+        <input placeholder-class="fonts" placeholder="请输入验证码" maxlength='4' name="code" type="number"></input>
+      </view>
+    </view>
+     <button class="registerBtn" form-type="submit">注册</button>
+  </view>
+ </form>
+</view>
+

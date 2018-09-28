@@ -1,0 +1,17 @@
+<import src="head.wxml"></import>
+<template name="5">
+  <view class="c_box">
+    <template is="head" data="{{from:from,index:index,data:data}}"></template>
+    <view class="p_box">
+      <view class="p_list" wx:for="{{data.ModuleProductList}}" wx:key="yangxi" wx:for-index="idx" data-id="{{data.ModuleProductList[idx].productId}}" bindtap='goProduct'>
+        <image mode="aspectFill" src="{{item.productImg}}"></image>
+        <view class="flex_column_center p_list_box">
+          <view class="ellipsis_one">{{item.productName}}</view>
+          <view class="ellipsis_one p_list_money" wx-if="{{!item.amountMin}}"><text>￥</text>{{item.amountMax}}</view>
+          <view class="ellipsis_one p_list_money" wx-if="{{!item.amountMax}}"><text>￥</text>{{item.amountMin}}</view>
+          <view class="ellipsis_one p_list_money" wx-if="{{item.amountMin&&item.amountMax}}"><text>￥</text>{{item.amountMin}}-<text>￥</text>{{item.amountMax}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

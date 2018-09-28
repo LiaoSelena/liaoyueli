@@ -1,0 +1,12 @@
+<import src="head.wxml"></import>
+<template name="4">
+  <view class="c_box">
+    <template is="head" data="{{from:from,index:index,data:data}}"></template>
+    <view class="pa_box">
+      <view class="flex_column_center pa_list" wx:for="{{data.ModulePartnerList}}" wx:key="yangxi">
+        <image mode="aspectFill" src="{{item.partnerLogo}}"></image>
+        <view class="ellipsis_one">{{item.partnerName}}</view>
+      </view>
+    </view>
+  </view>
+</template>

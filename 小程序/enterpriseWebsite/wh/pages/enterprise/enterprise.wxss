@@ -1,0 +1,3 @@
+page{padding-top: 30rpx;}
+.text{margin: 0 40rpx 35rpx 40rpx;color: #666;font-size: 28rpx;line-height: 2}
+.imgs,.videos{width: 690rpx;height: 388rpx;border-radius: 15rpx;margin: 0 30rpx 35rpx 30rpx;}

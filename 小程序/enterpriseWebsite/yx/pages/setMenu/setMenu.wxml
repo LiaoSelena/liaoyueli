@@ -1,0 +1,30 @@
+<form bindsubmit="submit">
+  <label class="flex_center label">
+    <view class="flex_center">*</view>
+    <text class="flex_center">底部菜单名称</text>
+  </label>
+  <view class="input_box">
+    <input placeholder="输入底部菜单名称最多4个汉字" placeholder-class="place_style" maxlength="4" name="name" value="{{value}}"></input>
+  </view>
+  <label class="flex_center label" wx:if="{{flags.default}}">
+    <view class="flex_center">*</view>
+    <text class="flex_center">跳转链接</text>
+  </label>
+  <view class="flex_center input_box" wx:if="{{flags.default}}">
+    <view class="ellipsis_one place_style {{linkName!='请选择跳转链接'?'on4':''}}">{{linkName}}</view>
+  </view>
+  <view class="control">
+    <view class="flex_center control_btn_box" hidden="{{flags.btn}}" wx:if="{{flags.default}}">
+      <view class="flex_center control_btn {{flags.list?'':'on'}}" bindtap="showColumn">
+        <view class="{{flags.list?'':'on2'}}"></view>跳转至栏目
+      </view>
+      <view class="flex_center control_btn" bindtap="showNews">
+        <view></view>跳转至资讯
+      </view>
+    </view>
+    <view class="choose" hidden="{{flags.list}}">
+      <view class="ellipsis_one flex_center {{item.flag?'on3':''}}" wx:for="{{columnList}}" wx:key="yangxi" bindtap="chooseColumn" data-name="{{item.name}}" data-index="{{index}}">{{item.name}}</view>
+    </view>
+  </view>
+  <button class="flex_center submit" form-type="submit">保存</button> 
+</form>

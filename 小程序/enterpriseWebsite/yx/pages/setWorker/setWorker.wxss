@@ -1,0 +1,12 @@
+@import "../../utils/yx.wxss";
+
+.hd{ height:192rpx; background-image:url(http://q.img.soukong.cn/website/yx/setWorker_bg.jpg); background-size:100%; justify-content:flex-start;}
+.hd image{ width:124rpx; height:124rpx; box-sizing:border-box; border:4rpx solid #fff; border-radius:20rpx; margin:0 20rpx 0 30rpx;}
+.hd_text1{ font-size:34rpx; font-weight:bold; color:#fff; margin-bottom:22rpx;}
+.hd_text2{ color:#fff;}
+.list{ height:120rpx;}
+.list_left{ width:126rpx; height:120rpx; float:left;}
+.list_left image{ width:74rpx; height:74rpx;}
+.list_right{ width:624rpx; height:120rpx; float:left; justify-content:space-between; border-bottom:2rpx solid #e6edf2;}
+.list_right view{ font-size:32rpx;}
+.list_right image{ width:11rpx; height:20rpx; margin-right:35rpx;}

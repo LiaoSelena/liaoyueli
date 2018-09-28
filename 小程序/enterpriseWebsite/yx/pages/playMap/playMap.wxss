@@ -1,0 +1,4 @@
+@import "../../utils/yx.wxss";
+
+.map{ width:750rpx; height:776rpx;}
+.back{ font-size:32rpx; color:#fff; width:690rpx; height:98rpx; background-color:#5cb8f7; border-radius:10rpx; margin:20rpx auto;}

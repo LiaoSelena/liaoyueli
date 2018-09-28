@@ -1,0 +1,29 @@
+<view class="searchBox flex_centet">
+  <image src="http://q.img.soukong.cn/website/wh/00_search.png" class="searchIcon"></image>
+  <input placeholder="请输入官网名称" class="searchInput" placeholder-style='color:#BAC8D2' confirm-type="search" bindconfirm="searchGW" bindinput="searchValFun" value='{{searchInput}}'></input>
+  <image src="http://q.img.soukong.cn/website/lyl/00_qingchu.png" class="closeIcon" wx:if="{{serhflag!=1}}" catchtap='deleteInput'></image>
+  <view class="searchText" wx:if="{{serhflag!=1}}" bindtap="searchGW">搜索</view>
+</view>
+<view class="pt130"></view>
+<scroll-view  style="height:{{height}}px;" scroll-y bindscrolltolower="low" lower-threshold="10">
+<view class="List">
+  <view class="Lists flex_centet" wx:for="{{list}}" data-cmpyId="{{item.cmpyId}}" bindtap="Record">
+    <image class="Logo" src="{{item.logo}}"></image>
+    <view class="textCont">
+      <view class="name">{{item.cmpyName}}官网</view>
+      <view class="industry">{{item.industry}}</view>
+    </view>
+    <image class="arrowIcon" src="http://q.img.soukong.cn/website/wh/00_jt.png"></image>
+  </view>
+  <!-- <view class="pt150"></view> -->
+  <view class="flex_centet list_more" wx:if="{{flags.more}}">{{moreText}}</view>
+  <view class="list_nothing" wx:if="{{flags.nothing}}">暂无数据</view>
+</view>
+</scroll-view>
+<view class="kbox" wx:if="{{kongShow==1}}">
+  <image src="http://q.img.soukong.cn/website/wh/kongbai.png" class="kbImg"></image>
+  <view class="font">抱歉，没有搜索到您要找的官网</view>
+  <view class="font">点击快速创建官网，立即创建一个属于自己的官网</view>
+  <view class="cjBtn2" catchtap="goCreate"> + 快速创建微官网</view>
+</view>
+<view class="cjBtn" catchtap="goCreate" wx:if="{{kongShow==2}}"> + 快速创建微官网</view>

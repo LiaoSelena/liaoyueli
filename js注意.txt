@@ -1,4 +1,4 @@
 ﻿ var pricemax = Math.max.apply(null, priceall).toFixed(2);//价格最高
 
  var pricemin = Math.min.apply(null, priceall).toFixed(2);//价格最低
-testtest
+

@@ -1,0 +1,7 @@
+/* lyl/pages/contactUsDeail/contactUsDeail.wxss */
+@import "../../utils/lyl.wxss";
+page{ background: #fff;}
+.h422{ height: 422rpx;}
+.w184{ width: 184rpx;}
+.line_heigt{ line-height: 180%;}
+.img_size{ width: 184rpx; height: 184rpx;}

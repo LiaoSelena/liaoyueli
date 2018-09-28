@@ -1,0 +1,15 @@
+<view class="topLine"></view>
+<view class="colorPlan"></view>
+<view class="main">
+  <view class="textcont">
+     <view class="name">{{name}}</view>
+     <view class="name">邀请您成为其员工</view>
+  </view>
+  <image class="code" src="{{codeScr}}" bindtap="showCode"></image>
+  <view class="linebox  ">
+    <view class="leftro"></view>
+    <view class="line"></view>
+    <view class="rightro"></view>
+  </view>
+  <view class="footText">请扫描上方二维码进行注册</view>
+</view>

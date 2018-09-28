@@ -1,0 +1,26 @@
+<form bindsubmit="submit">
+  <label class="flex_center label">
+    <view class="flex_center">*</view>
+    <text class="flex_center">栏目菜单名称</text>
+  </label>
+  <view class="input_box">
+    <input placeholder="输入栏目菜单名称最多8个汉字" placeholder-class="place_style" maxlength="8" name="name" value="{{value}}"></input>
+  </view>
+  <label class="flex_center label" wx:if="{{flags.edit}}">
+    <view class="flex_center">*</view>
+    <text class="flex_center">功能模块</text>
+  </label>
+  <view class="flex_center input_box" wx:if="{{flags.edit}}">
+    <view class="place_style {{template!='选择功能模块'?'on4':''}}">{{template}}</view>
+  </view>
+  <view class="control" wx:if="{{flags.edit}}">
+    <view class="list_box" hidden="{{flags.btn}}">
+      <view class="list" wx:for="{{list}}" wx:key="yangxi" data-index="{{index}}" data-type="{{item.type}}" data-id="{{item.moduleType}}" bindtap="choose">
+        <image src="{{item.img}}"></image>
+        <view class="flex_center list_btn {{item.choose?'choose':''}}"><view></view>{{item.type}}</view>
+      </view>
+    </view>
+    <view class="clear"></view>
+  </view>
+  <button class="flex_center submit" form-type="submit">完成</button> 
+</form>

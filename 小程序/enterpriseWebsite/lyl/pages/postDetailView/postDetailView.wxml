@@ -1,0 +1,62 @@
+<import src="../../../template/overTime/overTime1.wxml"></import>
+<import src="../../../template/overTime/overTime2.wxml"></import>
+<!--lyl/pages/postDetailView/postDetailView.wxml-->
+<view wx:if='detailData!=""'>
+    <view class='pt50 pb50 ml30 mr30 border_b'>
+        <view class='top-lr-scatter ft38'>
+            <view class='font-w'>{{detailData.jobName}}</view>
+            <view class='color-red font-w'>{{detailData.amountMax}}<text class='ft24 pl10' wx:if='{{detailData.amountMax!="面议"}}'>元</text></view>
+        </view>
+        <view class='color-666 pt20'>{{detailData.workYeas}} / {{detailData.education}} / {{detailData.province}}</view>
+    </view>
+    <view class='pt50 pb50 ml30 mr30 border_b'>
+        <view class='center-float-left pb20'>
+          <view class='line bg-blue mr10'></view>
+          <view class='ft36'>岗位职责</view>
+        </view>
+        <text class='pt10 line_200'>{{detailData.jobDuty}}</text>
+    </view>
+    <view class='pt50 pb50 ml30 mr30 border_b'>
+        <view class='center-float-left pb20'>
+          <view class='line bg-blue mr10'></view>
+          <view class='ft36'>任职要求</view>
+        </view>
+        <text class='pt10 line_200'>{{detailData.jobRequire}}</text>
+    </view>
+    <view class='pt50 pb50 ml30 mr30 border_b' wx:if='{{detailData.cmpyWelfare}}'>
+        <view class='center-float-left pb20'>
+          <view class='line bg-blue mr10'></view>
+          <view class='ft36'>公司福利</view>
+        </view>
+        <text class='pt10 line_200'>{{detailData.cmpyWelfare}}</text>
+    </view>
+    <view class='pt50 pb50 ml30 mr30 border_b' wx:if='{{detailData.workTime}}'>
+        <view class='center-float-left pb20'>
+          <view class='line bg-blue mr10'></view>
+          <view class='ft36'>工作时间</view>
+        </view>
+        <view class='pt10'>{{detailData.workTime}}</view>
+    </view>
+    <view class='pt50 pb50 ml30 mr30' wx:if='{{detailData.workAddress!="请选择地址"}}'>
+        <view class='center-float-left pb20'>
+          <view class='line bg-blue mr10'></view>
+          <view class='ft36'>工作地点</view>
+        </view>
+        <view class='pt10 center-float-left' bindtap='navigation'>
+            <view class='flex-1 mr10'>{{detailData.workAddress}}</view>
+            <image class='icon_one' src='http://q.img.soukong.cn/website/lyl/31_dh.png'></image>
+        </view>
+        <!-- <map wx:if='{{style!="view1"}}' bindtap='navigation' id="myMap" class='w100 h388 mt30' longitude="{{detailData.latitude}}" latitude="{{detailData.longitude}}"  show-location></map> -->
+        <map id="map" wx:if='{{style!="edit"}}' class='w100 h388 mt30' longitude="{{detailData.longitude}}" latitude="{{detailData.latitude}}" scale="16" markers="{{markers}}"  show-location  bindmarkertap="markertap" bindregionchange="regionchange"  ></map>
+    </view>
+    <view class='center-float-center pl30 pr30 pb60 pt30' wx:if='{{style!="edit"}}'>
+        <view class='btn_list btn_one flex-1 center-float-center mr30 ft34 color-fff' bindtap='callingFun'>
+            <image class='icon_two mr10' src='http://q.img.soukong.cn/website/lyl/118_zixun.png'></image>咨询
+        </view>
+        <button open-type="share"  class='btn_list btn_two flex-1 center-float-center ml30 ft34 color-fff'>
+            <image class='icon_two mr10' src='http://q.img.soukong.cn/website/lyl/118_share.png'></image>分享
+        </button>
+    </view>
+</view>
+<template is="overTime1" data="{{flag:flags.overTime,mask:flags.mask}}" wx:if="{{flags.fromManage}}"></template>
+<template is="overTime2" data="{{flag:flags.overTime,mask:flags.mask}}" wx:if="{{flags.fromOther}}"></template>

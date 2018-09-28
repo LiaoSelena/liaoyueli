@@ -1,0 +1,77 @@
+<import src="../../../template/overTime/overTime1.wxml"></import>
+<import src="../../../template/overTime/overTime2.wxml"></import>
+<!--lyl/joinUs/joinUs.wxml-->
+<view class='{{box?"":"hide"}}'>
+<!--加入我们-->
+<view class='pd30 bg-fff {{style!="detail"?"mt30":""}}'>
+    <view class='top-lr-scatter center-float-center' wx:if='{{style!="detail"}}'>
+       <view class='flex-1 ft34'>
+          加入我们
+          <view class='line bg-blue mt10'></view>
+       </view>
+       <view class='flex-1 text-right color-blue' bindtap='goEdit'>
+          <image class='icon_one mr5' src='http://q.img.soukong.cn/website/lyl/00_bj.png'></image>编辑
+       </view>
+    </view>
+    <view class='color-666 pt30 line_height' wx:if="{{describeData!=''}}">{{describeData.desc}}</view>
+</view>
+<!--/加入我们-->
+<!--招聘岗位-->
+<view class='pl30 pr30 bg-fff {{style!="detail"?"mt30 pt30":""}}'>
+    <view class='top-lr-scatter center-float-center pb30' wx:if='{{style!="detail"}}'>
+       <view class='flex-1 ft34'>
+          招聘岗位
+          <view class='line bg-blue mt10'></view>
+       </view>
+       <view class='flex-1 center-float-right'>
+           <view class='color-blue mr20' wx:if="{{jobListData!=''}}" bindtap='deletePost'>删除</view>
+           <view class='color-fff add_post text-center' bindtap='addPost' data-style='add'>添加岗位</view>
+       </view>
+    </view>
+    <radio-group class="radio-group" bindchange="radioChange" class='top-lr-scatter pt40 pb50 border_b' wx:if="{{jobListData!=''}}" wx:for='{{jobListData}}'>
+        <label  class='center-float-left pr30' wx:if='{{style!="detail"}}'>
+          <radio value="{{index}}" checked="{{item.checked}}" color="#FA4B3E"/>
+        </label>
+        <view class='flex-1 ft30' bindtap='postDetailView' data-id='{{item.id}}'>
+            {{item.jobName}}
+            <view class='color-666 ft24 pt10'>
+              <text class='pr10'>{{item.cityName}}</text><text class='pr10'>{{item.education}}</text>
+            </view>
+        </view>
+        <view class='color-red font-w w200' bindtap='postDetailView' data-id='{{item.id}}'>{{item.amountMax}}</view>
+        <view class='center-float-right color-blue' bindtap='addPost' data-id='{{item.id}}' data-style='edit' wx:if='{{style!="detail"}}'>
+          <image class='icon_one mr5' src='http://q.img.soukong.cn/website/lyl/00_bj.png'></image>编辑
+        </view>
+    </radio-group>
+</view>
+<!--/招聘岗位-->
+<!--HR信息-->
+<view class='pd30 bg-fff {{style!="detail"?"mt30":""}}'>
+    <view class='top-lr-scatter center-float-center' wx:if='{{style!="detail"}}'>
+       <view class='flex-1 ft34'>
+          HR信息<view class='line bg-blue mt10'></view>
+       </view>
+       <view class='flex-1 text-right color-blue' bindtap='HRinfoEdit'>
+          <image class='icon_one mr5' src='http://q.img.soukong.cn/website/lyl/00_bj.png'></image>编辑
+       </view>
+    </view>
+    <view class='color-666 pt30 line_height position-re' wx:if='{{HRData!=""}}'>
+      <image class='w100 h180 ' src='http://q.img.soukong.cn/website/lyl/37_HRbj.png'></image>
+        <view class='HR_info top-lr-scatter center-float-center  h180 w100'>
+            <image class='HR_avatar ml30' mode='aspectFill' src='{{HRData.headImg}}'></image>
+            <view class='color-fff pl20 flex-1'>
+                <view>{{HRData.hrName}}<text class='HR_border pr5 ml10'>人事</text></view>
+                <view>{{HRData.phone}}<image class='HR_tel ml10 mt10' src='http://q.img.soukong.cn/website/lyl/37_HR_tel.png'></image></view>
+            </view>
+            <view class='pr30' wx:if='{{HRData.weixinQrcod!=""}}'>
+                <image class='HR_code' bindtap='lookCode' mode='aspectFill' src='{{HRData.weixinQrcod}}'></image>
+                <view class='color-fff ft19 text-center'>加我微信</view>
+            </view>
+            
+        </view>
+    </view>
+</view>
+<!--/HR信息-->
+</view>
+<template is="overTime1" data="{{flag:flags.overTime,mask:flags.mask}}" wx:if="{{flags.fromManage}}"></template>
+<template is="overTime2" data="{{flag:flags.overTime,mask:flags.mask}}" wx:if="{{flags.fromOther}}"></template>

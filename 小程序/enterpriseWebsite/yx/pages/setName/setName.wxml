@@ -1,0 +1,38 @@
+<view wx:if="{{flags.inShow}}">
+  <view class="box" wx:if="{{flags.inShow&&status!=3}}">
+    <view class="flex_center list">
+      <label>联系人</label>
+      <view class="ellipsis_one list_box">{{name}}</view>
+    </view>
+    <view class="flex_center list">
+      <label>联系电话</label>
+      <view class="ellipsis_one list_box">{{phone}}</view>
+    </view>
+    <view class="flex_center list">
+      <label>营业执照</label>
+      <view class="flex_center list_box licence_box">
+        <view>{{status==2?'已验证':''}}</view>
+        <view class="flex_center" data-img="{{img}}" bindtap="pre">
+          <image mode="aspectFill" class="licence" src="{{img}}"></image>
+          <image class="icon" src="http://q.img.soukong.cn/website/yx/arrow.png"></image>
+        </view> 
+      </view>
+    </view>
+    <view class="flex_center list">
+      <label>认证状态</label>
+      <view class="list_box" style="color:{{color}};">{{type}}</view>
+    </view>
+    <view class="fail" wx:if="{{status==0}}">
+      <label>失败原因</label>
+      <view>{{examineMsg}}</view> 
+    </view>
+  </view>
+  <view class="flex_center btn" bindtap="edit" wx:if="{{status==0}}">重新提交审核</view>
+  <view class="nothing" wx:if="{{status==3}}">
+    <image src="http://q.img.soukong.cn/website/yx/setName_nothing.jpg"></image>
+    <view class="nothing_text1">您的微官网还没有进行公司名称的实名认证</view>
+    <view class="nothing_text2">请您尽快完成实名认证，未认证的微官网</view>
+    <view class="nothing_text2">将不能被企业员工绑定</view>
+    <view class="flex_center btn" bindtap="edit">马上认证</view>
+  </view>
+</view>

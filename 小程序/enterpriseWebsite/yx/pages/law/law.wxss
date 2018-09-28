@@ -1,0 +1,10 @@
+@import "../../utils/yx.wxss";
+
+.hd{ width:686rpx; height:135rpx; background-color:#5cb8f7; border-radius:10rpx; margin:30rpx auto 60rpx; position:relative; box-shadow:0 10rpx 20rpx rgba(92,184,247,0.3);}
+.hd text{ font-size:30rpx; font-weight:bold; color:#fff; line-height:1.3; width:420rpx; position:absolute; left:190rpx; top:36rpx;}
+.hd image{ width:135rpx; height:112rpx; position:absolute; left:30rpx; bottom:0;}
+.list{ margin:0 36rpx 44rpx 30rpx; overflow:hidden;}
+.list view{ float:left;}
+.index{ font-family:"arial"; font-size:48rpx; font-weight:bold; width:40rpx; height:40rpx; background-color:#5cb8f7; border-radius:50%; text-indent:15rpx;}
+.text{ color:#999; width:624rpx; line-height:1.3; margin:4rpx 0 0 16rpx; text-align:justify;}
+.btn{ font-size:34rpx; color:#fff; width:602rpx; height:88rpx; background-color:#5cb8f7; border-radius:60rpx; position:fixed; left:50%; margin-left:-301rpx; bottom:82rpx; box-shadow:0 0 60rpx rgba(92,184,247,1);}

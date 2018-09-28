@@ -1,0 +1,2 @@
+<map class="map" longitude="{{longitude}}" latitude="{{latitude}}" markers="{{markers}}" show-location></map>
+<view class="flex_center back" bindtap="back">返回</view>

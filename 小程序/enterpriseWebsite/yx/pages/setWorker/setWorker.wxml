@@ -1,0 +1,21 @@
+<view class="flex_center hd">
+  <image mode="aspectFill" src="{{logoUrl}}"></image>
+  <view>
+    <view class="hd_text1">{{simpCmpyName}}</view>
+    <view class="hd_text2">{{industry}}</view>
+  </view>
+</view>
+<view class="list" bindtap="listWorker">
+  <view class="flex_center list_left"><image src="http://q.img.soukong.cn/website/yx/setWorker_icon2.png"></image></view>
+  <view class="flex_center list_right">
+    <view>我的员工</view>
+    <image src="http://q.img.soukong.cn/website/yx/arrow.png"></image>
+  </view>
+</view>
+<view class="list" bindtap="invite">
+  <view class="flex_center list_left"><image src="http://q.img.soukong.cn/website/yx/setWorker_icon1.png"></image></view>
+  <view class="flex_center list_right">
+    <view>邀请员工</view>
+    <image src="http://q.img.soukong.cn/website/yx/arrow.png"></image>
+  </view>
+</view>

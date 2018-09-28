@@ -1,0 +1,3 @@
+.img-v{width: 500rpx;height: 500rpx;}
+.upload-img-btn{width: 100rpx;height: 100rpx;background:black;}
+.delete-btn{width: 200rpx;height: 200rpx;background: red;}

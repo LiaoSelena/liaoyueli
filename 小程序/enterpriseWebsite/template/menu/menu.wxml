@@ -1,0 +1,17 @@
+<template name="menu">
+  <view class="menu_box" wx:if="{{from=='manage'||from=='nogo'&&menu.list.length>1||from=='pre'&&menu.list.length>1}}">
+    <view class="flex_center menu_show" wx:if="{{from=='manage'&&menu.flags.hide}}" bindtap="menuOpen">编辑底部菜单</view> 
+    <view class="menu" wx:else>
+      <view class="flex_center menu_list" style="background-color:{{item.active?'#ddd':''}};" wx:for="{{menu.list}}" wx:key="yangxi" bindtap="menuControl" data-i="{{item.index}}" data-from="{{from}}" data-type="{{item.type}}" data-obj="{{item.objectId}}" data-company="{{item.company}}" data-mtype="{{item.moduleType}}" data-mapId="{{item.mapId}}" data-mediaid="{{item.mediaId}}" data-columnid="{{item.columnId}}" data-union="{{item.unionCmpyId}}" data-appid="{{item.appId}}">{{item.name}}</view>
+      <!-- <navigator wx:if="{{from!='manage'}}" class="flex_center menu_list" target="miniProgram" app-id="{{item.appId}}" path='pages/index/index?unionCmpyId={{item.unionCmpyId}}' style="background-color:{{item.active?'#ddd':''}};" wx:for="{{menu.list}}" wx:key="yangxi" bindtap="menuControl" data-i="{{item.index}}" data-from="{{from}}" data-type="{{item.type}}" data-obj="{{item.objectId}}" data-company="{{item.company}}" data-mtype="{{item.moduleType}}" data-mapId="{{item.mapId}}" data-mediaid="{{item.mediaId}}" data-columnid="{{item.columnId}}" data-union="{{item.unionCmpyId}}" data-appid="{{item.appId}}">{{item.name}}</navigator>
+      <navigator wx:if="{{from=='manage'}}" class="flex_center menu_list" style="background-color:{{item.active?'#ddd':''}};" wx:for="{{menu.list}}" wx:key="yangxi" bindtap="menuControl" data-i="{{item.index}}" data-from="{{from}}" data-type="{{item.type}}" data-obj="{{item.objectId}}" data-company="{{item.company}}" data-mtype="{{item.moduleType}}" data-mapId="{{item.mapId}}" data-mediaid="{{item.mediaId}}" data-columnid="{{item.columnId}}" data-union="{{item.unionCmpyId}}" data-appid="{{item.appId}}">{{item.name}}</navigator> -->
+      <view class="flex_center menu_add" wx:if="{{from=='manage'&&menu.list.length!=menu.l}}" bindtap="menuAdd">+</view>
+    </view>
+  </view>
+  <view class="flex_center menu_control {{menu.run.left}}">
+    <view class="flex_center {{menu.run.rotate}}" hidden="{{menu.flags.left}}" bindtap="menuLeft">左移</view>
+    <view class="flex_center {{menu.run.rotate}}" bindtap="menuEdit">编辑</view>
+    <view class="flex_center {{menu.run.rotate}}" hidden="{{menu.flags.right}}" bindtap="menuRight">右移</view>
+    <view class="flex_center {{menu.run.rotate}}" hidden="{{menu.flags.delete}}" bindtap="menuDelete">删除</view>
+  </view>
+</template>

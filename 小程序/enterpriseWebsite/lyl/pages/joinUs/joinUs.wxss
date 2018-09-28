@@ -1,0 +1,17 @@
+.mask{ position:fixed; z-index:2; top:0; left:0; right:0; bottom:0; background-color:rgba(0,0,0,0.5);}
+.flex_center{ display:flex; justify-content:center; align-items:center;}
+@import "../../../template/overTime/overTime.wxss";
+@import "../../utils/lyl.wxss";
+.line{width:56rpx;height:6rpx; border-radius: 3px }
+.icon_one{ width: 30rpx; height: 30rpx;}
+.line_height{ line-height: 160%;}
+.add_post{ background:-webkit-gradient(linear, 0 0, 0 bottom, from(#579FF8), to(#57B6F8)); width: 160rpx; height: 60rpx; line-height: 60rpx; border-radius: 30rpx;}
+.border_b{ border-bottom: #f5f5f5 1px solid;}
+.h180{ height: 180rpx;}
+.HR_info{ position: absolute;top:30rpx; z-index: 1}
+.HR_avatar{ width: 117rpx; height: 117rpx; border:#fff 1px solid; border-radius: 60rpx;}
+.HR_tel{ width: 30rpx; height: 30rpx;}
+.HR_border{ border:#fff 1px solid; font-size: 20rpx; border-radius: 10rpx;}
+.HR_code{width:94rpx; height: 94rpx;}
+.ft19{ font-size: 19rpx;}
+.w200{ width: 200rpx;}

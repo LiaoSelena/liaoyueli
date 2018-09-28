@@ -1,0 +1,4 @@
+<view class="box">
+  <video class="video" src=""></video>
+</view>
+<view class="bottom"></view>

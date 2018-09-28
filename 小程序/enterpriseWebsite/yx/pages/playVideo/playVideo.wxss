@@ -1,0 +1,5 @@
+@import "../../utils/yx.wxss";
+
+.box{ margin:20rpx 30rpx;}
+.box video{ width:690rpx; height:388rpx;}
+.box view{ font-size:32rpx; color:#fff; width:690rpx; height:98rpx; background-color:#5cb8f7; border-radius:10rpx; margin-top:20rpx;}

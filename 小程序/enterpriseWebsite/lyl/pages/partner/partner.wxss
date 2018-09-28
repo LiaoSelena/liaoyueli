@@ -1,0 +1,8 @@
+.mask{ position:fixed; z-index:2; top:0; left:0; right:0; bottom:0; background-color:rgba(0,0,0,0.5);}
+.flex_center{ display:flex; justify-content:center; align-items:center;}
+@import "../../../template/overTime/overTime.wxss";
+@import "../../utils/lyl.wxss";
+.img_size{ width: 130rpx; height: 130rpx; border-radius: 50%;}
+.icon_size{width: 44rpx; height: 44rpx; position: absolute; bottom: 40rpx; right: 40rpx;}
+.close_size{width:28rpx; height: 28rpx; position: absolute; left: 30rpx; top:30rpx; }
+.w33{ width: 33%;}

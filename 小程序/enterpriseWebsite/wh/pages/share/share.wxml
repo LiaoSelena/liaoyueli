@@ -1,0 +1,3 @@
+<canvas class="canvas" canvas-id="bigCanvas"></canvas>
+<button class="Btn1" open-type="share">分享给朋友或群聊</button>
+<view class="Btn2" bindtap="preview">生成朋友圈分享图</view>

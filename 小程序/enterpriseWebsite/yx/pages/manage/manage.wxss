@@ -1,0 +1,37 @@
+@import "../../utils/yx.wxss";
+@import "../../../template/column/public.wxss";
+@import "../../../template/menu/menu.wxss";
+@import "../../../template/overTime/overTime.wxss";
+
+.g_logo image{ margin:28rpx auto 126rpx;}
+
+.hd{ height:306rpx; background-image:url(http://q.img.soukong.cn/website/yx/mag_hd.jpg); background-size:100%; overflow:hidden;}
+.hd_overview{ height:184rpx; margin:25rpx 16rpx 0 30rpx;}
+.hd_logo_box{ float:left; overflow:hidden;}
+.hd_logo{ width:124rpx; height:124rpx; border-radius:10rpx; background-color:#fff; float:left;}
+.hd_logo image{ width:116rpx; height:116rpx; border-radius:10rpx;}
+.hd_name{ width:220rpx; height:124rpx; float:left; margin-left:22rpx;}
+.hd_company{ font-size:34rpx; font-weight:bold; color:#fff;}
+.hd_trade{ color:#fff; margin-top:24rpx;}
+.hd_see{ width:140rpx; float:right; margin:36rpx 0 0 0;}
+.hd_forward{ width:140rpx; float:right; margin:36rpx 0 0 0;}
+.hd_number{ font-family:'arial'; font-size:44rpx; font-weight:bold; color:#fff; text-align:center;}
+.hd_text{ font-size:24rpx; color:#fff; text-align:center; margin-top:10rpx;}
+.hd_control{ width:690rpx; margin:0 auto; justify-content:space-between;}
+.hd_control view,.hd_control button{ font-size:24rpx; color:#fff; width:194rpx; height:60rpx; border:2rpx solid #fff; border-radius:10rpx; background-color:transparent;}
+.hd_set{ width:26rpx; height:25rpx; margin-right:6rpx;}
+.hd_share{ width:22rpx; height:24rpx; margin-right:6rpx;}
+.hd_pre{ width:30rpx; height:21rpx; margin-right:6rpx;}
+.pass{ width:750rpx; height:130rpx; background-color:#fff; padding-top:10rpx;}
+.pass image{ width:713rpx; height:124rpx; animation:run 2s infinite linear;}
+@keyframes run{0%{ margin-left:0;}50%{ margin-left:40rpx;}100%{ margin-left:0;}}
+.cover{ height:260rpx; background-color:#fff; overflow:hidden;}
+.cover_hd{ height:40rpx; margin:38rpx 30rpx 0;}
+.cover_text{ float:left;}
+.cover_edit{ color:#28b9fd; width:90rpx; height:60rpx; float:right; justify-content:space-between; align-items:flex-start;}
+.cover_edit image{ width:27rpx; height:27rpx;}
+.cover_scroll{ width:690rpx; height:131rpx; margin:16rpx 30rpx 0; white-space:nowrap;}
+.cover_scroll image{ width:232rpx; height:131rpx; border-radius:6rpx; display:inline-block; margin-right:30rpx;}
+.cover_scroll image:last-child{ margin-right:0;}
+.cover_scroll view{ font-size:20rpx; color:#fff; width:60rpx; height:24rpx; background-color:#5cb8f7; border-radius:0 10rpx 10rpx 0; position:absolute; left:0; top:10rpx;}
+.template_load{ font-size:32rpx; color:#666; height:800rpx; text-align:center; padding-top:30rpx; background-color:#fff;}

@@ -1,0 +1,15 @@
+/* lyl/pages/officialNetwork/officialNetwork.wxss */
+@import "../../utils/lyl.wxss";
+.w110{ width: 110rpx;}
+.pd0{ padding: 0;}
+.img_size{ width: 100rpx; height: 110rpx; border-radius: 55rpx;}
+.position-ab-b{ position: absolute; right: 0;bottom: -10rpx;}
+.icon_one{ width: 32rpx; height: 32rpx;}
+.btn_box{width:120rpx;height:54rpx; line-height: 54rpx; border-radius: 10px; border:#5CB8F7 1px solid; }
+.search_size{ width: 30rpx; height: 30rpx;}
+.search_box{ height: 82rpx; border-radius: 50rpx; }
+.search_close_size{ width: 28rpx; height: 28rpx;}
+.no_content_img{width:114rpx;height:156rpx; }
+.position_fixed{ position: fixed; bottom: 30rpx;}
+.btn_one{ height:88rpx; line-height: 80rpx; border-radius: 100rpx;
+ background:-webkit-gradient(linear, 0 0, 0 bottom, from(#26A6FD), to(#5CB8F7));}

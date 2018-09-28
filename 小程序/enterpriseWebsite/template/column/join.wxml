@@ -1,0 +1,29 @@
+<import src="head.wxml"></import>
+<template name="3">
+  <view class="c_box" bindtap='joinUs' data-id="{{data.columnId}}">
+    <template is="head" data="{{from:from,index:index,data:data}}"></template>
+    <view class="j_text">{{data.ModuleRecruitList[0].desc}}</view>
+    <view>
+      <view class="flex_center j_list" wx:for="{{data.ModuleRecruitJobList}}" wx:key="yangxi" catchtap="goDetailView" data-i="{{item.id}}" data-cmpyId="{{data.ModuleRecruitList[0].cmpyId}}" data-rid="{{data.ModuleRecruitList[0].recruitId}}">
+        <view class="flex_column_center j_list_left">
+          <view class="ellipsis_two j_list_job">{{item.jobName}}</view>
+          <view class="ellipsis_one j_list_tip">{{item.cityName}} {{item.education}}</view>
+        </view>
+        <view class="ellipsis_one j_list_money">{{item.amountMin}}</view>
+      </view>
+    </view>
+    <view class="flex_center j_hr">
+      <view class="j_hr_left">
+        <view class="flex_center j_hr_img"><image src="{{data.ModuleRecruitHrList[0].headImg}}"></image></view>
+        <view class="flex_column_center j_hr_text">
+          <view class="flex_center j_hr_name"><view class="ellipsis_one">{{data.ModuleRecruitHrList[0].hrName}}</view><text class="flex_center">人事</text></view>
+          <view class="flex_center j_hr_phone" catchtap="callHR" data-phone="{{data.ModuleRecruitHrList[0].phone}}"><view class="ellipsis_one">{{data.ModuleRecruitHrList[0].phone}}</view><image src="http://q.img.soukong.cn/website/yx/mag_hr_phone.png"></image></view>
+        </view>
+      </view>
+      <view class="flex_column_center j_hr_code" wx:if="{{data.ModuleRecruitHrList[0].weixinQrcod}}">
+        <image mode="aspectFill" src="{{data.ModuleRecruitHrList[0].weixinQrcod}}" catchtap='ckCode' data-code="{{data.ModuleRecruitHrList[0].weixinQrcod}}"></image>
+        <view>加我微信</view>
+      </view>
+    </view>
+  </view>
+</template>

@@ -1,0 +1,4 @@
+page{background:linear-gradient(to left,#4a6ce9,#5246e4);}
+.canvas{height: 960rpx;width: 750rpx;}
+.Btn1{width: 610rpx;height: 80rpx;color: #fff;line-height: 80rpx;text-align: center;background: #51AA38;border-radius: 10rpx;margin-left: 66rpx;margin-bottom: 15rpx;font-size: 32rpx; }
+.Btn2{width: 610rpx;height: 80rpx;color: #333;line-height: 80rpx;text-align: center;background: #F8F8F8;border-radius: 10rpx;margin-left: 66rpx;font-size: 32rpx;}

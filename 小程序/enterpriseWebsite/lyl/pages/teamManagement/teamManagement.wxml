@@ -1,0 +1,48 @@
+<!--lyl/pages/teamManagement/teamManagement.wxml-->
+<!--search-->
+<view class='bg-blue pt30 pb30 center-float-left search_main w100 '>
+   <view class='bg-fff flex-1 center-float-left search_box pl30 pr30 ml30 mr30'>
+      <image class='search_size' src='http://q.img.soukong.cn/website/lyl/00_search.png'></image>
+      <input class='flex-1 ml20' type='text' confirm-type='search' value='{{searchVal}}' placeholder='|  输入团队成员名字' placeholder-class='color-C0' bindinput='searchValFun' bindconfirm='searchFun'></input>
+      <view class='{{serchCloaseIs?"":"hide"}}' bindtap='searchColseFun'><image class='search_close_size' src='http://q.img.soukong.cn/website/lyl/00_qingchu.png'></image></view>
+   </view>
+   <view wx:if='{{searchVal!=""}}' class='mr30'>
+      <view class='w110  ft30 color-fff {{serchCloaseIs?"":"hide"}}' bindtap='searchFun'>搜索</view>
+      <view class='w110  ft30 color-fff {{serchCloaseIs?"hide":""}}' bindtap='searchColseFun'>取消</view>  
+   </view>
+</view>
+<!--/search-->
+<!--list-->
+<view class='pt175'  wx:if="{{flags.inShow}}">
+  <scroll-view class="box" style="height:{{height}}px;" scroll-y  bindscrolltolower="lower" >
+    <view class='left-float-top pd30 box-sizing list {{transition}}' style="top:{{item.top}}rpx;" wx:for="{{list}}" wx:key="yangxi">
+        <image class='icon_size block' bindtap='deleteFun' data-index='{{index}}' data-teamid='{{item.teamId}}' src='http://q.img.soukong.cn/website/lyl/84_guanbi.png'></image>
+        <image class='avatar_size ml30 block'  mode='aspectFill'  src='{{item.img}}'></image>
+        <view class='flex-1 left-tb-scatter ml30 mr30'>
+            <view class='w260'>
+                <view class='ft34 break-word apostrophe-two'>{{item.userName}}</view>
+                <view class='color-666 ft240 pt10 break-word apostrophe-two'>{{item.userJob}}</view>
+            </view>
+            <view class='color-blue' bindtap='goEdit' data-type="edit" data-teamid='{{item.teamId}}' data-img='{{item.img}}' data-name='{{item.userName}}' data-job='{{item.userJob}}'><image class='edit_size mr5' src='http://q.img.soukong.cn/website/lyl/00_bj.png'></image>编辑</view>
+        </view>
+        <view class="right-tb-scatter list_right ">
+          <view hidden="{{item.index==0}}" data-i="{{item.index}}" bindtap="up">
+              <image class='icon_size' src='http://q.img.soukong.cn/website/lyl/84_shangyi.png'></image>
+          </view>
+          <view hidden="{{item.index==list.length-1}}" data-i="{{item.index}}" bindtap="down">
+              <image class='icon_size' src='http://q.img.soukong.cn/website/lyl/84_xiayi.png'></image>
+          </view>
+        </view>
+    </view>
+  </scroll-view>
+  <view class="add" bindtap='goEdit' data-type="add"><image class='add_size' src='http://q.img.soukong.cn/website/lyl/79_addteam.png'></image></view>
+</view>
+<!--/list-->
+
+<!--no-->
+<view class='pt175 text-center' wx:if='{{emptyIs}}'>
+   <image class='no_size mt100' src='http://q.img.soukong.cn/website/lyl/79_girl.png'></image>
+   <view class='color-999 pt80 pb80'>抱歉，没有搜到相关成员</view>
+   <view class='btn_list btn_two color-fff ft34 ml100 mr100' bindtap='goEdit' data-type="add"><text class='ft46 mr10'>+</text>添加成员</view>
+</view>
+<!--/no-->

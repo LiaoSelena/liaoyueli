@@ -1,0 +1,10 @@
+.mask{ position:fixed; z-index:2; top:0; left:0; right:0; bottom:0; background-color:rgba(0,0,0,0.5);}
+.flex_center{ display:flex; justify-content:center; align-items:center;}
+@import "../../../template/overTime/overTime.wxss";
+@import "../../utils/lyl.wxss";
+.h462{ height: 462rpx;}
+.w50{ width: 50%; }
+.bg-000{ background: #000;}
+.text_box{ position: absolute; bottom: 0; background: rgba(0, 0, 0, 0.5); width: 80%;border-radius:0 0 10rpx 10rpx;}
+.block{ display: block;}
+.border_radius{border-radius: 10rpx; overflow: hidden;}

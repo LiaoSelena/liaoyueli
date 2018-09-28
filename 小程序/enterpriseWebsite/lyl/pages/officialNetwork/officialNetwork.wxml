@@ -1,0 +1,34 @@
+<!--lyl/pages/officialNetwork/officialNetwork.wxml-->
+<view wx:if='{{box}}'>
+  <view class='center-float-left bg-fff border-r pd30 mt30' wx:for='{{cmpyData}}'>
+        <view class='position-re' data-type='{{item.type}}' bindtap='lookFun' data-cmpyid='{{item.cmpyId}}'>
+            <image class='img_size' wx:if='{{item.logo && item.logo!=""}}' src='{{item.logo}}'></image> 
+            <image class='img_size hide' wx:else src='http://q.img.soukong.cn/website/lyl/00HR_mrtx.png'></image> 
+            <view class='color-fff text-center position-ab-b'>
+              <image class='icon_one' wx:if='{{item.type=="1"}}' src='http://q.img.soukong.cn/website/lyl/55_liulan.png'></image>
+              <image class='icon_one' wx:if='{{item.type=="2"}}' src='http://q.img.soukong.cn/website/lyl/55_bianji.png'></image>
+            </view>
+        </view>
+        <view class='flex-1 ml30 mr30' data-type='{{item.type}}' bindtap='lookFun' data-cmpyid='{{item.cmpyId}}'>
+            <view class='ft30 apostrophe-two'>{{item.simpCmpyName}}</view>
+            <view class='color-666 ft24 pt10'>{{item.endTime}} 到期</view>
+        </view>
+        <view class='center-float-right ft24' wx:if='{{item.type=="1"}}'>
+            <view class='btn_box text-center color-blue bg-fff' bindtap='untie' data-type='{{item.type}}' data-cmpyid='{{item.cmpyId}}' data-id='{{item.userId}}'>解除绑定</view>
+        </view>
+    </view>
+    <view class='position_fixed w100 center-float-center hide'>
+      <view class='btn_one flex-1 color-fff text-center ft36 ml30 mr20' bindtap='creatNetwork'><text class='ft48 pr10'>+</text>快速创建官网</view>
+      <view class='btn_one flex-1 color-fff text-center ft36 mr30' bindtap='bindNetwork'><text class='ft48 pr10'>+</text>快速绑定官网</view>
+    </view>
+</view>
+<!--no_content-->
+<view class='pd100' wx:if='{{noData}}'>
+   <view class='center-float-center'><image class='no_content_img' src='http://q.img.soukong.cn/website/lyl/00_blank.png'></image></view>
+   <view class='text-center color-999 pt60 pb60'>抱歉，没有找到相关企业官网</view>
+   <view class='position_fixed w100 center-float-center hide'>
+      <view class='btn_one flex-1 color-fff text-center ft36 ml30 mr20'><text class='ft48 pr10'>+</text>快速创建官网</view>
+      <view class='btn_one flex-1 color-fff text-center ft36 mr30' bindtap='bind'><text class='ft48 pr10'>+</text>快速绑定官网</view>
+    </view>
+</view>
+<!--/no_content-->

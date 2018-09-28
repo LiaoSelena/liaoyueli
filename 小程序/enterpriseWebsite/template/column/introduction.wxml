@@ -1,0 +1,16 @@
+<import src="head.wxml"></import>
+<template name="1">
+  <view class="c_box i_box" style="height:{{data.showMore&&data.showControl?'480rpx':'auto'}};">
+    <template is="head" data="{{from:from,index:index,data:data}}"></template>
+    <view class="i_template" wx:for="{{data.moduleMedia.ModuleTextImgList}}" wx:key="yangxi" wx:for-item="list" wx:for-index="idx">
+      <text class="word_break i_text" space="ensp" wx:if="{{list.contentType==1}}">{{list.content}}</text>
+      <image class="i_img" mode="aspectFill" wx:if="{{list.contentType==2}}" wx:for="{{list.imgContent}}" wx:key="yangxi" src="{{item}}"></image>
+      <view class="i_cover" wx:if="{{list.contentType==3}}" bindtap="playVideo" data-src="{{list.content}}">
+        <image class="i_cover_video" mode="aspectFill" src="{{list.videoUrl}}"></image>
+        <image class="i_cover_play" src="http://q.img.soukong.cn/website/yx/playVideo_play.png"></image>
+      </view>
+    </view>
+    <view class="i_mask" wx:if="{{data.showMore&&data.showControl}}"></view>
+  </view>
+  <view class="flex_center i_see_more" wx:if="{{data.showMore}}" bindtap="seeMore" data-i="{{index}}"><image class="{{data.showControl?'i_see_more_icon':''}}" src="http://q.img.soukong.cn/website/yx/manage_seeMore.png"></image>{{data.showControl?'展开全文':'收起全文'}}</view>
+</template>

@@ -1,0 +1,15 @@
+.mask{ position:fixed; z-index:2; top:0; left:0; right:0; bottom:0; background-color:rgba(0,0,0,0.5);}
+.flex_center{ display:flex; justify-content:center; align-items:center;}
+@import "../../../template/overTime/overTime.wxss";
+/* lyl/pages/postDetailView/postDetailView.wxss */
+@import "../../utils/lyl.wxss";
+page{ background: #fff;}
+.border_b{ border-bottom: #DEDEDE 1px solid;}
+.line{width:8rpx;height:36rpx; border-radius: 6rpx }
+.icon_one{ width: 31rpx; height: 31rpx;}
+.h388{ height: 388rpx;}
+.btn_list{ border-radius: 50rpx; height: 88rpx; line-height: 88rpx;}
+.btn_one{background:-webkit-gradient(linear, 0 0, 0 bottom, from(#FA4B3E), to(#FE8A57));}
+.btn_two{background:-webkit-gradient(linear, 0 0, 0 bottom, from(#579FF8), to(#57B6F8));}
+.icon_two{width: 40rpx; height: 40rpx;}
+.line_200{ line-height: 200%;}

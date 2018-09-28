@@ -1,0 +1,6 @@
+<!--lyl/pages/personDetail/personDetail.wxml-->
+<view class='pd30'>
+   <view wx:if='{{imgUrl!=""}}'><image class='img_size w100 border_radius' src='{{imgUrl}}'></image></view>
+   <view wx:if='{{text!=""}}' class='pt30 pb30'><text class='line_height color-666  '>{{text}}</text></view>
+   <view wx:if='{{videoSrc!=""}}'><video class='h388 w100 border_radius' src='{{videoSrc}}'></video></view>
+</view>

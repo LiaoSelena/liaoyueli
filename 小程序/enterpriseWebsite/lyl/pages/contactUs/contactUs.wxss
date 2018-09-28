@@ -1,0 +1,9 @@
+/* lyl/pages/contactUs/contactUs.wxss */
+@import "../../utils/lyl.wxss";
+page{background: #fff;}
+.bg-66{ background: #ccc; color: #999}
+.btn{ height: 88rpx; line-height: 88rpx; border-radius: 44rpx;}
+.btn_bg{background:-webkit-gradient(linear, 0 0, 0 bottom, from(#29A7FD), to(#52B5F8));color: #fff}
+.h400{ height: 400rpx;}
+.icon_one{ width:31rpx; height:31rpx;}
+.dh_box{ border-radius:10rpx; border:#52B5F8 1px solid; width: 120rpx; height: 50rpx;}

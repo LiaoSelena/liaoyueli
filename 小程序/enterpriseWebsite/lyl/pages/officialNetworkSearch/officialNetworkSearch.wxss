@@ -1,0 +1,31 @@
+/* pages/officialNetworkSearch/officialNetworkSearch.wxss */
+@import "../../utils/lyl.wxss";
+.search_main{ position: fixed; z-index: 2;top:0; color: #9B9B9B}
+.img_size{ width: 110rpx; height: 110rpx; border-radius: 55rpx;}
+.w110{  width: 110rpx;}
+.position-ab-b{ position: absolute; bottom: 0; left: 14rpx; border-radius: 15rpx;width:76rpx;height:30rpx; font-size: 20rpx;  }
+.btn_box{width:116rpx;height:54rpx; line-height: 54rpx; border-radius: 10px; border:#C96148 1px solid; }
+.border-r{ border-radius: 20rpx;}
+.border_blue{ border:#5CB8F7 1px solid;}
+.bg-ba{ background: #BAC6D2;}
+.color-dc{ color: #dccfcc;}
+.color-red{color: #C96148;}
+.border_ba{ border:#BAC6D2 1px solid;}
+.layer{ width: 625rpx;}
+.fixedcenter{position:fixed; z-index: 2;top:50%; left:50%; -webkit-transform:translate(-50%,-50%);}
+.img_size_one{ width: 36rpx; height: 36rpx;}
+.input_box{ height: 80rpx; border-radius: 10rpx;}
+.button_class{ font-size: 28rpx; height: 80rpx; line-height: 80rpx;}
+.btn_sure{ height: 90rpx; line-height: 90rpx; border-radius: 50rpx; font-size: 34rpx;}
+.btn_no{ height: 84rpx; width: 204rpx; border-radius: 40rpx;}
+.colse_size{width: 58rpx; height: 58rpx;}
+.black_bg{  position: fixed; z-index: 1;  height: 100%; left:0; top:0; background: rgba(0, 0, 0, 0.5)}
+.line{ height: 60rpx; width: 2px; margin-right: 28rpx;}
+.search_size{ width: 30rpx; height: 30rpx;}
+.search_box{ height: 82rpx; border-radius: 50rpx;}
+.search_close_size{ width: 28rpx; height: 28rpx;}
+.no_content_img{width:114rpx;height:156rpx; }
+.bg-9f{background: #9FB6C6}
+.pt155{ padding-top: 155rpx;}
+.pt205{ padding-top: 205rpx;}
+.pt275{padding-top: 275rpx;}
