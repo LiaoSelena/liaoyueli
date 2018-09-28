@@ -1,0 +1,40 @@
+body{ background-color:#f5f5f5;}
+.logo_bottom{ height:auto; display:block; padding-bottom:1.2rem;}
+/*收货地址*/
+.line{ height:0.2rem; background-color:#f5f5f5;}
+.address{ height:1.94rem; position:relative; background-color:#fff;}
+.address_content{ width:6.5rem; padding-left:0.3rem;}
+.address_first{ font-size:0.32rem; font-weight:bold; color:#333; margin-bottom:0.2rem; overflow:hidden;}
+#address_name{ float:left;}
+#address_phone{ float:right;}
+.address address{ font-size:0.26rem; color:#646464; font-style:normal;}
+.address i{ width:0.3rem; height:0.4rem; background-image:url(../image/arrow-gray.png); background-size:100%; position:absolute; right:0.3rem; top:50%; margin-top:-0.2rem;}
+#address_nothing{ font-size:0.32rem; color:#333; padding-left:0.3rem; display:none;}
+.line_post{ height:0.08rem; background-image:url(../image/sureOrder_line.jpg); background-size:100%;}
+/*产品规格*/
+.shop_name{ font-size:0.26rem; height:0.84rem; line-height:0.84rem; padding-left:0.2rem; background-color:#fff;}
+.shop_name:before{ content:''; width:0.5rem; height:0.84rem; float:left; margin-right:0.1rem; background-image:url(../image/sureOrder_shop.png); background-size:100%;}
+#format{ background-color:#fafafa; padding:0.3rem; border-bottom:1px solid #f5f5f5;}
+.format{ border-bottom:1px dashed #ccc; padding-bottom:0.3rem; margin-bottom:0.3rem; position:relative;}
+.format:last-child{ margin-bottom:0;}
+.format:last-child{ border-bottom:0; padding-bottom:0;}
+.format>figure>span{ width:1.6rem; height:1.6rem;}
+.format img{ width:1.6rem; height:1.6rem;}
+.format figcaption{ width:5.2rem; height:1.6rem; padding-left:0.2rem;}
+.format h2{ font-size:0.28rem; font-weight:normal; color:#333;}
+.format figcaption>span:nth-of-type(1){ font-size:0.24rem; color:#999;}
+.format figcaption>span:nth-of-type(2){ font-size:0.22rem; color:#ed7e00;}
+.list_mask{ font-size:0.26rem; color:red; width:6.9rem; height:1.6rem; background-color:rgba(0,0,0,0.6); position:absolute; left:0; top:0; display:flex; display:-webkit-flex; flex-direction:column; -webkit-flex-direction:column; justify-content:flex-end; -webkit-justify-content:flex-end; align-items:flex-end; -webkit-align-items:flex-end;}
+/*运费留言合计*/
+.fare,.message,.total{ font-size:0.32rem; color:#333; background-color:#fff; padding:0 0.3rem;}
+.fare div,.message div{ height:1.08rem; border-bottom:1px solid #e0e0e0;}
+.fare_text{ font-size:0.28rem;}
+.message input{ font-size:0.32rem; width:5.2rem; height:auto; margin:0 0 0 0.2rem; line-height:2; border:0; background-color:#fff; padding:0;}
+.total div{ height:1.08rem;}
+/*提交*/
+.submit{ width:100%; height:0.98rem; background-color:#fff; position:fixed; bottom:0; left:0;}
+.submit_text{ font-size:0.32rem; color:#999; width:5.4rem; line-height:0.98rem; border-top:1px solid #e0e0e0; float:left; text-indent:0.3rem;}
+.submit_tip{ font-size:0.24rem;}
+.submit_btn{ font-size:0.32rem; width:2.1rem; height:0.98rem; line-height:0.98rem; background-color:#ed7e00; float:right; text-align:center; color:#fff;}
+
+.ellipsis_one{ display:-webkit-box; -webkit-box-orient:vertical; -webkit-line-clamp:1; white-space:normal;}

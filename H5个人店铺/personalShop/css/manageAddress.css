@@ -1,0 +1,24 @@
+body{ background-color:#f5f5f5;}
+#public_center{ overflow:hidden;}
+.address{ background-color:#fff; margin-bottom:0.1rem;}
+/*地址*/
+.address>div:nth-of-type(1){ padding:0.3rem 0.3rem 0.1rem;}
+.address>div:nth-of-type(1) span{ color:#333; font-weight:bold; display:inline-block; margin-right:0.2rem; overflow:hidden;}
+.name{ max-width:4.6rem;}
+.address address{ font-size:0.3rem; font-style:normal; color:#333; padding:0 0.3rem 0.3rem;}
+.address>div:nth-of-type(1) span.hide{ display:none;}
+/*控制按钮层*/
+.control{ border-top:1px solid #e0e0e0; overflow:hidden;}
+.control>div:nth-of-type(1){ float:left; margin-left:0.1rem;}
+.control>div:nth-of-type(2){ float:right;}
+.control>div:nth-of-type(2) i{ margin:0 0.1rem 0 0.07rem;}
+.control>div *{ float:left; line-height:0.7rem; display:inline-block;}
+.control i{ width:0.7rem; height:0.7rem; background-image:url(../image/address_control.png); background-size:0.7rem 2.8rem;}
+.editor{ background-position:0 0;}
+.delete{ background-position:0 -0.7rem;}
+.default{ background-position:0 -2.1rem;}
+.current{ background-position:0 -1.4rem;}
+/*按钮*/
+.add_btn{ font-size:0.32rem; color:#f5f5f5; width:100%; height:0.98rem; line-height:0.98rem; position:fixed; bottom:0; left:0;text-align:center; }
+#nothing{ font-size:0.36rem; text-align:center; color:#333; display:none;}
+.logo_bottom{ height:auto; display:block; padding-bottom:1.2rem;}

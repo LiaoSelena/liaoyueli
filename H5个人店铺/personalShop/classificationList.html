@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="http://q.img.soukong.cn/css/mui.min.css">
+	<link rel="stylesheet" href="../style/public.css">
+    <link rel="stylesheet" type="text/css" href="css/classificationList.css">
+	<script src="http://apps.bdimg.com/libs/mui/2.8.0/js/mui.min.js"></script>
+	<!--<script type="text/javascript" src="js/mui.pullToRefresh.js"></script>-->
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/mui.lazyload.js"></script>
+	<script src="js/mui.lazyload.img.js"></script>
+	<script src="../script/public.js"></script>
+</head>
+<body>
+<script>var Cwidth=document.documentElement.clientWidth;var fz=Cwidth/7.5+'px';document.documentElement.style.fontSize=fz;</script>
+<div id="public_center">
+	<header>
+		<div class="top-lr-scatter classification_header ">
+			<a id='new' class="item mui-active flex-1 center-float-center on">
+				最新
+			</a>
+			<a id='sales' class="item flex-1 center-float-center">
+				销量<img src="image/pro_gray.png">
+			</a>
+			<a id='price' class="item flex-1 center-float-center">
+				价格<img src="image/pro_gray.png">
+			</a>
+			<span class="search_btn flex-1 center-float-center" >
+				<img src="image/pro_list_search.png">
+			</span>
+		</div>
+		<div class="search_box center-float-center top-lr-scatter transform">
+			<dl class="left-float-top flex-1">
+				<dt class="center-float-center ml10"><img class="icno_search" src="image/pro_list_search.png"></dt>
+				<dd class="flex-1">
+					 <form id="myform" action="" onsubmit="return false;">
+		     			<input id="searchInput" type="search" placeholder="搜索您想要的">
+		     		</form>
+			    </dd>
+			</dl>
+			<span class="center-float-center">取消</span>
+		</div>
+	</header>
+	<section class="scroll_box main">
+		<div class="mui-scroll-wrapper" id="content">
+			<div class="mui-scroll">
+				<ul class="mui-table-view list left-float-top-br top-lr-scatter" id="list">
+				</ul>
+				<aside class="center-float-center nothing" id="nothing1">吖，没有任何内容！</aside>
+			</div>
+		</div>
+	</section>
+</div>
+<footer id="footer_menu"></footer>
+<aside id="SK_personal_shop_btn"></aside>
+<aside class="loading_box" id="loading"></aside>
+<aside class="center-float-center nothing" id="nothing">吖，没有任何内容！</aside>
+<aside class="masked_transparent" id="masked_transparent"></aside>
+</body>
+<script type="text/javascript" src="js/classificationList.js"></script>
+</html>

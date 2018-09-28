@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="http://q.img.soukong.cn/css/mui.min.css">
+	<link rel="stylesheet" href="../style/public.css">
+    <link rel="stylesheet" type="text/css" href="css/product_detail.css">
+    <link rel="stylesheet" type="text/css" href="css/componentCSS/loginRegister.css">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/swiper-3.4.2.jquery.min.js"></script>
+	<script src="http://apps.bdimg.com/libs/mui/2.8.0/js/mui.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/mui.lazyload.js"></script>
+	<script src="js/mui.lazyload.img.js"></script>
+	<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+	<script src="../script/public.js"></script>
+	<script src="../../SKscript/topFloat.js"></script>
+	<style>
+		.leader_float{display: none;}
+	</style>
+</head>
+<body>
+<script>var Cwidth=document.documentElement.clientWidth;if(Cwidth>768){Cwidth=768;}var fz=Cwidth/7.5+'px';document.documentElement.style.fontSize=fz;</script>
+<div class="product_detail" id="product_detail">
+<main class="main">
+	<section class="mui-slider banner" id="bannerImg">
+	 <div class="icon_dot"></div>
+	</section>
+	<section class="left-float-top product_name">
+		<dl class="flex-1">
+			<dt class="ellipsis_two"></dt>
+			<dd></dd>
+		</dl>
+		<a id='copyLink' role="button" href="javascript:void(0)">
+			<img src="image/p_copy_orange.png" />
+			<p>复制链接</p>
+		</a>
+	</section>
+	<section class="sim" id="sim">
+		<div class="sim_left">选择号码</div>
+		<div class="sim_right">
+			<span class="sim_main_choose" id="sim_main_choose">主卡号码</span>
+			<span class="sim_main" id="sim_main">主卡 : <span id="sim_main_num"></span></span>
+			<span class="sim_second_choose" id="sim_second_choose">副卡号码</span>
+			<span class="sim_second" id="sim_second">副卡 : <span id="sim_second_num"></span></span>
+		</div>
+	</section>
+	<section class="specifications top-lr-scatter"><span>请选择产品规格</span><p class="center-float-center"><img src="image/arrow-black.png"></p></section>
+	<section class="shop_name top-lr-scatter">
+		<p class="center-float-left">
+			<em class="center-float-center"></em>
+			<span></span>
+		</p>
+		<!--<a href="javascript:">进入店铺</a>-->
+	</section>
+	<section class="detail">
+		<nav class="left-float-top">
+			<a class="flex-1 on" >图文详情</a>
+			<a class="flex-1" >规格说明</a>
+			<a class="flex-1" >产品推荐</a>
+		</nav>
+		<ul>
+			<li class="pic_text" id="pic_text">
+			</li>
+			<li class="info">
+				<dl>
+					<dt class="left-float-top">
+						<span>规格编号</span>
+						<span>规格名称</span>
+						<span>规格价格</span>
+					</dt>
+				</dl>
+			</li>
+			<li class="recommend left-float-top-br"></li>
+		</ul>
+	</section>  
+	<!--<section class="logo_bottom">
+	    <img src="image/logo_bottom.png">
+	</section>-->
+	<section class="logo_bottom" id='logo_bottom'>
+		<img src="image/logo_bottom.png" />
+	</section>
+</main>
+<footer class="top-lr-scatter">
+   <div class='flex-1 shopping_cart center-float-left top-lr-scatter'>
+   	   <div id="service" class="flex-1 center-tb-scatter">
+	   		<img class="icnoOne" src="image/p_service_gray.png" />
+	   		<p class="ft28 ">客服</p>
+	   </div>
+       <span class="center-tb-scatter flex-1">
+			<div>
+				<img class="icnoTwo" src="image/p_cart_gray.png" />
+				<em class="cartSum"></em>
+			</div>
+			<p class="ft28">购物车</p>
+	   </span>
+	   <div id="jump_index" class="center-tb-scatter flex-1">
+	   		<img class="icnoThree" src="image/shop.png" />
+	   		<p class="ft28">店铺</p>
+	   </div>
+   </div>
+	<p class="left-float-top">
+		<a  id="goCart" class="formatOn" href="javascript:void(0)">加入购物车</a>
+	    <a id="buyNow" href="javascript:void(0)">立即购买</a>
+	</p>
+</footer>
+</div>
+<!--纯图-->
+<div class="productDetail_img hide">
+	<main class="swiper-container">
+   	  	<div class="swiper-wrapper" id="swiperBannerIn">
+   	  	</div>
+	</main>
+	<div class="icno_up"><img  width="100%" src="image/icno_up.png"></div>
+	<footer class="top-lr-scatter">
+		<div class='flex-1 shopping_cart center-float-left top-lr-scatter'>
+		   <div id="service" class="flex-1 center-tb-scatter">
+		   		<img class="icnoOne" src="image/p_service_gray.png" />
+		   		<p class="ft28 ">客服</p>
+		   </div>
+	       <span class="flex-1 center-tb-scatter">
+				<div class="center-float-center">
+					<img class="icnoTwo" src="image/p_cart_gray.png" />
+					<em class="cartSum"></em>
+				</div>
+				<p class="ft28">购物车</p>
+		   </span>
+		   <div id="jump_index2" class="flex-1 center-tb-scatter">
+		   		<img class="icnoThree" src="image/shop.png" />
+		   		<p class="ft28">店铺</p>
+		   </div>
+	    </div>
+		<p class="left-float-top">
+			<a  id="goCart" class="formatOn" href="javascript:void(0)">加入购物车</a>
+		    <a id="buyNow" href="javascript:void(0)">立即购买</a>
+		</p>
+	</footer>
+</div>
+<!-- 客服层 -->
+<aside class="customer_service hide">
+	<ul class="list">
+		<li class="pd_qq_a">
+		</li>
+		<li class="pd_tel_a">
+			<a href=""></a>
+		</li>
+		<li class="close">
+		</li>
+	</ul>
+</aside>
+<!-- copy link -->
+<aside class="copyLink_box">
+	<aside class="black_bg_in"></aside>
+	<aside class="copyLink_content">
+		<p>请复制以下链接：</p>
+		<input type="text" value="" />
+	</aside>
+</aside>
+<!--layer-->
+<aside class="choose_format transform">
+	<div class="product_pic top-lr-scatter">
+		<dl class="left-float-top">
+			<dt></dt>
+			<dd>
+				<span class="format_price">￥<em></em></span>
+				<span class="select_guige_moren">请选择规格</span>
+				<ul class="hide" id="commission">
+					<li>快递佣金:￥<em id="kd"></em></li>
+					<li>自提佣金:￥<em id="zt"></em></li>
+				</ul>
+			</dd>
+		</dl>
+		<i id="closeLayer"><img src='image/close_gray.png'></i>
+	</div>
+	<div class="select_detail">
+		<p class="format_name">规格名称</p>
+		<div class="format_btn_box">
+			<div class="mui-scroll-wrapper format_btn_scroll">
+				<div class="mui-scroll format_btn left-float-top-br">
+					
+				</div>
+			</div>
+		</div>
+		<div class="num top-lr-scatter">
+			<p>购买数量</p>
+			<div class="left-float-top sel">
+				<span id="reduceBtn"><img src="image/p_reduce.png" /></span>
+				<div id="buyNum">1</div>
+				<span id="addBtn"><img src="image/p_add.png" /></span>
+			</div>
+		</div>
+	</div>
+	<div class="sure_btn"><button>确认</button></div>
+	<div class="top-lr-scatter footerLayer hide">
+		<div class='flex-1 shopping_cart center-float-left top-lr-scatter '>
+	       <span class="flex-1 center-tb-scatter">
+				<div class="center-float-center">
+					<img class="icnoTwo" src="image/p_cart_gray.png" />
+					<em class="cartSum"></em>
+				</div>
+				<p class="ft28">购物车</p>
+		   </span>
+		   <div id="jump_index1" class="flex-1 center-tb-scatter">
+		   		<img class="icnoThree" src="image/shop.png" />
+		   		<p class="ft28">店铺</p>
+		   </div>
+	   </div>
+		<p class="left-float-top">
+			<a id="goCartLayer" href="javascript:void(0)">加入购物车</a>
+		    <a id="buyNowLayer" href="javascript:void(0)">立即购买</a>
+		</p>
+	</div>
+</aside>
+<aside class="sim_choose" id="sim_choose">
+	<div class="sim_choose_close" id="sim_choose_close"><img src="image/ProductDetail_sim_close.png"></div>
+	<header class="sim_choose_hd">
+		<input class="sim_choose_search" id="sim_choose_search" type="tel" placeholder="请输入3-4位数字搜索">
+		<span class="sim_choose_btn" id="sim_choose_btn"><img src="image/ProductDetail_search.png"></span>
+		<span class="sim_choose_x" id="sim_choose_x"><span>&times;</span></span>
+	</header>
+	<div class="sim_choose_list" id="sim_choose_list">
+		<ul></ul>
+	</div>
+	<div class="sim_choose_change" id="sim_choose_change">换一批</div>
+</aside>
+<aside id="SK_personal_shop_btn"></aside>
+<aside class="black_bg"></aside>
+</div>
+<aside class="loading_box" id="loading"></aside>
+<aside id="big_code"></aside>
+<input type="hidden" id="recordId" value="4224">
+</body>
+<script type="text/javascript" src="js/isProductDetail.js"></script>
+<!--<script type="text/javascript" src="js/ProductDetail.js"></script>-->
+<script type="text/javascript" src="js/componentJS/loginRegister.js" ></script>
+</html>

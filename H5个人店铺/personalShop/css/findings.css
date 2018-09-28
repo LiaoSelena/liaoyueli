@@ -1,0 +1,27 @@
+.hd{ height:0.96rem; background-color:#ed7e00; overflow:hidden;}
+.hd>div{ font-size:0.28rem; color:#909090; width:6.9rem; line-height:0.64rem; height:0.64rem; border-radius:0.1rem; background-color:#fff; background-image:url(../image/findings_search.png); background-repeat:no-repeat; background-position:0 center; background-size:0.5rem 0.64rem; text-indent:0.5rem; margin:0.16rem auto;}
+.list_large{ border-bottom:0.18rem solid #f5f5f5;}
+.list_large:first-child{ border-top:0.18rem solid #f5f5f5;}
+.list_large_tip{ overflow:hidden; border-bottom:1px solid #eee;}
+.list_large>span{ font-size:0.26rem; color:#666; line-height:0.8rem; text-align:center;}
+.list_large_left{ font-size:0.32rem; color:#ed7e00; float:left; margin-left:0.3rem; line-height:0.8rem;}
+.list_large_left:before{ width:0.3rem; height:0.8rem; background-image:url(../image/findings_color.png); background-size:100%; content:''; float:left; margin-right:0.06rem;}
+.list_large_right{ font-size:0.26rem; color:#a8a8a8; float:right; margin-right:0.3rem; line-height:0.8rem;}
+.list_large_right span{ margin-right:0.1rem; float:left;}
+.list_large_right i{ width:0.4rem; height:0.8rem; float:left; background-image:url(../image/findings_icon.png); background-size:100%;}
+.list_large_right .turn{ transform:rotate(180deg); -webkit-transform:rotate(180deg);}
+
+.list_small{ display:none;}
+.list_small_tip{ overflow:hidden; display:block; border-bottom:1px solid #eee;}
+.list_small_left{ font-size:0.26rem; color:#666; line-height:0.6rem; float:left; margin-left:0.3rem;}
+.list_small_left:before{ width:0.4rem; height:0.6rem; background-image:url(../image/findings_shop.png); background-size:100%; content:''; float:left; margin-left:-0.04rem;}
+.list_small_right{ font-size:0.24rem; color:#ccc; line-height:0.6rem; float:right; margin-right:0.3rem;}
+.list_small dl{ overflow:hidden; display:none;}
+.list_small dd{ width:25%; height:0.9rem; line-height:0.9rem; text-align:center; border-right:1px solid #eee; border-bottom:1px solid #eee; float:left;}
+
+.list_small .no_border{ border-right:0;}
+.logo_bottom{ height:auto; display:block; padding-bottom:1.2rem;}
+.nothing1{ font-size:0.32rem; display:none;}
+.hide{ display:none;}
+.show{ display:block;}
+span{ display:block;}

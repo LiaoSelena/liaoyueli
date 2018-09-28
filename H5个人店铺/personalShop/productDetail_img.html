@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no, minimum-scale=0.5, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="http://q.img.soukong.cn/css/mui.min.css">
+	<link rel="stylesheet" href="../style/public.css">
+    <link rel="stylesheet" type="text/css" href="css/product_detail.css">
+    <link rel="stylesheet" type="text/css" href="css/componentCSS/loginRegister.css">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="js/swiper-3.4.2.jquery.min.js"></script>
+	<script src="http://apps.bdimg.com/libs/mui/2.8.0/js/mui.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
+	<script src="../script/public.js"></script>
+	<script src="../../SKscript/topFloat.js"></script>
+</head>
+<body>
+<script>var Cwidth=document.documentElement.clientWidth;if(Cwidth>768){Cwidth=768;}var fz=Cwidth/7.5+'px';document.documentElement.style.fontSize=fz;</script>
+<div class="ProductDetail_img">
+	<main class="swiper-container">
+   	  	<div class="swiper-wrapper" id="swiperBannerIn">
+   	  	</div>
+	</main>
+	<div class="icno_up"><img width="100%" src="image/icno_up.png"></div>
+	<footer class="top-lr-scatter">
+		<span>
+			<img src="image/p_cart_gray.png" />
+			<em class="cartSum">1</em>
+		</span>
+		<p>
+			<a  id="goCart" class="formatOn" href="javascript:void(0)">加入购物车</a>
+		    <a id="buyNow" href="javascript:void(0)">立即购买</a>
+		</p>
+	</footer>
+</div>
+<!--layer-->
+<aside class="choose_format transform">
+	<div class="product_pic top-lr-scatter">
+		<dl class="left-float-top">
+			<dt><img src="image/img_nothing.jpg"></dt>
+			<dd>
+				<span class="format_price">￥<em></em></span>
+				<span class="select_guige_moren">请选择规格</span>
+				<ul class="hide">
+					<li>快递佣金:￥<em id="kd">0.2</em></li>
+					<li>自提佣金:￥<em id="zt">0.3</em></li>
+				</ul>
+			</dd>
+		</dl>
+		<i id="closeLayer"><img src='image/close_gray.png'></i>
+	</div>
+	<div class="select_detail">
+		<p class="format_name">规格名称</p>
+		<div class="format_btn_box">
+			<div class="mui-scroll-wrapper format_btn_scroll">
+				<div class="mui-scroll format_btn left-float-top-br">
+					<!--<a href="javsScript:void(0)">1</a>
+					<a href="javsScript:void(0)">2</a>-->
+				</div>
+			</div>
+		</div>
+		<div class="num top-lr-scatter">
+			<p>购买数量</p>
+			<div class="left-float-top sel">
+				<span id="reduceBtn"><img src="image/p_reduce.png" /></span>
+				<div id="buyNum">1</div>
+				<span id="addBtn"><img src="image/p_add.png" /></span>
+			</div>
+		</div>
+	</div>
+	<div class="sure_btn"><button>确认</button></div>
+	<div class="top-lr-scatter footerLayer hide">
+		<span style="float: left;">
+			<img src="image/p_cart_gray.png" />
+			<em class="cartSum"></em>
+		</span>
+		<p style="float: right;">
+			<a id="goCartLayer" href="javascript:void(0)">加入购物车</a>
+		    <a id="buyNowLayer" href="javascript:void(0)">立即购买</a>
+		</p>
+	</div>
+</aside>
+<aside class="black_bg"></aside>
+<input type="hidden" id="recordId" value="4224">
+<aside class="loading_box hide" id="loading"></aside>
+</body>
+<script type="text/javascript" src="js/productDetail_img.js"></script>
+<script type="text/javascript" src="js/componentJS/loginRegister.js" ></script>
+</html>

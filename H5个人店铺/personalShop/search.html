@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>搜索商品</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="http://q.img.soukong.cn/css/mui.min.css">
+	<link rel="stylesheet" href="../style/public.css">
+	<link rel="stylesheet" href="css/search.css">
+	<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="http://apps.bdimg.com/libs/mui/2.8.0/js/mui.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+</head>
+<body>
+	<script>var fz=document.documentElement.clientWidth/7.5+'px';document.documentElement.style.fontSize=fz;</script>
+	<div id="public_center">
+		<div class="panel1 top-lr-scatter">
+			<div class="searchbox center-float-left">
+				<img class="icno40 ml20 mr15" src="image/search_sousuo.png" />
+				<input id="input-text" type="text" placeholder="搜索您喜欢的商品"/>
+			</div>
+			<div id="search-btn" class="search-btn center-float-center">搜索</div>
+		</div>
+		<div style="display: none;" class="panel2">
+			<div class="panel2-titlebox top-lr-scatter center-float-center">
+				<div>
+					<span class="color-ed7">| </span>
+					<span>历史记录</span>
+				</div>
+				<div  id="remove" style="width:.6rem;" class="center-float-center"><img class="icno22-24" src="image/shanchu.png" /></div>
+			</div>
+			<ul id="panel2-ul" class="left-float-top-br">
+				
+			</ul>
+		</div>
+	</div>
+	<aside id="SK_personal_shop_btn"></aside>
+	<script src="../script/public.js"></script>
+	<script src="js/search.js"></script>
+</body>
+</html>

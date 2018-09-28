@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, minimum-scale=1, maximum-scale=1.0">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<link rel="stylesheet" href="http://q.img.soukong.cn/css/mui.min.css">
+	<link rel="stylesheet" href="../style/public.css">
+    <link rel="stylesheet" type="text/css" href="css/shopcarpage.css">
+    <link rel="stylesheet" type="text/css" href="css/componentCSS/loginRegister.css">
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="http://apps.bdimg.com/libs/mui/2.8.0/js/mui.min.js"></script>
+	<script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+	<script src="js/mui.lazyload.js"></script>
+	<script src="js/mui.lazyload.img.js"></script>
+	<script src="../script/public.js"></script>
+</head>
+<body >
+<script>var Cwidth=document.documentElement.clientWidth;if(Cwidth>768){Cwidth=768;}var fz=Cwidth/7.5+'px';document.documentElement.style.fontSize=fz;</script>
+<div id="public_center">
+	<!--<section class="shaoppingCart_tip">
+		亲，个人店铺暂不支持多个店铺一次下单！
+	</section>-->
+	<main class="main_list">
+ 		<div class="goods_list" id="goods_list">
+ 			<section id="noRecord" class="noRecord">
+ 				<div class="noRecord_img"><img src="image/shoppingCart_cart.png"></div>
+ 				<h2>购物车中没有商品</h2>
+ 				<p>到处逛逛，将你心爱的商品加入购物车</p>
+ 				<div class="noRecord_btn" id="noRecord_btn">
+ 					去逛逛
+ 				</div>
+ 			</section>
+ 		</div>
+ 		<div class="logo_bottom show" id="logo_bottom"><img src="image/logo_bottom.png"></div>
+	</main>
+	<section class="settlement ">
+	   	  <dl class=" top-lr-scatter">
+	   	  	 <dt class="center-float-center">
+	   	  	 	<p>合计：<span class="orange">￥<span id="TotalMoney">0</span></span> <em>(不含运费)</em></p>
+	   	  	 </dt>
+	   	  	 <dd class="">
+	   	  	 	<button class="on">结 算 <span id="goodsNumber"></span></button>
+	   	  	 </dd>
+	   	  </dl>
+	   </section>
+</div>
+<aside class="loading_box" id="loading">
+		<div class="loading_img"></div>
+		<div class="loading"></div>
+</aside>
+<section id="MainBottom"></section>
+<aside id="SK_personal_shop_btn"></aside>
+<aside class="masked_transparent" id="masked_transparent"></aside>
+</body>
+<script type="text/javascript" src="js/componentJS/loginRegister.js" ></script>
+<script src="js/shopcarpage.js"></script>
+</html>

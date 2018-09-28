@@ -1,0 +1,64 @@
+.flex-1{flex:1; -webkit-box-flex: 1; -ms-flex: 1; -moz-box-flex: 1;}
+body{background:#f5f5f5}
+em{font-style:normal}
+.show{ display: block;}
+.showFlex{display: flex !important; display: -moz-box !important;display: -ms-flexbox !important;display: -webkit-flex !important;}
+.hide{ display: none;}
+.orange{color:#ed7e00!important}
+button{ border:none !important;}
+.fa-check-circle{color:#ed7e00;font-size:.46rem}
+/*noRecord*/
+.noRecord{display: none; width: 100%;}
+.noRecord .noRecord_img{ text-align: center; padding: 1.9rem 0 .5rem 0; }
+.noRecord .noRecord_img img{ display: inline-block; width: 1.86rem; height: 1.48rem;}
+.noRecord h2{ font-weight: normal; font-size: .34rem; color: #999; text-align: center;}
+.noRecord p{font-size: .26rem; color: #999; text-align: center; padding: .28rem 0 .46rem 0;}
+.noRecord .noRecord_btn{ margin: 0  auto; border:#ED7E00 1px solid !important; background: none; color: #ED7E00; font-size: .28rem; 
+height: .74rem; width: 3.48rem; text-align: center; line-height: .74rem; border-radius: 1rem;}
+/*.main_list{padding:.88rem 0 1.5rem 0}*/
+.shaoppingCart_tip{ background: #fff; color: #999; font-size: .24rem; padding: .2rem;}
+.main_list dl{border-top:#e0e0e0 .01rem solid;background:#fafafa}
+.main_list dl dt{width:1rem;text-align:center;font-size:.42rem;justify-content:center}
+.main_list dl dt i{background: url("../image/p_check.png"); width: .4rem; height: .4rem;background-position: 0 -.5rem; background-size:100% ;}
+.settlement p i{ background: url('../image/no_choice_white@2x.png'); width: .4rem; height: .41rem;background-size:100% ;}
+.settlement p i.on{background: url("../image/p_check.png");background-position: 0 0;background-size:100% ;}
+.main_list dl dt i.on{ background-position: 0 0;}
+.main_list dl dt i.noOn{background-position: 0 -.5rem !important; }
+.main_list dl.shop_info{padding:0rem .3rem 0rem 0; min-height:1rem; background: #fff;}
+.main_list dl.shop_info dd{padding-left:.1rem}
+.main_list dl.shop_info dd em{width:.6rem;height:.4rem}
+.main_list dl.shop_info dd img{width:100%;height:100%}
+.main_list dl.shop_info dd p{line-height:.38rem;height:.4rem;font-size:.34rem;color:#000;margin-left:.2rem}
+.main_list dl.goods_info{position: relative;}
+.main_list dl.goods_info .detail{padding:0 .2rem}
+.main_list dl.goods_info .over{ position: absolute; top:.1rem; bottom: .1rem; background: rgba(0,0,0,0.3); width: 100%;  right: 1rem;
+color: #fff; text-align: center; line-height: 100%; font-size: .32rem;}
+.main_list dl.goods_info .detail .number_box{margin-top:.05rem}
+.main_list dl.goods_info .detail .add_reduce{border-radius:.05rem;height:.4rem;border:#999999 1px solid; overflow: hidden;}
+.main_list dl.goods_info .detail .reduceBtn{ border-right: #999 1px solid;}
+.main_list dl.goods_info .detail .addBtn{ border-left: #999 1px solid;}
+.main_list dl.goods_info .detail .add_reduce span{display:block;width:.4rem;}
+.main_list dl.goods_info .detail .add_reduce span i{font-size:.24rem}
+.main_list dl.goods_info .detail .add_reduce .buyNum{min-width:.5rem;height:.38rem; color:#ed7e00;font-size:.24rem;padding:0;text-align:center;border:none;background:0 0;margin-bottom:0;border-radius:0}
+.main_list dl.goods_info .detail .add_reduce img{ height: auto; width: .2rem; margin: .08rem 0 0 .1rem;}
+.main_list dl.goods_info .detail .reduceBtn img{ margin-top: .15rem !important;}
+.main_list dl.goods_info dt{text-align:center;padding:.3rem 0}
+.main_list dl.goods_info dd{padding:.3rem .1rem}
+.main_list dl.goods_info dd em{width:1.6rem;height:1.6rem}
+.main_list dl.goods_info dd img{width:100%;height:100%}
+.main_list dl.goods_info dd p{line-height:.4rem;font-size:.24rem;color:#333}
+.main_list dl.goods_info dd p .two_line{height:.8rem}
+.main_list dl.goods_info dd p .one_line{height:.4rem}
+.main_list dl.goods_info .del{background:#fff;width:1rem;justify-content:center;color:#ed7e00}
+.main_list dl.goods_info .del img{width: .4rem; height: .4rem;}
+.settlement{position:fixed;z-index:2;bottom:0;width:100%;background:#fff;padding:.2rem .3rem;border-top: #eee 0.01rem solid;}
+.settlement dl dt{color:#fff;text-align: right;}
+.settlement dl dt span{font-size:.34rem}
+.settlement dl dt em{font-size:.28rem; padding-left: 0.02rem;}
+.settlement dl dd{margin-left:.2rem}
+.settlement dl dd button{background:#C1C1C1;border;#C1C1C1 1px solid !important;
+color:#fff;font-size:.28rem;height:.7rem;padding:0 .3rem;border-radius:.05rem;}
+.settlement dl dd button.on{ background: #ed7e00;border-color;#ed7e00 1px solid  !important;}
+.settlement p{font-size:.32rem;color:#999; wo}
+.settlement p i{margin-right:.3rem}
+.logo_bottom{ height:auto; padding-bottom:1.2rem;}
