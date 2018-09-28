@@ -1,4 +1,24 @@
-﻿ var pricemax = Math.max.apply(null, priceall).toFixed(2);//价格最高
+数组获取价格的最低最高﻿ 
+
+var pricemax = Math.max.apply(null, priceall).toFixed(2);//价格最高
 
  var pricemin = Math.min.apply(null, priceall).toFixed(2);//价格最低
+
+匹配电话号码正则
+
+var regx = /^(((13[0-9]{1})|(14[0-9]{1})|(15[0-9]{1})|(16[0-9]{1})|(17[0-9]{1})|(18[0-9]{1})|(19[0-9]{1}))+\d{8})$/
+
+regx.test(param)
+
+微信号的正则
+
+ var regx = new RegExp("[\\u4E00-\\u9FFF]+", "g")
+
+邮箱的正则
+
+var regx = /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[a-z0-9]+$/
+
+数组转字符串 var str = JSON.stringify(arr[i]);
+
+ 字符串转数组 str = JSON.parse(str)
 

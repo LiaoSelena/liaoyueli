@@ -5,3 +5,29 @@
 3. `}`
 
 禁止滚动  catchtouchmove='true'
+
+//封装计算尺寸比例 返回高度
+
+function iphone6Size(sizes, callBack) {
+
+  let result = []
+
+  let length = sizes.length
+
+  wx.getSystemInfo({
+
+​    success: res => {
+
+​      for (let i = 0; i < length; i++) {
+
+​        result.push(res.windowHeight - res.windowWidth * sizes[i] / 750)
+
+​      }
+
+​      if (callBack) callBack(result)
+
+​    }
+
+  })
+
+}
