@@ -22,3 +22,4 @@ var regx = /^[a-z0-9]+([._\\-]*[a-z0-9])*@([a-z0-9]+[-a-z0-9]*[a-z0-9]+.){1,63}[
 
  字符串转数组 str = JSON.parse(str)
 
+<script>var Cwidth=document.documentElement.clientWidth;if(Cwidth>768){Cwidth=768;}var fz=Cwidth/7.5+'px';document.documentElement.style.fontSize=fz;</script>
