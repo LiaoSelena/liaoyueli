@@ -1,1 +1,2 @@
 
+vue项目不提交node_modules文件，需要提交文件.gitignore 内容为：/node_modules
